@@ -1,0 +1,52 @@
+<section class="content">
+  <div class="headline">
+    <div class="row-header">
+      <div class="links">
+        <a href="#" (click)="showPrograms('all')">ALL</a>
+        <a href="#" (click)="showPrograms('delhi')">Delhi</a>
+        <a href="#" (click)="showPrograms('patna')">Patna</a>
+        <a href="#" (click)="showPrograms('online')">Online <div class="location">Location</div></a>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="programs">
+    <div class="program-box" *ngIf="currentCategory === 'all'">
+      <div class="program-item">
+        <img src="path/to/your/image1.jpg" alt="Program Image 1" />
+        <h3>Program Title 1</h3>
+      </div>
+      <div class="program-item">
+        <img src="path/to/your/image2.jpg" alt="Program Image 2" />
+        <h3>Program Title 2</h3>
+      </div>
+      <div class="program-item">
+        <img src="path/to/your/image3.jpg" alt="Program Image 3" />
+        <h3>Program Title 3</h3>
+      </div>
+      
+    </div>
+    <div class="program-box" *ngIf="currentCategory === 'delhi'">
+      <div class="program-item">
+        <img src="path/to/your/image-delhi1.jpg" alt="Program Delhi Image 1" />
+        <h3>Delhi Program Title 1</h3>
+      </div>
+   
+    </div>
+    <div class="program-box" *ngIf="currentCategory === 'patna'">
+      <div class="program-item">
+        <img src="path/to/your/image-patna1.jpg" alt="Program Patna Image 1" />
+        <h3>Patna Program Title 1</h3>
+      </div>
+      
+    </div>
+    <div class="program-box" *ngIf="currentCategory === 'online'">
+      <div class="program-item">
+        <img src="path/to/your/image-online1.jpg" alt="Program Online Image 1" />
+        <h3>Online Program Title 1</h3>
+      </div>
+     
+    </div>
+  </div>
+</section>

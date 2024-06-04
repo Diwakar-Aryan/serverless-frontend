@@ -1,0 +1,36 @@
+<!-- header.component.html -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-left">WabiSabi Project</div>
+    <div class="navbar-right">
+      <a href="#" class="navbar-item"><i class="fas fa-shopping-cart"></i></a>
+      <a href="#" class="navbar-item"
+        ><i class="fa-solid fa-arrow-right-to-bracket"></i
+      ></a>
+      <!-- <a href="#" class="navbar-item"><i class="fas fa-ellipsis-v"></i></a> -->
+      <a class="navbar-item">|</a>
+      <button class="navbar-toggle" (click)="toggleNavbar()">
+        <span *ngIf="navCollapsed"><i class="fa-solid fa-bars"></i></span>
+        <span *ngIf="!navCollapsed"><i class="fa-solid fa-xmark"></i></span>
+      </button>
+    </div>
+  </div>
+  <div class="navbar-content" [class.collapsed]="navCollapsed">
+    <div class="nav-section">
+      <div class="nav-column">
+        <h4>PROJECTS</h4>
+        <ul>
+          <li>Jajam</li>
+        </ul>
+      </div>
+      <div class="nav-column">
+        <h4>PLATFORM</h4>
+        <ul>
+          <li>Workshops</li>
+          <li>Collections</li>
+          <li>Notes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

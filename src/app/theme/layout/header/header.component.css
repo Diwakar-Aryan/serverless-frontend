@@ -1,0 +1,96 @@
+/* header.component.css */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s;
+}
+.navbar.scrolled {
+  background-color: rgba(248, 249, 250, 0.8); /* Semi-transparent background */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.navbar-left {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 10%;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  margin-right: 13%;
+}
+
+.navbar-item {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+  justify-content: space-between;
+  padding-inline-end: 1rem;
+}
+
+.navbar-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.navbar-content {
+  display: none;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+  background-color: #f8f9fa; 
+  transition: background-color 0.3s;
+}
+
+.navbar-content.collapsed {
+  display: none;
+}
+
+.navbar-content:not(.collapsed) {
+  display: flex;
+}
+.navbar-content.scrolled {
+  background-color: rgba(248, 249, 250, 0.8); /* Semi-transparent background */
+}
+.nav-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-column {
+  margin-right: 13%;
+  margin-left: 10%;
+}
+
+.nav-column h4 {
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+}
+
+.nav-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-column ul li {
+  margin-bottom: 0.5rem;
+}

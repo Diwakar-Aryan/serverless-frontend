@@ -1,0 +1,67 @@
+.section {
+  padding: 20px;
+  background-color: #d3a178;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: auto;
+}
+
+.text-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.text-container h1 {
+  font-size: 2.5em;
+  color: #994f4f;
+  text-align: start;
+  margin-bottom: 20px;
+}
+
+.headline-text p {
+  font-size: 1.2em;
+  color: #8b4848;
+  text-align: start;
+  margin-bottom: 30px;
+}
+
+/* Row for the three columns */
+.row-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Individual column styles */
+.row-text .text1-column,
+.row-text .text2-column,
+.row-text .text3-column {
+  flex: 1;
+  margin: 10px;
+  min-width: 250px;
+  max-width: 32%;
+}
+
+/* Text within the columns */
+.row-text p {
+  font-size: 1em;
+  color: #8b4848;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .row-text {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row-text .text1-column,
+  .row-text .text2-column,
+  .row-text .text3-column {
+    max-width: 100%;
+    text-align: center;
+  }
+}

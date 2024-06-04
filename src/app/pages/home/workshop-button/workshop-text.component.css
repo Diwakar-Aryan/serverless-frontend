@@ -1,0 +1,65 @@
+.text-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f1abff; /* light gray background */
+}
+
+.left-text {
+  width: 70%;
+  /* text-align: center; */
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.left-text p {
+  font-family: Nunito, sans-serif;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  /* margin: var(--m1) 0; */
+  font-style: normal;
+  font-weight: 750;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  letter-spacing: 0.02em;
+  font-feature-settings: "pnum" on, "onum" on;
+  opacity: 50%;
+}
+
+.right-text {
+  width: 30%;
+  margin-right: 10%;
+}
+
+.right-text p {
+  font-family: Nunito, sans-serif;
+  margin: var(--m1) 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 1.75rem;
+  letter-spacing: 0.02em;
+  font-feature-settings: "pnum" on, "onum" on;
+  opacity: 50%;
+
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+
+.workshop-button {
+  background-color: #8e24aa; /* purple color background */
+  color: #fff;
+  border: none;
+  padding: 4.5% 25%;
+  font-size: 18px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.workshop-button:hover {
+  background-color: #7a1c95;
+}

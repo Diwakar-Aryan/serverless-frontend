@@ -1,0 +1,46 @@
+.content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    height: 100vh;
+}
+.headline {
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+}
+.row-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.links a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #007BFF;
+}
+.links a:hover {
+    text-decoration: underline;
+}
+
+.programs {
+    margin-top: 20px;
+}
+.program-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.program-item {
+    width: 30%;
+    margin: 1%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 10px;
+    text-align: center;
+}
+.program-item img {
+    max-width: 100%;
+    height: auto;
+}
+.program-item h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}

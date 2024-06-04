@@ -1,0 +1,132 @@
+.observation-container {
+  position: relative;
+  background-image: url("/assets/images/image1.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.tools-container {
+  position: relative;
+  background-image: url("/assets/images/image2.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.take-away-container {
+  position: relative;
+  background-image: url("/assets/images/image3.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.studio-container {
+  position: relative;
+  background-image: url("/assets/images/image1.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.schedule-container {
+  position: relative;
+  background-image: url("/assets/images/image4.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.curious-container {
+  position: relative;
+  background-image: url("/assets/images/image3.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.learning-container {
+  position: relative;
+  background-image: url("/assets/images/image2.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.glamorous-container {
+  position: relative;
+  background-image: url("/assets/images/slide.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.observation-text {
+  padding: 30%;
+}
+.observation-text p {
+  align-items: center;
+  padding: auto;
+}
+.observation-text h2 {
+  font-size: 1.5em;
+  color: #531717;
+  text-align: center;
+  font-weight: 600;
+}
+ .border-fill{
+    border: none;
+    padding: 20px; 
+   
+    background-color: #723030;
+  }
