@@ -15,7 +15,7 @@
       </button>
     </div>
   </div>
-  <div class="navbar-content" [class.collapsed]="navCollapsed">
+  <div class="navigation" [class.collapsed]="navCollapsed">
     <div class="nav-section">
       <div class="nav-column">
         <h4>PROJECTS</h4>
@@ -26,11 +26,13 @@
       <div class="nav-column">
         <h4>PLATFORM</h4>
         <ul>
-          <li>Workshops</li>
-          <li>Collections</li>
-          <li>Notes</li>
+          <li><a href="/workshops" routerLinkActive="active-link">Workshops</a></li>
+          <li><a href="/collections" routerLinkActive="active-link">Collections</a></li>
+          <li><a href="/notes" routerLinkActive="active-link">Notes</a></li>
+         
         </ul>
       </div>
     </div>
   </div>
+  <!-- <app-breadcrumb></app-breadcrumb> -->
 </nav>

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  background-color: #f1abff; /* light gray background */
+  background-color: #e4cfaa; /* light gray background */
 }
 
 .left-text {
@@ -24,6 +24,7 @@
   letter-spacing: 0.02em;
   font-feature-settings: "pnum" on, "onum" on;
   opacity: 50%;
+  color: #580505;
 }
 
 .right-text {
@@ -48,10 +49,11 @@
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   unicode-bidi: isolate;
+  color: #580505;
 }
 
 .workshop-button {
-  background-color: #8e24aa; /* purple color background */
+  background-color: #7a1b1b; /* purple color background */
   color: #fff;
   border: none;
   padding: 4.5% 25%;
@@ -61,5 +63,5 @@
 }
 
 .workshop-button:hover {
-  background-color: #7a1c95;
+  background-color: #580505;
 }
