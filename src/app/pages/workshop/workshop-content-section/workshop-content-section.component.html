@@ -1,52 +1,188 @@
-<section class="content">
-  <div class="headline">
-    <div class="row-header">
-      <div class="links">
-        <a href="#" (click)="showPrograms('all')">ALL</a>
-        <a href="#" (click)="showPrograms('delhi')">Delhi</a>
-        <a href="#" (click)="showPrograms('patna')">Patna</a>
-        <a href="#" (click)="showPrograms('online')">Online <div class="location">Location</div></a>
-      </div>
-      
+<section>
+  <div class="tabs-container">
+    <div class="tabs-left">
+      <a class="tab3" id="all-tab" (click)="showContent('all')">ALL</a>
+      <a class="tab3" id="bagru-tab" (click)="showContent('bagru')">BAGRU</a>
+      <a class="tab3" id="delhi-tab" (click)="showContent('delhi')">DELHI</a>
+      <a class="tab3" id="jaipur-tab" (click)="showContent('jaipur')">JAIPUR</a>
+      <a class="tab3" id="online-tab" (click)="showContent('online')">ONLINE</a>
+    </div>
+    <div class="line-and-topic">
+      <hr class="horizontal-line" />
+      <span class="topic-text">Location</span>
     </div>
   </div>
 
-  <div class="programs">
-    <div class="program-box" *ngIf="currentCategory === 'all'">
-      <div class="program-item">
-        <img src="path/to/your/image1.jpg" alt="Program Image 1" />
-        <h3>Program Title 1</h3>
+  <div *ngIf="currentContent === 'all'" class="all-content" id="all-content">
+    <h6>
+      PROGRAMS
+      <hr style="margin-left: 6%; width: 78%; margin-top: -0.5%" />
+    </h6>
+    <div class="container">
+      <div class="item">
+        <img src="assets/images/block-carving.jpg" alt="Block Carving" />
+        <p>BLOCK CARVING</p>
+        <p class="location">Jaipur</p>
       </div>
-      <div class="program-item">
-        <img src="path/to/your/image2.jpg" alt="Program Image 2" />
-        <h3>Program Title 2</h3>
+      <div class="item">
+        <img src="assets/images/block_prints.jpg" alt="Block Printing" />
+        <p>BLOCK PRINTING</p>
+        <p class="location">Bagru, Online</p>
       </div>
-      <div class="program-item">
-        <img src="path/to/your/image3.jpg" alt="Program Image 3" />
-        <h3>Program Title 3</h3>
+      <div class="item">
+        <img src="assets/images/Natural_dyes.JPG" alt="Natural Dye" />
+        <p>NATURAL DYE</p>
+        <p class="location">Bagru, Delhi, Online</p>
       </div>
-      
+      <div class="item">
+        <img src="assets/images/idigo.jpg" alt="Natural Indigo" />
+        <p>NATURAL INDIGO</p>
+        <p class="location">Delhi, Online</p>
+      </div>
+      <div class="item">
+        <img src="assets/images/resist-printing.jpg" alt="Natural Indigo" />
+        <p>Resist-Printing</p>
+        <p class="location">Bagru, Online</p>
+      </div>
     </div>
-    <div class="program-box" *ngIf="currentCategory === 'delhi'">
-      <div class="program-item">
-        <img src="path/to/your/image-delhi1.jpg" alt="Program Delhi Image 1" />
-        <h3>Delhi Program Title 1</h3>
+    <h6>
+      EXCURSIONS
+      <hr style="margin-left: 6%; width: 78%; margin-top: -0.5%" />
+    </h6>
+    <div class="container2">
+      <div class="item2">
+        <img src="assets/images/2022_04.jpg" alt="Block Carving" />
+        <p>BAGRU KA TOUR</p>
+        <p class="location2">Bagru</p>
       </div>
-   
+      <div class="item2">
+        <img src="assets/images/main_04.jpg" alt="Block Printing" />
+        <p>TRADITIONAL TEXTILES</p>
+        <p class="location2">Bagru</p>
+      </div>
     </div>
-    <div class="program-box" *ngIf="currentCategory === 'patna'">
-      <div class="program-item">
-        <img src="path/to/your/image-patna1.jpg" alt="Program Patna Image 1" />
-        <h3>Patna Program Title 1</h3>
+  </div>
+
+  <div *ngIf="currentContent === 'bagru'" class="all-content" id="all-content">
+    <h6>
+      PROGRAMS
+      <hr style="margin-left: 6%; width: 78%; margin-top: -0.5%" />
+    </h6>
+    <div class="container">
+      <div class="item">
+        <img src="assets/images/block_prints.jpg" alt="Block Printing" />
+        <p>BLOCK PRINTING</p>
+        <p class="location">Bagru, Online</p>
       </div>
-      
+      <div class="item">
+        <img src="assets/images/Natural_dyes.JPG" alt="Natural Dye" />
+        <p>NATURAL DYE</p>
+        <p class="location">Bagru, Delhi, Online</p>
+      </div>
+      <div class="item">
+        <img src="assets/images/resist-printing.jpg" alt="Natural Indigo" />
+        <p>Resist-Printing</p>
+        <p class="location">Bagru, Online</p>
+      </div>
     </div>
-    <div class="program-box" *ngIf="currentCategory === 'online'">
-      <div class="program-item">
-        <img src="path/to/your/image-online1.jpg" alt="Program Online Image 1" />
-        <h3>Online Program Title 1</h3>
+    <h6>
+      EXCURSIONS
+      <hr style="margin-left: 6%; width: 78%; margin-top: -0.5%" />
+    </h6>
+    <div class="container2">
+      <div class="item2">
+        <img src="assets/images/2022_04.jpg" alt="Block Carving" />
+        <p>BAGRU KA TOUR</p>
+        <p class="location2">Bagru</p>
       </div>
-     
+      <div class="item2">
+        <img src="assets/images/main_04.jpg" alt="Block Printing" />
+        <p>TRADITIONAL TEXTILES</p>
+        <p class="location2">Bagru</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="currentContent === 'delhi'" class="all-content" id="all-content">
+    <h6>
+      PROGRAMS
+      <hr style="margin-left: 6%; width: 78%; margin-top: -0.5%" />
+    </h6>
+    <div class="container">
+      <div class="item">
+        <img src="assets/images/Natural_dyes.JPG" alt="Natural Dye" />
+        <p>NATURAL DYE</p>
+        <p class="location">Bagru, Delhi, Online</p>
+      </div>
+      <div class="item">
+        <img src="assets/images/idigo.jpg" alt="Natural Indigo" />
+        <p>NATURAL INDIGO</p>
+        <p class="location">Delhi, Online</p>
+      </div>
+    </div>
+    <h6>
+      EXCURSIONS
+      <hr style="margin-left: 6%; width: 78%; margin-top: -0.5%" />
+    </h6>
+    <div class="notfound-content">
+      <p>No EXCURSIONS found</p>
+    </div>
+  </div>
+
+  <div *ngIf="currentContent === 'jaipur'" class="all-content" id="all-content">
+    <h6>
+      PROGRAMS
+      <hr style="margin-left: 6%; width: 78%; margin-top: -0.5%" />
+    </h6>
+    <div class="container">
+      <div class="item">
+        <img src="assets/images/block-carving.jpg" alt="Block Carving" />
+        <p>BLOCK CARVING</p>
+        <p class="location">Jaipur</p>
+      </div>
+    </div>
+    <h6>
+      EXCURSIONS
+      <hr style="margin-left: 6%; width: 78%; margin-top: -0.5%" />
+    </h6>
+    <div class="notfound-content">
+      <p>No EXCURSIONS found</p>
+    </div>
+  </div>
+
+  <div *ngIf="currentContent === 'online'" class="all-content" id="all-content">
+    <h6>
+      PROGRAMS
+      <hr style="margin-left: 6%; width: 78%; margin-top: -0.5%" />
+    </h6>
+    <div class="container">
+      <div class="item">
+        <img src="assets/images/block_prints.jpg" alt="Block Printing" />
+        <p>BLOCK PRINTING</p>
+        <p class="location">Bagru, Online</p>
+      </div>
+      <div class="item">
+        <img src="assets/images/Natural_dyes.JPG" alt="Natural Dye" />
+        <p>NATURAL DYE</p>
+        <p class="location">Bagru, Delhi, Online</p>
+      </div>
+      <div class="item">
+        <img src="assets/images/idigo.jpg" alt="Natural Indigo" />
+        <p>NATURAL INDIGO</p>
+        <p class="location">Delhi, Online</p>
+      </div>
+      <div class="item">
+        <img src="assets/images/resist-printing.jpg" alt="Natural Indigo" />
+        <p>Resist-Printing</p>
+        <p class="location">Bagru, Online</p>
+      </div>
+    </div>
+    <h6>
+      EXCURSIONS
+      <hr style="margin-left: 6%; width: 78%; margin-top: -0.5%" />
+    </h6>
+    <div class="notfound-content">
+      <p>No EXCURSIONS found</p>
     </div>
   </div>
 </section>

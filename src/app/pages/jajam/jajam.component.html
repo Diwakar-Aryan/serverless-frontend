@@ -1,1 +1,29 @@
-<p>jajam works!</p>
+<div class="tabs">
+  <a
+    class="tablinks"
+    (click)="openTab('Tab1')"
+    [class.active]="currentTab === 'Tab1'"
+  >
+    People's Textile
+  </a>
+  <div class="horizontal-line"></div>
+  <a
+    class="tablinks"
+    (click)="openTab('Tab2')"
+    [class.active]="currentTab === 'Tab2'"
+  >
+    The Journey
+  </a>
+  <div class="horizontal-line"></div>
+  <a
+    class="tablinks"
+    (click)="openTab('Tab3')"
+    [class.active]="currentTab === 'Tab3'"
+  >
+    Regional Jajam
+  </a>
+</div>
+
+<app-people-texttile *ngIf="currentTab === 'Tab1'"></app-people-texttile>
+<app-journey-page *ngIf="currentTab === 'Tab2'"></app-journey-page>
+<app-regional-page *ngIf="currentTab === 'Tab3'"></app-regional-page>

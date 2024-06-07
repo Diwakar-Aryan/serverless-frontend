@@ -9,9 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './workshop-content-section.component.css'
 })
 export class WorkshopContentSectionComponent {
-  currentCategory: string = 'all';
+  currentContent: string = 'all';
 
-  showPrograms(category: string) {
-    this.currentCategory = category;
+  showContent(content: string): void {
+    this.currentContent = content;
   }
 }

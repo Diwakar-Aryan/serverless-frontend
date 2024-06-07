@@ -17,7 +17,7 @@ export class HeaderComponent {
 
   toggleNavbar() {
     this.navCollapsed = !this.navCollapsed;
-    const paddingTop = this.navCollapsed ? '5.5%' : 'calc(5% + 11.7%)';
+    const paddingTop = this.navCollapsed ? '5.5%' : 'calc(5.5% + 11.2%)';
     this.renderer.setStyle(this.document.body, 'padding-top', paddingTop);
   }
   @HostListener('window:scroll', [])

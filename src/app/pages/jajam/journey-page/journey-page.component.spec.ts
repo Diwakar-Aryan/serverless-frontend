@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TextSectionComponent } from './text-section.component';
+import { JourneyPageComponent } from './journey-page.component';
 
-describe('TextSectionComponent', () => {
-  let component: TextSectionComponent;
-  let fixture: ComponentFixture<TextSectionComponent>;
+describe('JourneyPageComponent', () => {
+  let component: JourneyPageComponent;
+  let fixture: ComponentFixture<JourneyPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TextSectionComponent]
+      imports: [JourneyPageComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(TextSectionComponent);
+    fixture = TestBed.createComponent(JourneyPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

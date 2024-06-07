@@ -1,1 +1,47 @@
-<p>all-notes-section works!</p>
+<section >
+  <div class="tabs-container">
+    <div class="tabs-left">
+      <a href="#" class="tab" id="all-tab" (click)="showContent('all')">ALL</a>
+      <a href="#" class="tab" id="placeholder-tab">PLACEHOLDER</a>
+    </div>
+    <div class="line-and-topic">
+      <hr class="horizontal-line" />
+      <span class="topic-text">TOPIC</span>
+    </div>
+  </div>
+  <div class="tabs-container2">
+    <div class="tabs-left2">
+      <a href="#" class="tab2" id="all-tab2" (click)="showContent('all')">ALL</a>
+      <a href="#" class="tab2" id="english-tab2">ENGLISH</a>
+    </div>
+    <div class="line-and-topic2">
+      <hr class="horizontal-line2" />
+      <span class="topic-text2">LANGUAGE</span>
+    </div>
+  </div>
+
+  <div class="tabs-container3">
+    <div class="tabs-left3">
+      <a  class="tab3" id="all-tab3"(click)="showContent('locked')">ALL</a>
+      <a  class="tab3" id="locked-tab3"(click)="showContent('locked')">LOCKED</a>
+      <a  class="tab3" id="unlocked-tab3"(click)="showContent('unlocked')">UNLOCKED</a>
+    </div>
+    <div class="line-and-topic3">
+      <hr class="horizontal-line3" />
+      <span class="topic-text3">ACCESS</span>
+    </div>
+  </div>
+
+ <div *ngIf="currentContent === 'locked'" class="locked-content" id="locked-content">
+    <div class="left-content">
+      <p class="note">Placeholder Note</p>
+      <p class="sub-text">placeholder</p>
+    </div>
+    <div class="right-content">
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+  <div *ngIf="currentContent === 'unlocked'" class="unlocked-content">
+    <p>No Notes found</p>
+  </div>
+</section>

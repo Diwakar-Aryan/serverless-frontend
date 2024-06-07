@@ -1,0 +1,147 @@
+/* General Styles */
+section {
+  padding: 1%;
+  background-color: #f8f8f8; /* Light background for sections */
+  padding:5%;
+}
+.tabs-container,
+.tabs-container2,
+.tabs-container3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1%;
+  background-color: #f8f8f8; /* Light background for tabs */
+}
+
+.tabs-left,.tabs-left2,
+.tabs-left3 {
+  display: flex;
+  align-items: center;
+}
+
+.tab,.tab2,
+.tab3 {
+  margin: 0 15px;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: #333;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.tab:hover,.tab2:hover,
+.tab3:hover {
+  background-color: #6d6b6d;
+  color: #fff;
+}
+
+.tab.active,.tab2.active,
+.tab3.active {
+  background-color: #551404;
+  color: #fff;
+}
+
+.line-and-topic,.line-and-topic2,
+.line-and-topic3 {
+  display: flex;
+  align-items: center;
+  width: 100%; 
+}
+
+.horizontal-line,.horizontal-line2,
+.horizontal-line3 {
+  flex-grow: 1;
+  background-color: #333;
+  border: none;
+  height: 5px;
+  margin-right: 10px; 
+}
+
+.topic-text,.topic-text2,
+.topic-text3 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  letter-spacing: 0.3em;
+  font-weight: bold;
+}
+
+/* Adjust margins to ensure proper alignment */
+/* .tabs-container2 .line-and-topic2 {
+  margin-left: 28%; 
+}
+
+.tabs-container3 .line-and-topic3 {
+  margin-left: 40%; 
+} */
+
+/* Locked Content Styles */
+.locked-content {
+  display: flex; 
+  /* margin-top: 6px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  padding-left: 7%;
+
+ 
+  
+}
+
+.left-content {
+  flex: 1;
+}
+
+.right-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.note {
+ font-family: Nunito, sans-serif;
+  color: rgb(61, 55, 55);
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  font-feature-settings: "pnum" on, "onum" on;
+  opacity: 50%;
+  line-height: 0cap;
+}
+
+.sub-text {
+  font-size: 0.9rem;
+  opacity: 50%;
+  padding-left: 2%;
+}
+
+.add-to-cart {
+  padding: 5px 40px;
+  background-color: #161416;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.unlocked-content {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+ 
+}
+.unlocked-content p{
+    font-family: Nunito, sans-serif;
+  color: rgb(61, 55, 55);
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  font-feature-settings: "pnum" on, "onum" on;
+  opacity: 50%;
+  line-height: 0cap;
+  padding-left: 4%;
+}

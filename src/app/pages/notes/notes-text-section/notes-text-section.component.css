@@ -1,0 +1,59 @@
+/* workshop-text.component.css */
+.red-section {
+  background-color: rgba(134, 13, 13, 0.9);
+  color: white;
+  width: 100%;
+  height: auto;
+}
+.text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+.text1 p {
+  font-family: Nunito, sans-serif;
+  margin-bottom: 5%;
+  color: rgb(255, 255, 255);
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  letter-spacing: 0.02em;
+  font-feature-settings: "pnum" on, "onum" on;
+  opacity: 50%;
+}
+.text2 p {
+  margin-bottom: 5%;
+  color: rgb(255, 255, 255);
+
+  font-weight: 500;
+  font-style: normal;
+
+  font-size: 1.2rem;
+
+  font-feature-settings: "pnum" on, "onum" on;
+  /* opacity: 70%; */
+}
+
+.left-text,
+.right-text {
+  flex: 1;
+  margin: 2%;
+  padding-left: 10%;
+}
+.right-text1 p {
+  padding-right: 35%;
+
+  margin-bottom: 45%;
+  color: rgb(255, 255, 255);
+
+  font-style: normal;
+
+  font-size: 1.2rem;
+
+  font-feature-settings: "pnum" on, "onum" on;
+  opacity: 70%;
+}

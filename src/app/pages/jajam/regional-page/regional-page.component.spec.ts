@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JajamMapComponent } from './jajam-map.component';
+import { RegionalPageComponent } from './regional-page.component';
 
-describe('JajamMapComponent', () => {
-  let component: JajamMapComponent;
-  let fixture: ComponentFixture<JajamMapComponent>;
+describe('RegionalPageComponent', () => {
+  let component: RegionalPageComponent;
+  let fixture: ComponentFixture<RegionalPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [JajamMapComponent]
+      imports: [RegionalPageComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(JajamMapComponent);
+    fixture = TestBed.createComponent(RegionalPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
