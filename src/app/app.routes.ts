@@ -4,6 +4,7 @@ import { WorkshopComponent } from './pages/workshop/workshop.component';
 import { CollectionsComponent } from './pages/collections/collections.component';
 import { JajamComponent } from './pages/jajam/jajam.component';
 import { NotesComponent } from './pages/notes/notes.component';
+import { AccountComponent } from './pages/account/account.component';
 
 export const routes: Routes = [
     {
@@ -12,8 +13,11 @@ export const routes: Routes = [
     {
         path:"home",component:HomeComponent
     },
-     {
-         path: "workshops", component: WorkshopComponent, 
+    {
+      path:"account",component: AccountComponent
+    },
+    {
+         path: "workshops", component: WorkshopComponent,
     },
     {
         path: "collections", component: CollectionsComponent,
