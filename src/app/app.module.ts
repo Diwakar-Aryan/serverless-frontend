@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BreadcrumbComponent } from './theme/shared/components/breadcrumb/breadcrumb.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
+import { FooterComponent } from './theme/layout/footer/footer.component';
 
 
 
@@ -13,7 +14,8 @@ import { routes } from './app.routes';
   declarations: [
     AppComponent,
     BreadcrumbComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
