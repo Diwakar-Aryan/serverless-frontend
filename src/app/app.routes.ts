@@ -8,6 +8,7 @@ import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { ReturnPolicyComponent } from './pages/return-policy/return-policy.component';
 import { AccountComponent } from './pages/account/account.component';
+import { TermsPageComponent } from './pages/terms-page/terms-page.component';
 
 export const routes: Routes = [
     {
@@ -39,6 +40,9 @@ export const routes: Routes = [
     },
     {
         path: "returns", component: ReturnPolicyComponent,
+    },
+    {
+        path: "terms", component: TermsPageComponent,
     }
 
 ];

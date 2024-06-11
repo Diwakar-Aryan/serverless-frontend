@@ -1,15 +1,109 @@
-.flex-container {
-  display: flex;
-  flex-direction: column;
+
+.image-container {
+  position: relative;
+  background-image: url("/assets/images/flyer-background.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
   width: 100%;
-  overflow: hidden;
-  justify-content: flex-start;
-  align-items: center;
-}
-.flex-item {
-  width: 100%;
-  height: 200px;
+  height: 100vh;
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
+  font-family: Arial, sans-serif;
+  /* padding: 3%; */
+}
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.line-and-topic {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 15rem;
+}
+.topic-text {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 0.3em;
+  font-weight: normal;
+  font-size: 4rem;
   
+}
+.horizontal-line {
+  flex-grow: 1;
+  background-color: #f3ebeb;
+  border: none;
+  height: 5px;
+ 
+}
+.user{
+  width: 100%;
+  height: auto;
+  background-color: #3b3a3a;
+}
+.row-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem;
+}
+
+/* .email h2 {
+    margin: 0;
+    padding-left: 6rem;
+    color: #fff;
+    opacity: 60%;
+} */
+ .email {
+    display: flex;
+    align-items: center;
+}
+
+.initials-box {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1em;
+}
+
+.button {
+    margin-left: auto;
+    padding-right: 4rem;
+
+
+}
+
+.btn {
+    padding: 1rem 7rem;
+    cursor: pointer;
+   color: #fff;
+ 
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 2rem;
+  font-weight: bold;
+  border: 0.2rem solid #e4eaf3;
+  /* opacity: 50%; */
+  transition: background-color 0.3s ease;
 }

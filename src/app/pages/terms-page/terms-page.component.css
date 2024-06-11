@@ -1,16 +1,16 @@
-.returns{
+.terms{
 display: block;
 width: 100%;
 height: auto;
 padding: 2%;
  background-color: rgba(250, 238, 238, 0.3);
 }
-.return-policy{
+.term-page{
     padding-left: 8rem;
     padding-right: 35rem;
 }
-.return-policy h1{
-   font-family: Nunito Sans, sans-serif;
+.term-page h1{
+    font-family: Nunito Sans, sans-serif;
     text-transform: uppercase;
     font-style: normal;
     line-height: 100%;
@@ -22,11 +22,8 @@ padding: 2%;
     opacity: 75%;
     overflow-wrap: break-word;
 }
-.return-policy p{
-    font-weight: 700;
-}
-.return-policy ul li{
-   font-family: Nunito, sans-serif;
+.term-page p{
+    font-family: Nunito, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1em;
@@ -35,3 +32,4 @@ padding: 2%;
     font-feature-settings: "pnum" on, "onum" on;
     overflow-wrap: break-word;
 }
+

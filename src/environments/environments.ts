@@ -1,9 +1,10 @@
 export const environment = {
   production : false,
   auth : {
-    domain: 'dev-pluymneemvu6poxu.us.auth0.com',
-    clientId: 'yv9MGoCNXrgtQwEFyWuNECWcdOLMv2Hp',
-    clientSecret: 'adv_U4wfWOiqMgZFKuZ6O7dgsAxhdmvRUyZQeROp1WtFC60orKTqFxHy9wuYzeN8',
+    domain: 'dev-afmi1nlilps06dir.us.auth0.com',
+    clientId: 'HpHGuu4dXuyfKipTX95jlN66kKoklpUf',
+    clientSecret: 'jz2UZqnxrlGmtm9fiw9HCQ9ET8gbIJcRt9DfHStHPIWX66wLpsPpChaLroSGboMU',
+    // redirectUri: typeof window !== 'undefined' ? window.location.origin : '',
     
   }
 }

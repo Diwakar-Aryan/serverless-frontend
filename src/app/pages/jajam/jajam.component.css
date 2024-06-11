@@ -9,6 +9,9 @@
   padding-right: 10%;
 }
 
+.tabs.white-background {
+  background-color: white;
+}
 .tablinks {
   border: none;
   outline: none;

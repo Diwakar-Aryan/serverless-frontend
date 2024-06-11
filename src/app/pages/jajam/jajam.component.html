@@ -1,4 +1,4 @@
-<div class="tabs">
+<div [ngClass]="{'tabs': true, 'white-background': currentTab === 'Tab3'}">
   <a
     class="tablinks"
     (click)="openTab('Tab1')"

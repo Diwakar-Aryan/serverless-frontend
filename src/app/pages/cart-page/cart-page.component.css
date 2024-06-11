@@ -2,10 +2,11 @@
   background-color: #fff;
   width: 100%;
   height: auto;
+  padding: 3%;
 }
 .container {
   display: flex;
-  padding-top: 10%;
+ 
   align-items: center;
 }
 .cart-row {
