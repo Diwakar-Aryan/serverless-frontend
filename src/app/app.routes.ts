@@ -7,6 +7,7 @@ import { NotesComponent } from './pages/notes/notes.component';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { ReturnPolicyComponent } from './pages/return-policy/return-policy.component';
+import { AccountComponent } from './pages/account/account.component';
 
 export const routes: Routes = [
     {
@@ -15,8 +16,11 @@ export const routes: Routes = [
     {
         path:"home",component:HomeComponent
     },
-     {
-         path: "workshops", component: WorkshopComponent, 
+    {
+      path:"account",component: AccountComponent
+    },
+    {
+         path: "workshops", component: WorkshopComponent,
     },
     {
         path: "collections", component: CollectionsComponent,

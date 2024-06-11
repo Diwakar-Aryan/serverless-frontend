@@ -1,0 +1,15 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  justify-content: flex-start;
+  align-items: center;
+}
+.flex-item {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  
+}
