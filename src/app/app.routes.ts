@@ -9,6 +9,12 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import { ReturnPolicyComponent } from './pages/return-policy/return-policy.component';
 import { AccountComponent } from './pages/account/account.component';
 import { TermsPageComponent } from './pages/terms-page/terms-page.component';
+import { DhundharBoxComponent } from './pages/jajam/regional-page/dhundhar-box/dhundhar-box.component';
+import { HadotiBoxComponent } from './pages/jajam/regional-page/hadoti-box/hadoti-box.component';
+import { AjmerBoxComponent } from './pages/jajam/regional-page/ajmer-box/ajmer-box.component';
+import { MarwarBoxComponent } from './pages/jajam/regional-page/marwar-box/marwar-box.component';
+import { MewarBoxComponent } from './pages/jajam/regional-page/mewar-box/mewar-box.component';
+import { SekhawatiBoxComponent } from './pages/jajam/regional-page/sekhawati-box/sekhawati-box.component';
 
 export const routes: Routes = [
     {
@@ -27,7 +33,7 @@ export const routes: Routes = [
         path: "collections", component: CollectionsComponent,
     },
     {
-        path: "jajam", component: JajamComponent,
+        path: "jajam", component: JajamComponent ,
     },
     {
         path: "notes", component: NotesComponent,
@@ -43,6 +49,24 @@ export const routes: Routes = [
     },
     {
         path: "terms", component: TermsPageComponent,
+    },
+    {
+        path: "jajam/region-ajmer", component: AjmerBoxComponent,
+    },
+    {
+        path: "jajam/region-dhundhar", component: DhundharBoxComponent,
+    },
+    {
+        path: "jajam/region-hadoti", component: HadotiBoxComponent,
+    },
+    {
+        path: "jajam/region-marwar", component: MarwarBoxComponent,
+    },
+    {
+        path: "jajam/region-mewar", component: MewarBoxComponent,
+    },
+    {
+        path: "jajam/region-sekhawati", component: SekhawatiBoxComponent,
     }
 
 ];

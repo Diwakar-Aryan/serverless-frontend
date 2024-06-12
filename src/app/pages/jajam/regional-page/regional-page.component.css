@@ -48,6 +48,9 @@
   opacity: 100%;
   overflow-wrap: break-word;
 }
+.tabcontent{
+  padding: 3%;
+}
 .T3container2 h2 {
   font-family: Nunito Sans, sans-serif;
   text-transform: uppercase;
@@ -78,3 +81,67 @@
   max-width: 60ch;
   text-align: center;
 }
+.T3container4 {
+  align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    width: 80%;
+}
+
+.T3image-container4 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.T3image-container4 h2 {
+  font-family: Nunito Sans, sans-serif;
+  text-transform: uppercase;
+    position: absolute;
+    /* bottom: 45%;
+    left: 35%; */
+    top: 40%;
+    margin: 0;
+    line-height: 100%;
+    font-size: 1.75rem;
+    font-weight: 400;
+    letter-spacing: .02em;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+.T3image-container4 p{
+  font-family: Nunito, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1em;
+    position: absolute;
+    top: 50%;
+    line-height: 1.75rem;
+    letter-spacing: .02em;
+    font-feature-settings: "pnum" on, "onum" on;
+    overflow-wrap: break-word;
+    max-width: 60ch;
+}
+
+.T3image-container4:hover {
+    transform: scale(1.05);
+    opacity: 70%;
+    /* filter: blur(3px); */
+}
+
+
+

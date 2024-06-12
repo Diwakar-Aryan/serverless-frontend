@@ -1,0 +1,62 @@
+.comming-soon {
+  background-color: #fff;
+  /* padding: 3%; */
+  width: 100%;
+  height: auto;
+}
+.comming-soon h1 {
+  padding: 3.2%;
+  text-align: center;
+  text-align: center;
+  font-family: Nunito Sans, sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  line-height: 100%;
+  white-space: unset;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0;
+  opacity: 72%;
+}
+.sekhawati-container {
+  background-color: rgba(80, 78, 78, 0.2);
+  width: 100%;
+}
+
+.sekhawati-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem;
+}
+
+.row-text {
+  display: flex;
+  align-items: center;
+}
+.text-column{
+    padding-right: 15rem;
+    padding-left: 10rem;
+}
+
+
+.join-button {
+  margin-left: auto;
+  padding-right: 4rem;
+   
+}
+
+.btn {
+  padding: 0.5rem 7rem;
+  cursor: pointer;
+  color: #fff;
+  line-height: 100%;
+ background-color: rgba(80, 78, 78, 0.5);
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 2rem;
+  font-weight: bold;
+  border: 0.2rem solid #e4eaf3;
+  /* opacity: 50%; */
+  transition: background-color 0.3s ease;
+}
