@@ -1,7 +1,8 @@
 import { Component, HostListener, Inject, Renderer2 } from '@angular/core';
-import { DOCUMENT, CommonModule } from '@angular/common';
+import { DOCUMENT, CommonModule ,Location} from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { BreadcrumbComponent } from '../../shared/components/breadcrumb/breadcrumb.component';
+import { AuthServiceService } from '../../shared/services/auth-service.service';
 
 @Component({
   selector: 'app-header',
@@ -12,9 +13,22 @@ import { BreadcrumbComponent } from '../../shared/components/breadcrumb/breadcru
 })
 export class HeaderComponent {
   navCollapsed: boolean = true;
+  isAuthenticated: boolean = false;
+  
 
-  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {}
-
+  constructor( private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {}
+  // ngOnInit(): void {
+  //   this.auth.auth.isAuthenticated$.subscribe(isAuthenticated => {
+  //     this.isAuthenticated = isAuthenticated;
+  //     if (isAuthenticated) {
+  //       this.auth.auth.user$.subscribe(user => {
+  //         if (user) {
+  //           // this.userImage = user.picture || null;
+  //         }
+  //       });
+  //     }
+  //   });
+  // }
   toggleNavbar() {
     this.navCollapsed = !this.navCollapsed;
     const paddingTop = this.navCollapsed ? '5.5%' : 'calc(5.5% + 11.2%)';

@@ -67,11 +67,13 @@
  .email {
     display: flex;
     align-items: center;
+    color: #fff;
+    
 }
 
-.initials-box {
-    width: 2rem;
-    height: 2rem;
+/* .initials-box img{
+    width: 1rem;
+    height: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,11 +82,16 @@
     font-weight: bold;
     border-radius: 0.5rem;
     margin-right: 0.5rem;
-}
+} */
+ .email img{
+  height: 2.5rem;
+  width: 2.5rem;
+ }
 
 h2 {
     margin: 0;
     font-size: 1em;
+    font-size: 2rem;
 }
 
 .button {

@@ -1,4 +1,4 @@
-<div [ngClass]="{'tabs': true, 'white-background': currentTab === 'Tab3'}">
+<div [ngClass]="{ tabs: true, 'white-background': currentTab === 'Tab3' }">
   <a
     class="tablinks"
     (click)="openTab('Tab1')"
@@ -26,4 +26,4 @@
 
 <app-people-texttile *ngIf="currentTab === 'Tab1'"></app-people-texttile>
 <app-journey-page *ngIf="currentTab === 'Tab2'"></app-journey-page>
-<app-regional-page *ngIf="currentTab === 'Tab3'"></app-regional-page>
+<app-regional-page *ngIf="currentTab === 'Tab3'"> </app-regional-page>
