@@ -2,6 +2,7 @@ import { Component, HostListener, Inject, Renderer2 } from '@angular/core';
 import { DOCUMENT, CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { BreadcrumbComponent } from '../../shared/components/breadcrumb/breadcrumb.component';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,7 @@ import { BreadcrumbComponent } from '../../shared/components/breadcrumb/breadcru
 export class HeaderComponent {
   navCollapsed: boolean = true;
 
-  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {}
+  constructor( private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {}
 
   toggleNavbar() {
     this.navCollapsed = !this.navCollapsed;

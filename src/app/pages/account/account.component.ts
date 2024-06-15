@@ -8,31 +8,52 @@ import { CommonModule, DOCUMENT } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './account.component.html',
-  styleUrl: './account.component.css'
+  styleUrl: './account.component.css',
 })
-export class AccountComponent{
+export class AccountComponent {
   email: string | null = null;
   initials: string | null = null;
+  userImage: string | null | undefined;
+  tokenId: string | null = null;
 
-  constructor(public auth: AuthService, private http: HttpClient) { }
+  constructor(
+    public auth: AuthService,
+    private http: HttpClient,
+    @Inject(DOCUMENT) public document: Document
+  ) {}
 
   ngOnInit(): void {
-    this.auth.user$.subscribe(user => {
+    this.auth.user$.subscribe((user) => {
       if (user && user.email) {
         this.email = user.email;
         this.initials = this.email.substring(0, 2).toUpperCase();
+        this.userImage = user.picture || null;
+        this.saveToLocalStorage('userImage', this.userImage);
+      }
+    });
+    this.auth.idTokenClaims$.subscribe((claims) => {
+      if (claims) {
+        this.tokenId = claims.__raw;
+        this.saveToLocalStorage('tokenId', this.tokenId);
       }
     });
   }
+  
+ 
+
   async loginAt() {
-    // const url = "https://dev-pluymneemvu6poxu.us.auth0.com/authorize?response_type=code&client_id=yv9MGoCNXrgtQwEFyWuNECWcdOLMv2Hp&redirect_uri=http://localhost:4200/dashboard&scope=openid%20name%20picture&state={state}"
-    // this.document.location.href = url
     this.auth.loginWithRedirect();
   }
-
-  callApiHandler(){
-    this.auth.loginWithRedirect()
-    this.http.get('https://www.example.com').subscribe((res)=>{},)
+  private saveToLocalStorage(key: string, value: string | null): void {
+    if (value) {
+      localStorage.setItem(key, value);
+    }
   }
+
+  logout(): void {
   
+    localStorage.removeItem('userImage');
+    localStorage.removeItem('tokenId');
+    this.auth.logout({ logoutParams: { returnTo: this.document.location.origin } });
+  }
 }

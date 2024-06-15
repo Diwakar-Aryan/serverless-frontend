@@ -67,6 +67,8 @@
  .email {
     display: flex;
     align-items: center;
+    color: #fff;
+    
 }
 
 .initials-box {
@@ -85,6 +87,7 @@
 h2 {
     margin: 0;
     font-size: 1em;
+    font-size: 2rem;
 }
 
 .button {

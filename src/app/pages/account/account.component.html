@@ -13,7 +13,16 @@
   <h2>{{ email }}</h2>
 </div>
   <div class="button">
-<button class="btn"> <i class="fas fa-sign-out-alt"></i> Logout</button>
+<!-- <button class="btn"> <i class="fas fa-sign-out-alt"></i> Logout</button> -->
+<ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+  <button class="btn" (click)="logout()">
+    Log out
+  </button>
+</ng-container>
+
+<ng-template #loggedOut>
+  <button class="btn" (click)="loginAt()">Log in</button>
+</ng-template>
   </div>
  </div>
 </section>

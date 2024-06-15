@@ -7,22 +7,19 @@ import { BreadcrumbComponent } from './theme/shared/components/breadcrumb/breadc
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { FooterComponent } from './theme/layout/footer/footer.component';
-
-
+import { AuthModule, AuthService } from '@auth0/auth0-angular';
+import { environment } from '../environments/environments';
 
 @NgModule({
   declarations: [
     AppComponent,
     BreadcrumbComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AuthService
   ],
-  imports: [
-    CommonModule,
-    BrowserModule,
-    
-  ],
-   providers: [],
-  bootstrap: [AppComponent]
+  imports: [CommonModule, BrowserModule, RouterModule.forRoot([]),AuthModule.forRoot(environment.auth)],
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

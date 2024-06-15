@@ -1,10 +1,10 @@
 export const environment = {
   production : false,
   auth : {
-    domain: 'dev-afmi1nlilps06dir.us.auth0.com',
-    clientId: 'HpHGuu4dXuyfKipTX95jlN66kKoklpUf',
-    clientSecret: 'jz2UZqnxrlGmtm9fiw9HCQ9ET8gbIJcRt9DfHStHPIWX66wLpsPpChaLroSGboMU',
-    // redirectUri: typeof window !== 'undefined' ? window.location.origin : '',
+    domain: 'dev-smrqxfok3488dsaa.us.auth0.com',
+    clientId: 'wMrMuJUrIvOg5sI5BmSmEQGqyUb6j78q',
+    // clientSecret: '9tzT4WcXF2zVMzMkz7EtS1MpJVjTMy2HUTNn6mzHaIliFd687Ql_GI_dWGIn18HA',
+    redirectUri: 'http://localhost:4200/account',
     
   }
 }
