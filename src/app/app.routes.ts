@@ -15,6 +15,8 @@ import { AjmerBoxComponent } from './pages/jajam/regional-page/ajmer-box/ajmer-b
 import { MarwarBoxComponent } from './pages/jajam/regional-page/marwar-box/marwar-box.component';
 import { MewarBoxComponent } from './pages/jajam/regional-page/mewar-box/mewar-box.component';
 import { SekhawatiBoxComponent } from './pages/jajam/regional-page/sekhawati-box/sekhawati-box.component';
+import { authGuard } from './theme/shared/services/auth-guard/auth.guard';
+import { ContactUsPageComponent } from './pages/contact-us-page/contact-us-page.component';
 
 export const routes: Routes = [
     {
@@ -24,7 +26,7 @@ export const routes: Routes = [
         path:"home",component:HomeComponent
     },
     {
-      path:"account",component: AccountComponent
+      path:"account",component: AccountComponent,canActivate: [authGuard] 
     },
     {
          path: "workshops", component: WorkshopComponent,
@@ -49,6 +51,9 @@ export const routes: Routes = [
     },
     {
         path: "terms", component: TermsPageComponent,
+    },
+    {
+        path: "contactus", component: ContactUsPageComponent,
     },
     {
         path: "jajam/region-ajmer", component: AjmerBoxComponent,

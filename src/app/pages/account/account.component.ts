@@ -3,6 +3,7 @@ import { AuthService } from '@auth0/auth0-angular';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { CommonModule, DOCUMENT } from '@angular/common';
+import { AuthServiceService } from '../../theme/shared/services/auth-service.service';
 @Component({
   selector: 'app-account',
   standalone: true,
@@ -12,29 +13,29 @@ import { CommonModule, DOCUMENT } from '@angular/common';
 })
 export class AccountComponent {
   email: string | null = null;
-  initials: string | null = null;
+  userName: string | null | undefined;
   userImage: string | null | undefined;
   tokenId: string | null = null;
 
   constructor(
-    public auth: AuthService,
+    public auth: AuthServiceService,
     private http: HttpClient,
     @Inject(DOCUMENT) public document: Document
   ) {}
 
   ngOnInit(): void {
-    this.auth.user$.subscribe((user) => {
+    this.auth.auth. user$.subscribe((user) => {
       if (user && user.email) {
         this.email = user.email;
-        this.initials = this.email.substring(0, 2).toUpperCase();
+        this.userName = user.name|| null;
         this.userImage = user.picture || null;
-        this.saveToLocalStorage('userImage', this.userImage);
+        this.auth.saveToLocalStorage('userImage', this.userImage);
       }
     });
-    this.auth.idTokenClaims$.subscribe((claims) => {
+    this.auth.auth.idTokenClaims$.subscribe((claims) => {
       if (claims) {
         this.tokenId = claims.__raw;
-        this.saveToLocalStorage('tokenId', this.tokenId);
+        this.auth.saveToLocalStorage('tokenId', this.tokenId);
       }
     });
   }
@@ -42,18 +43,14 @@ export class AccountComponent {
  
 
   async loginAt() {
-    this.auth.loginWithRedirect();
+    this.auth.auth.loginWithRedirect();
   }
-  private saveToLocalStorage(key: string, value: string | null): void {
-    if (value) {
-      localStorage.setItem(key, value);
-    }
-  }
+  
 
   logout(): void {
   
     localStorage.removeItem('userImage');
     localStorage.removeItem('tokenId');
-    this.auth.logout({ logoutParams: { returnTo: this.document.location.origin } });
+    this.auth.auth.logout({ logoutParams: { returnTo: this.document.location.origin } });
   }
 }

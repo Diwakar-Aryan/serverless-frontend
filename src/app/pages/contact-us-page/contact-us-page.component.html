@@ -1,1 +1,180 @@
-<p>contact-us-page works!</p>
+<section>
+    <div class="container1">
+        <img src="assets/images/contactus.jpeg" alt="Placeholder Image">
+        <h1>contacts</h1>
+        <div class="line"></div>
+    </div>
+
+    <div class="container2">
+        <p class="para1">Talk to us about our offerings that interest you, or anything else that comes to your mind.</p>
+        <p class="para2">Find our contact form below—</p>
+    </div>
+  
+  
+
+  <div class="form-section">
+    <form>
+        <div class="full-width">
+            <label for="name">Name*</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="full-width">
+            <label for="email">Email*</label>
+            <input style="height: 50%;" type="email" id="email" name="email">
+        </div>
+        <div style="margin-top: 4%;">
+            <label for="country">Country</label>
+            <input style="height: 75%;" type="text" id="country" name="country">
+        </div>
+    </form>
+    <div class="info-text">
+        We will only use your personal details to reach back to you, and they will not be shared with any third party.
+      </div>
+</div>
+<!-- <div class="line2"></div> -->
+      <!-- <hr> -->
+      <div class="form-section2">
+        <label style="font-family: Nunito, sans-serif;
+font-style: normal;" for="topic">Topic</label>
+        <div class="topic-cont">
+            
+            <div class="topic-options">
+                <div class="tab" data-target="workshops">Workshops</div>
+                <div class="tab" data-target="excursions">Excursions</div>
+                <div class="tab" data-target="collections">Collections</div>
+                <div class="tab active" data-target="message">Just a Message</div>
+            </div>
+            <div class="info-text2">
+              <p>Please select what offering interests you, or if you’re just sending a message.</p>
+              <button class="submit-btn" type="submit">Send Message</button>
+          </div>
+        </div>
+    
+        <div style="font-family: Nunito, sans-serif;" class="tab-content">
+            <div style="font-family: Nunito, sans-serif;" class="content" id="workshops">
+                <form>
+                    <!-- Add specific content for Workshops here -->
+                    <div class="excursions-section">
+                      <form>
+                          <div class="excursions-group">
+                              <label for="preferred-date">Preferred Date*</label>
+                              <input type="date" id="preferred-date" name="preferred-date">
+                          </div>
+                  
+                          <div class="excursions-group">
+                              <label for="location">Location*</label>
+                              <div class="location-options">
+                                  <div class="location-tab active">Any</div>
+                                  <div class="location-tab">Bagru</div>
+                                  <div class="location-tab">Delhi</div>
+                                  <div class="location-tab">Jaipur</div>
+                                  <div class="location-tab">Online</div>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+                    <label style="font-family: Nunito, sans-serif;" for="workshops-message">Message</label>
+                    <textarea id="workshops-message" name="message" rows="4"></textarea>
+                    
+                </form>
+            </div>
+            <div style="font-family: Nunito, sans-serif;" class="content" id="excursions">
+                <form>
+                    <!-- Add specific content for Excursions here -->
+                    <div class="excursions-section">
+                      <form>
+                          <div class="excursions-group">
+                              <label for="preferred-date">Preferred Date*</label>
+                              <input type="date" id="preferred-date" name="preferred-date">
+                          </div>
+                  
+                          <div class="excursions-group">
+                              <label for="location">Location*</label>
+                              <div class="location-options">
+                                  <div class="location-tab active">Any</div>
+                                  <div class="location-tab">Bagru</div>
+                                  <div class="location-tab">Delhi</div>
+                                  <div class="location-tab">Jaipur</div>
+                                  <div class="location-tab">Online</div>
+                              </div>
+                          </div>
+                  
+                          <div class="excursions-group">
+                              <label for="excursions">Excursions*</label>
+                              <div class="excursions-options">
+                                  <div class="excursion-item" onclick="toggleSelect(this)" data-selected="false">
+                                      <img src="assets/images/2022_04.jpg" alt="Bagru Ka Tour">
+                                      <div class="excursion-select">Select</div>
+                                      <div class="excursion-info">
+                                          <h3>Bagru Ka Tour</h3>
+                                          <p>Bagru · 2hr</p>
+                                      </div>
+                                  </div>
+                                  <div class="excursion-item" onclick="toggleSelect(this)" data-selected="false">
+                                      <img src="assets/images/2022_05.jpg" alt="Traditional Textiles">
+                                      <div class="excursion-select">Select</div>
+                                      <div class="excursion-info">
+                                          <h3>Traditional Textiles</h3>
+                                          <p>Bagru · 2hr</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+                  
+                  <script>
+                  function toggleSelect(element) {
+                      const isSelected = element.getAttribute('data-selected') === 'true';
+                      element.setAttribute('data-selected', !isSelected);
+                  }
+                  </script>
+                  
+                    <label style="font-family: Nunito, sans-serif;" for="excursions-message">Message</label>
+                    <textarea id="excursions-message" name="message" rows="4"></textarea>
+                    
+                </form>
+            </div>
+            <div class="content" id="collections">
+                <form>
+                    <!-- Add specific content for Collections here -->
+                    <div class="select-section">
+                      <form>
+                          <div class="select-part">
+                              <label style="font-family: Nunito, sans-serif;" for="collection">Collection*</label>
+                              <select class="select-item" id="collection" name="collection">
+                                  <option value="" disabled selected>Select</option>
+                                  <option value="Bichhauni">Bichhauni</option>
+                                  <option value="Chaupad">Chaupad</option>
+                                  <option value="Jajam Barfi">Jajam Barfi</option>
+                                  <option value="Jajam Char Chaukor">Jajam Char Chaukor</option>
+                                  <option value="Jajam Spread">Jajam Spread</option>
+                                  <option value="Table Cloth Large">Table Cloth Large</option>
+                              </select>
+                          </div>
+                      </form>
+                  </div>
+                  <div style="margin-bottom: 5%; margin-top: 5%;">
+                    <label style="font-family: Nunito, sans-serif;" for="collections-message">Message</label>
+                    <textarea id="collections-message" name="message" rows="4"></textarea>
+                  </div>
+                </form>
+            </div>
+            <div class="content active" id="message">
+                <form>
+                    <!-- Add specific content for Just a Message here -->
+                    <label style="font-family: Nunito, sans-serif;
+font-style: normal;" for="message-content">Message</label>
+                    <textarea class="font-family: Nunito, sans-serif;" id="message-content" name="message" rows="4"></textarea>
+                    
+                </form>
+            </div>
+        </div>
+    
+        
+      </div>
+
+
+
+
+</section>

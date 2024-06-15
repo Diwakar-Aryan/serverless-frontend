@@ -4,9 +4,20 @@
     <div class="navbar-left"><a href="/home">WabiSabi Project</a></div>
     <div class="navbar-right">
       <a href="/cart" class="navbar-item"><i class="fas fa-shopping-cart"></i></a>
-      <a href="/account" class="navbar-item"
+      <!-- <a href="/account" class="navbar-item"
         ><i class="fa-solid fa-arrow-right-to-bracket"></i
-      ></a>
+      ></a> -->
+      <ng-container *ngIf="isAuthenticated; else loggedOut">
+        <a href="/account" class="navbar-item">
+          <!-- <img [src]="userImage" alt="User Image" class="user-icon" *ngIf="userImage"> -->
+          <i class="fa-solid fa-user" ></i>
+        </a>
+      </ng-container>
+      <ng-template #loggedOut>
+        <a href="/account" class="navbar-item">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+        </a>
+      </ng-template>
       <!-- <a href="#" class="navbar-item"><i class="fas fa-ellipsis-v"></i></a> -->
       <a class="navbar-item">|</a>
       <button class="navbar-toggle" (click)="toggleNavbar()">

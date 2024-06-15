@@ -9,12 +9,14 @@
 <section class="user">
  <div class="row-section">
  <div *ngIf="email" class="email">
-  <div class="initials-box">{{ initials }}</div>
+  <!-- <div class="initials-box">{{ userImage }}</div> -->
+  <img [src]="userImage" alt="User Image">
   <h2>{{ email }}</h2>
+  <!-- <p>{{userName}}</p> -->
 </div>
   <div class="button">
 <!-- <button class="btn"> <i class="fas fa-sign-out-alt"></i> Logout</button> -->
-<ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+<ng-container *ngIf="auth.auth.isAuthenticated$ | async; else loggedOut">
   <button class="btn" (click)="logout()">
     Log out
   </button>

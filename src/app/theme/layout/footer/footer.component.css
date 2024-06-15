@@ -9,6 +9,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
+    z-index: 1000;
   }
   
   .footer-left {
@@ -120,6 +121,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
+    z-index: 1000;
   }
   .footer2 ul li{
     float: left;
