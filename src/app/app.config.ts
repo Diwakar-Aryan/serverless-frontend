@@ -14,11 +14,10 @@ export const appConfig: ApplicationConfig = {
     domain: environment.auth.domain,
     clientId: environment.auth.clientId,
     authorizationParams: {
-      redirect_uri: 'http://localhost:4200/account'
+      redirect_uri: 'http://localhost:4200/account',
     }
   }),
   provideHttpClient(),
 
-  AuthService,
-HeaderComponent]
+ ]
 };
