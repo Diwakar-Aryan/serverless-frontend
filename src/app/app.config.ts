@@ -1,5 +1,5 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withComponentInputBinding } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
@@ -9,7 +9,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { clientInterceptor } from './client.interceptor';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideClientHydration(), provideAuth0({
+  providers: [provideRouter(routes,  withComponentInputBinding()), provideClientHydration(), provideAuth0({
     domain: environment.auth.domain,
     clientId: environment.auth.clientId,
     authorizationParams: {

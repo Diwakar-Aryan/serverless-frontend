@@ -9,6 +9,7 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import { ReturnPolicyComponent } from './pages/return-policy/return-policy.component';
 import { AccountComponent } from './pages/account/account.component';
 import { TermsPageComponent } from './pages/terms-page/terms-page.component';
+import { RedirectComponent } from './redirect/redirect.component';
 
 export const routes: Routes = [
     {
@@ -18,7 +19,7 @@ export const routes: Routes = [
         path:"home",component:HomeComponent
     },
     {
-      path:"account",component: AccountComponent
+        path:"account",component: AccountComponent
     },
     {
          path: "workshops", component: WorkshopComponent,
@@ -43,6 +44,9 @@ export const routes: Routes = [
     },
     {
         path: "terms", component: TermsPageComponent,
+    },
+    {
+      path:"payment/redirect/:sessionId", component: RedirectComponent
     }
 
 ];

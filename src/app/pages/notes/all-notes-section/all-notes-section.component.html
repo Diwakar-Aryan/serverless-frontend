@@ -1,4 +1,4 @@
-<section >
+<section>
   <div class="tabs-container">
     <div class="tabs-left">
       <a href="#" class="tab" id="all-tab" (click)="showContent('all')">ALL</a>
@@ -11,7 +11,9 @@
   </div>
   <div class="tabs-container2">
     <div class="tabs-left2">
-      <a href="#" class="tab2" id="all-tab2" (click)="showContent('all')">ALL</a>
+      <a href="#" class="tab2" id="all-tab2" (click)="showContent('all')"
+        >ALL</a
+      >
       <a href="#" class="tab2" id="english-tab2">ENGLISH</a>
     </div>
     <div class="line-and-topic2">
@@ -22,9 +24,13 @@
 
   <div class="tabs-container3">
     <div class="tabs-left3">
-      <a  class="tab3" id="all-tab3"(click)="showContent('locked')">ALL</a>
-      <a  class="tab3" id="locked-tab3"(click)="showContent('locked')">LOCKED</a>
-      <a  class="tab3" id="unlocked-tab3"(click)="showContent('unlocked')">UNLOCKED</a>
+      <a class="tab3" id="all-tab3" (click)="showContent('locked')">ALL</a>
+      <a class="tab3" id="locked-tab3" (click)="showContent('locked')"
+        >LOCKED</a
+      >
+      <a class="tab3" id="unlocked-tab3" (click)="showContent('unlocked')"
+        >UNLOCKED</a
+      >
     </div>
     <div class="line-and-topic3">
       <hr class="horizontal-line3" />
@@ -32,7 +38,11 @@
     </div>
   </div>
 
- <div *ngIf="currentContent === 'locked'" class="locked-content" id="locked-content">
+  <div
+    *ngIf="currentContent === 'locked'"
+    class="locked-content"
+    id="locked-content"
+  >
     <div class="left-content">
       <p class="note">Placeholder Note</p>
       <p class="sub-text">placeholder</p>
@@ -43,5 +53,22 @@
   </div>
   <div *ngIf="currentContent === 'unlocked'" class="unlocked-content">
     <p>No Notes found</p>
+  </div>
+
+  <div class="content">
+    <div class="all-notes" *ngIf="lockStatus == 0">
+      <div class="notes" *ngFor="let note of allNotes">
+        <div class="left-content">
+          <p class="note">{{note.name}}</p>
+          <p class="sub-text">{{note.title}}</p>
+        </div>
+        <div class="right-content">
+          <button class="add-to-cart" (click)="updateCart(note,note?.addedToCart ? false : true)">{{note?.addedToCart ? 'Added To Cart' : note.cost}}</button>
+        </div>
+      </div>
+    </div>
+    <div class="unlocked-notes" *ngIf="lockStatus == 1"></div>
+    <div class="locked-status" *ngIf="lockStatus == 2"></div>
+    <div class="note" *ngFor="let note; of"></div>
   </div>
 </section>

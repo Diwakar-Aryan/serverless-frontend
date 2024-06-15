@@ -1,4 +1,4 @@
-<section class="cart">
+<section class="cart" *ngIf="!embeddedPayment">
   <div class="container">
     <div class="line-and-topic">
       <h1 class="topic-text">CART</h1>
@@ -20,13 +20,25 @@
     </div>
     <hr class="horizontal-line-product" />
     <div class="cart-body-row">
-      <div class="cart-body">
+      <div class="cart-body" *ngIf="cartItem.length == 0">
         <p>No items in cart.</p>
       </div>
+      <div class="cart-body">
+       <div class="cart-tem" *ngFor="let item of cartItem">
+        <span class="product">{{item.name}}</span>
+        <span class="price">{{item.cost}}</span>
+        <span class="quantity">1</span>
+        <span class="total">{{item.cost}}</span>
+       </div>
+      </div>
       <div class="login-button">
-        <button class="checkout-button">Log in to checkout</button>
+        <button class="checkout-button" (click)="doCheckout()">Log in to checkout</button>
       </div>
     </div>
     <hr class="horizontal-line-product" />
   </div>
 </section>
+
+<div id="checkout">
+
+</div>
