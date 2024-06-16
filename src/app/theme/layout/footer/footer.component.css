@@ -2,9 +2,7 @@
     height: 13em;
     display: flex;
     justify-content: space-between;
-    /* padding: 20px; */
     background-color: #3f3f3f;
-    /* padding: 10px; */
     position: relative;
     left: 0;
     bottom: 0;
@@ -15,15 +13,15 @@
   .footer-left {
     width: 60%;
     margin-left: 15%;
-    /* margin-right: 15%; */
+
   }
   .footer-left p{
     font-family: Nunito, sans-serif;
-    /* margin-right: 15%; */
+
     margin-top: 5%;
     margin-bottom: 5%;
     color: rgb(255, 255, 255);
-    /* margin: var(--m1) 0; */
+
     font-style: normal;
     font-weight: 600;
     font-size: 1.25rem;
@@ -73,7 +71,7 @@
   }
   .footer-right {
     width: 20%;
-    /* margin-right: 5%; */
+
   }
   .footer-right .right-text{
     margin-top: 20%;
@@ -117,7 +115,6 @@
     background-color: black;
     display: flex;
     justify-content: space-between;
-    /* position: relative; */
     left: 0;
     bottom: 0;
     width: 100%;
@@ -151,3 +148,80 @@
   .footer2 .footer2-right h1{
     color: white;
   }
+
+
+
+
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      /* align-items: center; */
+      height: auto;
+      padding: 20px 0;
+    }
+    .footer-left, .footer-mid, .footer-right {
+      width: 100%;
+      /* margin-right: 40%; */
+      margin-left: 5%;
+      /* margin: 10px 0; */
+      /* text-align: center; */
+    }
+    .footer-left {
+      margin-left: 0;
+    }
+    .footer-left p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin-left: 5%;
+      margin-right: 15%;
+    }
+    .footer-mid .mid-text nav ul, .footer-right .right-text nav ul{
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 0rem;
+      column-gap: 0rem;
+    }
+    .footer-mid .mid-text nav ul li, .footer-right .right-text nav ul li{
+    font-family: Nunito, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    letter-spacing: .02em;
+    padding: 0;
+    line-height: 1.5em;
+    margin-left: 20%;
+    /* margin-top: -4%; */
+    display: list-item;
+    justify-items: start;
+    }
+    .footer-mid .mid-text, .footer-right .right-text {
+      margin-top: 10px;
+      margin-left: 0;
+    }
+    .footer-mid .mid-text h4, .footer-right .right-text h4 {
+      font-size: 0.675rem;
+    }
+    .footer-mid .mid-text nav ul, .footer-right .right-text nav ul {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+  
+    .footer2 {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+    }
+    .footer2-left, .footer2-right {
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
+    }
+    .footer2 ul li {
+      padding: 10px 5px;
+      font-size: 0.875rem;
+    }
+    .footer2-left h1, .footer2-right h1 {
+      font-size: 1.5rem;
+    }
+  }
+  

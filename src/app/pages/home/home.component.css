@@ -16,3 +16,17 @@
 
 
 
+
+/* Responsive styles for screens up to 768px (tablet portrait and below) */
+@media (max-width: 768px) {
+  .image-container {
+    height: auto; /* Adjust height for smaller screens */
+  }
+}
+
+/* Responsive styles for screens up to 350px (mobile screens) */
+@media (max-width: 350px) {
+  .image-container {
+    height: auto; /* Further adjust height for smaller mobile screens */
+  }
+}

@@ -17,7 +17,7 @@
     font-weight: 300;
     letter-spacing: 0;
     opacity: 72%;
-    overflow-wrap: break-word;
+    /* overflow-wrap: break-word; */
 
     /* display: block; */
     /* font-size: 1.5em; */
@@ -32,7 +32,7 @@
     font-weight: 800;
     letter-spacing: .03em;
     margin-left: 15%;
-    margin-right: 40%;
+    margin-right: 30%;
     font-family: Nunito, sans-serif;
     /* margin: var(--m1) 0; */
     /* font-style: normal; */
@@ -43,7 +43,7 @@
     font-feature-settings: "pnum" on, "onum" on;
     opacity: 50%;
 
-    overflow-wrap: break-word;
+    /* overflow-wrap: break-word; */
 }
 .what-we-do h1{
     margin-top: 5%;
@@ -60,7 +60,7 @@
     font-weight: 300;
     letter-spacing: 0;
     opacity: 72%;
-    overflow-wrap: break-word;
+    /* overflow-wrap: break-word; */
 }
 .what-we-do p{
     margin-top: 3%;
@@ -79,7 +79,7 @@
     font-feature-settings: "pnum" on, "onum" on;
     opacity: 75%;
 
-    overflow-wrap: break-word;
+    /* overflow-wrap: break-word; */
 }
 
 .how-we-do-it h1{
@@ -97,7 +97,7 @@
     font-weight: 300;
     letter-spacing: 0;
     opacity: 72%;
-    overflow-wrap: break-word;
+    /* overflow-wrap: break-word; */
 }
 .how-we-do-it p{
     margin-top: 3%;
@@ -116,7 +116,7 @@
     font-feature-settings: "pnum" on, "onum" on;
     opacity: 75%;
 
-    overflow-wrap: break-word;
+    /* overflow-wrap: break-word; */
 }
 
 .who-we-are h1{
@@ -134,7 +134,7 @@
     font-weight: 300;
     letter-spacing: 0;
     opacity: 72%;
-    overflow-wrap: break-word;
+    /* overflow-wrap: break-word; */
 }
 .who-we-are p{
     margin-top: 3%;
@@ -154,5 +154,60 @@
     font-feature-settings: "pnum" on, "onum" on;
     /* opacity: 50%; */
 
-    overflow-wrap: break-word;
+    /* overflow-wrap: break-word; */
 }
+
+/* Responsive styles for screens up to 350px (mobile screens) */
+@media (max-width: 350px) {
+    .about h1,
+    .what-we-do h1,
+    .how-we-do-it h1,
+    .who-we-are h1 {
+        padding-top: 10%;
+        padding-bottom: 10%;
+      margin-left: 10%;
+      margin-right: 10%;
+      width: 80%;
+      align: 10%;
+    }
+  
+    .about p,
+    .what-we-do p,
+    .how-we-do-it p,
+    .who-we-are p {
+      margin-left: 10%;
+      margin-right: 10%;
+      width: 80%;
+      align: 10%;
+    }
+  }
+  
+  /* Responsive styles for screens up to 768px (tablet screens) */
+  @media (max-width: 768px) {
+    .about-text {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about h1,
+    .what-we-do h1,
+    .how-we-do-it h1,
+    .who-we-are h1 {
+        padding-top: 10%;
+        padding-bottom: 10%;
+      margin-left: 10%;
+      margin-right: 10%;
+      width: auto;
+      align: 10%;
+    }
+  
+    .about p,
+    .what-we-do p,
+    .how-we-do-it p,
+    .who-we-are p {
+      margin-left: 10%;
+      margin-right: 10%;
+      width: auto;
+      align: 10%;
+    }
+  }
