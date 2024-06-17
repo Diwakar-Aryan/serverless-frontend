@@ -57,3 +57,34 @@
   font-feature-settings: "pnum" on, "onum" on;
   opacity: 70%;
 }
+
+@media (max-width: 768px) {
+  .left-text,
+  .right-text {
+    flex: 1 100%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .right-text p {
+    padding-right: 0;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 576px) {
+  .red-section {
+    padding: 8% 4%;
+  }
+
+  .left-text,
+  .right-text {
+    padding: 0;
+    text-align: left;
+  }
+
+  .right-text p {
+    margin-bottom: 10px;
+  }
+}
