@@ -2,12 +2,11 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  background-color: #e4cfaa; /* light gray background */
+  background-color: #e4cfaa; /* Light gray background */
 }
 
 .left-text {
   width: 70%;
-  /* text-align: center; */
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -16,7 +15,6 @@
   font-family: Nunito, sans-serif;
   margin-top: 5%;
   margin-bottom: 5%;
-  /* margin: var(--m1) 0; */
   font-style: normal;
   font-weight: 750;
   font-size: 1.25rem;
@@ -39,21 +37,14 @@
   font-weight: 600;
   font-size: 1em;
   line-height: 1.75rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.05em;
   font-feature-settings: "pnum" on, "onum" on;
   opacity: 50%;
-
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  unicode-bidi: isolate;
   color: #580505;
 }
 
 .workshop-button {
-  background-color: #7a1b1b; /* purple color background */
+  background-color: #7a1b1b; /* Purple color background */
   color: #fff;
   border: none;
   padding: 4.5% 25%;
@@ -64,4 +55,76 @@
 
 .workshop-button:hover {
   background-color: #580505;
+}
+
+/* Responsive styles for screens up to 350px (mobile screens) */
+@media (max-width: 350px) {
+  .text-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+  }
+
+  .left-text {
+    width: 100%; /* Full width for left-text on smaller screens */
+    margin: 0; /* Remove margins */
+  }
+
+  .right-text {
+    width: 100%; /* Full width for right-text on smaller screens */
+    margin-top: 20px; /* Add space between left and right content */
+  }
+
+  .left-text p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    line-height: 1.5rem; /* Adjust line height */
+  }
+
+  .right-text p {
+    font-size: 0.875rem; /* Adjust font size for smaller screens */
+    line-height: 1.5rem; /* Adjust line height */
+  }
+
+  .workshop-button {
+    padding: 10px 20px; /* Adjust padding */
+    font-size: 14px; /* Adjust font size */
+    margin-top: 5%;
+    width: 100%;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .text-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+  }
+
+  .left-text {
+    width: 80%; /* Adjust width for left-text */
+    margin-left: 10%; /* Maintain margin */
+    margin-right: 10%; /* Maintain margin */
+  }
+
+  .right-text {
+    width: 80%; /* Adjust width for right-text */
+    margin-top: 20px; /* Add space between left and right content */
+    margin-left: 10%; /* Maintain margin */
+    margin-right: 10%; /* Maintain margin */
+  }
+
+  .left-text p {
+    font-size: 1.1rem; /* Adjust font size for tablet screens */
+    line-height: 1.8rem; /* Adjust line height */
+  }
+
+  .right-text p {
+    font-size: 0.95rem; /* Adjust font size for tablet screens */
+    line-height: 1.6rem; /* Adjust line height */
+  }
+
+  .workshop-button {
+    padding: 12px 24px; /* Adjust padding */
+    font-size: 16px; /* Adjust font size */
+  }
 }
