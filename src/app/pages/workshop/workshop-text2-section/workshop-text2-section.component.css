@@ -31,6 +31,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  
 }
 
 /* Individual column styles */
@@ -55,13 +56,17 @@
 @media (max-width: 768px) {
   .row-text {
     flex-direction: column;
-    align-items: center;
+    align-items: left;
   }
 
   .row-text .text1-column,
   .row-text .text2-column,
   .row-text .text3-column {
     max-width: 100%;
-    text-align: center;
+    text-align: left;
+  }
+  .text-container h1{
+    font-size: 2rem;
+
   }
 }

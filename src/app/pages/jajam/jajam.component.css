@@ -48,3 +48,55 @@
 .tabcontent:target {
   display: block;
 }
+@media (max-width: 768px) {
+  .tabs {
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    flex-direction: column; /* Stack tabs vertically */
+  }
+
+  .tablinks {
+    padding: 10px 12px;
+    font-size: 16px;
+  }
+
+  .horizontal-line {
+    height: 1px;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .tabs{
+    margin-top: 6.5%;
+    padding-top: 3%;
+  }
+  
+  .tablinks {
+    padding: 8px 10px;
+    font-size: 15px;
+  }
+
+  .horizontal-line {
+    height: 1px;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .tabs{
+    margin-top: 9%;
+    padding-top: 7%;
+  }
+  .tablinks {
+    /* margin-top: 9%; */
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+
+  .horizontal-line {
+    height: 1px;
+    margin: 3px 0;
+  }
+}

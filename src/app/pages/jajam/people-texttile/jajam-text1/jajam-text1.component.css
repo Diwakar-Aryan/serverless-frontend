@@ -4,24 +4,24 @@
   width: 100%;
   height: auto;
 }
-.text1{
-    /* background-color: purple; */
-    display: block; 
-    padding: 3%;
-   padding: 2%;
+.text1 {
+  /* background-color: purple; */
+  display: block;
+  padding: 3%;
+  padding: 2%;
 }
-.text1 h1{
-    text-align: center;
-    font-size: 4em;
-    color: white;
-    opacity: 70%;
+.text1 h1 {
+  text-align: center;
+  font-size: 4em;
+  color: white;
+  opacity: 70%;
 }
-.text1 p{
-    margin-top: 2%;
-    margin-left: 25% ;
-    margin-right: 25%;
-    text-align: center;
-    font-family: Nunito, sans-serif;
+.text1 p {
+  margin-top: 2%;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+  font-family: Nunito, sans-serif;
   margin-bottom: 5%;
   color: rgb(255, 255, 255);
 
@@ -32,4 +32,60 @@
   letter-spacing: 0.02em;
   font-feature-settings: "pnum" on, "onum" on;
   opacity: 50%;
+}
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  .text1 {
+    padding: 2%;
+  }
+
+  .text1 h1 {
+    font-size: 3em;
+  }
+
+  .text1 p {
+    margin-left: 15%;
+    margin-right: 15%;
+    /* font-size: 1rem; */
+    text-align: center;
+    font-family: Nunito, sans-serif;
+    margin-bottom: 5%;
+    color: rgb(255, 255, 255);
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing: 0.02em;
+    font-feature-settings: "pnum" on, "onum" on;
+    opacity: 50%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .text1 {
+    padding: 1%;
+  }
+
+  .text1 h1 {
+    font-size: 2.5em;
+  }
+
+  .text1 p {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 0.9rem;
+    text-align: center;
+    font-family: Nunito, sans-serif;
+    margin-bottom: 5%;
+    color: rgb(255, 255, 255);
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing: 0.02em;
+    font-feature-settings: "pnum" on, "onum" on;
+    opacity: 50%;
+  }
 }
