@@ -1,37 +1,93 @@
-.returns{
-display: block;
-width: 100%;
-height: auto;
-padding: 2%;
- background-color: rgba(250, 238, 238, 0.3);
+.returns {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+
+  padding: 5%;
+  background-color: rgba(250, 238, 238, 0.3);
 }
-.return-policy{
-    padding-left: 8rem;
-    padding-right: 35rem;
+.return-policy {
+  padding-left: 8rem;
+  padding-right: 35rem;
 }
-.return-policy h1{
-   font-family: Nunito Sans, sans-serif;
-    text-transform: uppercase;
-    font-style: normal;
-    line-height: 100%;
-    padding-top: .05em;
-    white-space: unset;
-    font-size: 3.25rem;
-    font-weight: 100;
-    letter-spacing: -.02em;
-    opacity: 75%;
-    overflow-wrap: break-word;
+.return-policy h1 {
+  font-family: Nunito Sans, sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  line-height: 100%;
+  padding-top: 0.05em;
+  white-space: unset;
+  font-size: 3.25rem;
+  font-weight: 100;
+  letter-spacing: -0.02em;
+  opacity: 75%;
+  overflow-wrap: break-word;
 }
-.return-policy p{
-    font-weight: 700;
+.return-policy p {
+  font-weight: 700;
 }
-.return-policy ul li{
-   font-family: Nunito, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1em;
-    line-height: 1.75rem;
-    letter-spacing: .02em;
-    font-feature-settings: "pnum" on, "onum" on;
-    overflow-wrap: break-word;
+.return-policy ul li {
+  font-family: Nunito, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.75rem;
+  letter-spacing: 0.02em;
+  font-feature-settings: "pnum" on, "onum" on;
+  overflow-wrap: break-word;
+}
+@media (max-width: 1200px) {
+  .return-policy {
+    padding-left: 4rem;
+    padding-right: 15rem;
+  }
+
+  .return-policy h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+    .returns{
+        margin-top: 5%;
+    }
+  .return-policy {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .return-policy h1 {
+    font-size: 2rem;
+  }
+
+  .return-policy ul li {
+    font-size: 0.9em;
+  }
+
+  .return-policy p {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+    .returns{
+        margin-top: 10%;
+    }
+  .return-policy {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .return-policy h1 {
+    font-size: 1.5rem;
+  }
+
+  .return-policy ul li {
+    font-size: 0.8em;
+  }
+
+  .return-policy p {
+    font-size: 0.8em;
+  }
 }

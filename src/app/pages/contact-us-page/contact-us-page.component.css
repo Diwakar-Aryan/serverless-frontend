@@ -1,10 +1,26 @@
 
+.container1 {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
 
 .container1 img {
-    display: flex;
-    width: 100%;
-    /* height: 50%; */
-    /* opacity: 50%; */
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.container1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(60, 12, 12, 0.5);
+  z-index: 1;
 }
 .container1 h1 {
     position: absolute;
@@ -78,7 +94,7 @@
     padding: 20px;
     border-bottom: 1px solid #ccc;
     max-width: 80%;
-    margin: auto;
+    /* margin: auto; */
 }
 
 .form-section form {
@@ -150,7 +166,9 @@
     background-color: #ff0000;
 } */
 
-
+#message{
+  padding-bottom: 10%;
+}
 
 .form-section2 {
     box-sizing: border-box;
@@ -449,4 +467,255 @@ input[type="text"] {
 .excursion-item[data-selected="true"] .excursion-select {
   background-color: blue;
   color: white;
+}
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff; 
+  width: 100%;
+  z-index: 2;
+}
+
+
+.overlay-text{
+  display: flex;
+  align-items: center;
+  width: 100%; 
+  z-index: 2;
+  padding-left: 10%;
+  padding-right: 20%;
+}
+
+.horizontal-line {
+  flex-grow: 1;
+  background-color: #fff;
+  border: none;
+  height: 5px;
+  /* margin-right: 10px;  */
+  z-index: 2;
+}
+
+.topic-text {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 5rem;
+  color: #fff;
+  /* letter-spacing: 0.3em; */
+  font-weight: normal;
+  z-index: 2;
+  text-transform: uppercase;
+}
+.breathe {
+  padding: 20px;
+  background-color: #d0c4ba;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: auto;
+}
+
+.text-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.text-container h1 {
+  font-size: 2.5em;
+  color: #994f4f;
+  text-align: start;
+  margin-bottom: 20px;
+}
+
+.headline-text p {
+  font-size: 1.2em;
+  color: #8b4848;
+  text-align: start;
+  margin-bottom: 30px;
+}
+
+/* Row for the three columns */
+.row-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+/* Individual column styles */
+.row-text .text1-column,
+.row-text .text2-column,
+.row-text .text3-column {
+  flex: 1;
+  margin: 10px;
+  min-width: 250px;
+  max-width: 32%;
+}
+
+/* Text within the columns */
+.row-text p {
+  font-size: 1em;
+  color: #8b4848;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .row-text {
+    flex-direction: column;
+    align-items: left;
+  }
+
+  .row-text .text1-column,
+  .row-text .text2-column,
+  .row-text .text3-column {
+    max-width: 100%;
+    text-align: left;
+  }
+  .text-container h1{
+    font-size: 2rem;
+
+  }
+  .topic-text {
+    font-size: 3rem;
+  }
+
+  .overlay-text {
+    flex-direction: column;
+    padding-left: 7%;
+    padding-right: 7%;
+    display: block;
+  }
+
+  .horizontal-line {
+    /* margin: 10px 0; */
+    height: 3px;
+  }
+}
+
+@media (max-width: 350px) {
+  .container1 img {
+      display: block;
+      width: 100%;
+  }
+  .container1 h1 {
+      top: 20%;
+      left: 10%;
+      font-size: 2rem;
+      padding-top: 1rem;
+  }
+  .container1 .line {
+      top: 25%;
+      left: 10%;
+      width: 80%;
+  }
+  .container2 .para1, 
+  .container2 .para2 {
+      margin-left: 5%;
+      margin-right: 5%;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      font-size: 1rem;
+  }
+  .form-section {
+    flex: 1;
+    display: block;
+      flex-direction: column;
+      
+  }
+  .form-section form {
+    display: block;
+      flex-direction: column;
+  }
+  .form-section form div {
+      width: 100%;
+      margin: 5px 0;
+  }
+  .form-section label,
+  .form-section input {
+      font-size: 0.875rem;
+  }
+  .info-text {
+      font-size: 0.875rem;
+      
+  }
+  .form-section2 {
+      max-width: 95%;
+      margin: auto;
+  }
+  .topic-cont {
+      flex-direction: column;
+  }
+  .topic-options {
+      width: 95%;
+      margin: auto;
+  }
+  .tab-content .content {
+      width: 95%;
+  }
+  .info-text2 {
+      width: 100%;
+      margin-left: 0;
+  }
+  .info-text2 .submit-btn {
+      width: 80%;
+      margin: 10% auto;
+  }
+  .select-section {
+      max-width: 95%;
+      margin: auto;
+  }
+  .select-part {
+      margin-left: 0;
+  }
+  .select-item {
+      font-size: 0.875rem;
+  }
+  .excursions-section {
+      max-width: 95%;
+      margin: auto;
+  }
+  .location-options,
+  .excursions-options {
+      flex-direction: column;
+  }
+  .location-tab,
+  .excursion-item {
+      width: 100%;
+      margin-bottom: 1rem;
+  }
+  .excursion-info h3,
+  .excursion-info p {
+      font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .topic-text {
+    font-size: 2.5rem;
+  }
+
+  .overlay-text {
+    padding-left: 5%;
+    padding-right: 5%;
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .topic-text {
+    font-size: 2rem;
+  }
+
+  .overlay-text {
+    padding-left: 5%;
+    padding-right: 5%;
+    display: block;
+  }
+
+  .horizontal-line {
+    height: 2px;
+  }
 }

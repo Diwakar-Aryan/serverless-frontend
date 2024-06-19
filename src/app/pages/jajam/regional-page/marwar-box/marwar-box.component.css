@@ -87,3 +87,227 @@
     max-width: 60ch;
     overflow-wrap: break-word;
 }
+/* Responsive styles for screens up to 768px (tablet portrait and below) */
+@media (max-width: 768px) {
+    .ajmercontainer h1 {
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: 4%;
+        font-family: Nunito Sans, sans-serif;
+        text-transform: uppercase;
+        font-style: normal;
+        line-height: 100%;
+        padding-top: .05em;
+        white-space: unset;
+        font-size: 2.5rem;
+        font-weight: 300;
+        letter-spacing: 0;
+        opacity: 72%;
+    }
+    .ajmersec1{
+        align-items: center;
+    }
+    .ajmersec1 img{
+        width: 100%;
+        height: auto;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-left: 0;
+        /* margin-right: 10%; */
+    }
+    .workplace_info{
+        display: grid;
+        margin-top: 5%;
+        margin-bottom: 3%;
+        align-items: start;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.25rem;
+    }
+    .workplace_detail{
+        margin-left: 0;
+        padding-left: 10%;
+        display: grid;
+        grid-template-columns: 1fr;
+        /* grid-template-columns: repeat(auto-fit, minmax(16ch, 1fr)); */
+        row-gap: 1rem;
+        column-gap: 1rem;
+    }
+    
+    .topic{
+        font-family: Nunito, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: inherit;
+        letter-spacing: .02em;
+        font-feature-settings: "pnum" on, "onum" on;
+        opacity: 75%;
+        color: rgba(120, 48, 67, 1);
+    }
+    .label{
+        font-family: Nunito Sans, sans-serif;
+        font-weight: 200;
+        white-space: unset;
+        font-style: normal;
+        font-weight: 600;
+        font-size: .5rem;
+        line-height: 100%;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        color: rgba(72, 50, 49, 1);
+        padding-top: 0.125rem;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    }
+    .workplace_info p{
+        font-family: Nunito, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1em;
+        line-height: 1.75rem;
+        letter-spacing: .02em;
+        margin-right: 0;
+        padding-right: 18%;
+        font-feature-settings: "pnum" on, "onum" on;
+        max-width: 60ch;
+        overflow-wrap: break-word;
+    }
+  }
+  
+  /* Responsive styles for screens up to 350px (mobile screens) */
+  @media (max-width: 714px) {
+    
+    .ajmercontainer h1{
+        
+        font-size: 2.5rem;
+       
+    }
+    .ajmersec1 img{
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        /* padding: 3%; */
+    }
+    .workplace_info{
+        display: flex;
+      flex-direction: column;
+        align-items: start;
+       width: 100ch;
+    }
+    .workplace_detail{
+        padding-left: 5%;
+        padding-right: 5%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+      
+    }
+    /* .workplace_detail>*{
+        display: grid;
+        row-gap: 0.33em;
+        column-gap: 0.33em;   
+    } */
+    .topic{
+        font-family: Nunito, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: inherit;
+        letter-spacing: .02em;
+        font-feature-settings: "pnum" on, "onum" on;
+        opacity: 75%;
+        color: rgba(120, 48, 67, 1);
+    }
+    .label{
+        font-family: Nunito Sans, sans-serif;
+        font-weight: 200;
+        white-space: unset;
+        font-style: normal;
+        font-weight: 600;
+        font-size: .5rem;
+        line-height: 100%;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        color: rgba(72, 50, 49, 1);
+        padding-top: 0.125rem;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    }
+    .workplace_info p{
+        
+        padding-left: 5%;
+        padding-right: 5%;
+       
+        width: 100ch;
+        
+    }
+  }
+  @media (max-width: 440px) {
+    
+    .ajmercontainer h1{
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 2.5rem;
+       
+    }
+    .ajmersec1 img{
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        /* padding: 3%; */
+    }
+    .workplace_info{
+        display: flex;
+      flex-direction: column;
+        align-items: start;
+       width: 100%;
+    }
+    .workplace_detail{
+        padding-left: 5%;
+        padding-right: 5%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+      
+    }
+    /* .workplace_detail>*{
+        display: grid;
+        row-gap: 0.33em;
+        column-gap: 0.33em;   
+    } */
+    .topic{
+        font-family: Nunito, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: inherit;
+        letter-spacing: .02em;
+        font-feature-settings: "pnum" on, "onum" on;
+        opacity: 75%;
+        color: rgba(120, 48, 67, 1);
+    }
+    .label{
+        font-family: Nunito Sans, sans-serif;
+        font-weight: 200;
+        white-space: unset;
+        font-style: normal;
+        font-weight: 600;
+        font-size: .5rem;
+        line-height: 100%;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        color: rgba(72, 50, 49, 1);
+        padding-top: 0.125rem;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    }
+    .workplace_info p{
+        
+        padding-left: 5%;
+        padding-right: 5%;
+       
+        width: 100%;
+        
+    }
+}
