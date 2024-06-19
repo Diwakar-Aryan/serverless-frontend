@@ -1,73 +1,42 @@
-.image-container {
+.image {
   position: relative;
-  background-image: url("/assets/images/jajam8.jpg");
-  background-size: 100% 100%;
-  background-position: center;
-  color: white;
   width: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  font-family: Arial, sans-serif;
-  /* padding: 3%; */
 }
 
-.T2container .p1 {
+.image-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  position: relative;
+  max-width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Styles for the text container */
+.T2container {
+  position: absolute;
+  flex: 2;
+  padding-left: 10%;
+  padding-right: 40%;
+  padding-top: 5%;
+  box-sizing: border-box;
   font-family: Nunito, sans-serif;
   color: rgba(72, 50, 49, 1);
   font-style: normal;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 1rem;
-  position: absolute;
   letter-spacing: 0.02em;
-  font-feature-settings: "pnum" on, "onum" on;
-  margin-right: 45%;
-  top: 20%;
-  left: 18%;
+  /* font-feature-settings: "pnum" on, "onum" on; */
 }
-.T2container .p2 {
-  font-family: Nunito, sans-serif;
-  color: rgba(72, 50, 49, 1);
-  font-style: normal;
-  font-weight: 800;
-  font-size: 1rem;
-  position: absolute;
-  letter-spacing: 0.02em;
-  font-feature-settings: "pnum" on, "onum" on;
-  margin-right: 45%;
-  top: 30%;
-  left: 18%;
-  line-height: 1.75rem;
-}
-.T2container .p3 {
-  font-family: Nunito, sans-serif;
-  color: rgba(72, 50, 49, 1);
-  font-style: normal;
-  font-weight: 800;
-  font-size: 1rem;
-  position: absolute;
-  letter-spacing: 0.02em;
-  font-feature-settings: "pnum" on, "onum" on;
-  margin-right: 45%;
-  top: 69%;
-  left: 18%;
-  line-height: 1.75rem;
-}
-.T2container .p4 {
-  font-family: Nunito, sans-serif;
-  color: rgba(72, 50, 49, 1);
-  font-style: normal;
-  font-weight: 800;
-  font-size: 1rem;
-  position: absolute;
-  letter-spacing: 0.02em;
-  font-feature-settings: "pnum" on, "onum" on;
-  margin-right: 45%;
-  top: 77%;
-  left: 18%;
-  line-height: 1.75rem;
-}
+
 /* _______________container2_____________________ */
 .container2 {
   background-color: rgba(44, 9, 17, 0.8);
@@ -75,8 +44,8 @@
   width: 100%;
   height: auto;
   text-align: center;
-  padding-left: 30rem;
-  padding-right: 30rem;
+  padding-left: 20%;
+  padding-right: 20%;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -107,7 +76,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
+  height: auto;
   box-sizing: border-box;
   padding: 5%;
 }
@@ -116,8 +85,7 @@
   width: 50%;
 }
 .text-section1 {
-  padding-right: 20px;
-  margin-left: 14%;
+  padding-left: 6%;
 }
 .text-section1 h1 {
   font-family: Nunito Sans, sans-serif;
@@ -142,7 +110,7 @@
   line-height: 1.75rem;
   letter-spacing: 0.02em;
   font-feature-settings: "pnum" on, "onum" on;
-  max-width: 60ch;
+  /* max-width: 60ch; */
   overflow-wrap: break-word;
 }
 .token--featured {
@@ -162,9 +130,6 @@
 }
 #desgn {
   text-align: center;
-  /* margin-left: 15%;
-  margin-right: 15%; */
-  margin-top: -5%;
 }
 .design2 h3 {
   font-family: Nunito Sans, sans-serif;
@@ -181,7 +146,6 @@
 }
 blockquote p {
   font-family: Nunito, sans-serif;
-  margin: var(1.25rem) 0 var(1.25rem) 0;
   font-style: normal;
   font-weight: 800;
   font-size: 1.25rem;
@@ -189,6 +153,8 @@ blockquote p {
   letter-spacing: 0.02em;
   font-feature-settings: "pnum" on, "onum" on;
   opacity: 50%;
+  padding-left: 13%;
+  padding-right: 13%;
 }
 #img-design {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -205,77 +171,7 @@ blockquote p {
   width: 100%;
   overflow-clip-margin: content-box;
 }
-.chaupad {
-  color: white;
-  width: 100%;
-  height: auto;
-  text-align: left;
-  background-color: rgba(229, 215, 210, 1);
- 
-
-}
-.chaupad h4 {
-  font-family: Nunito Sans, sans-serif;
-  text-transform: uppercase;
-  font-style: normal;
-  padding-top: 5%;
-  line-height: 100%;
-  padding-top: 0.05em;
-  white-space: unset;
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  overflow-wrap: break-word;
-
-}
-.chaupad h2 {
-  font-family: Nunito Sans, sans-serif;
-  margin-top: -2%;
-  text-transform: uppercase;
-  padding-top: 5%;
-  font-style: normal;
-  line-height: 100%;
-  padding-top: 0.05em;
-  white-space: unset;
-  font-size: 2.5rem;
-  font-weight: 300;
-  letter-spacing: 0;
-  opacity: 72%;
-  overflow-wrap: break-word;
-  color: rgba(72, 50, 49, 1);
-}
 .chaupadtag {
-  background-color: rgba(229, 215, 210, 1);
-}
-
-blockquote > p {
-  font-family: Nunito, sans-serif;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  margin-left: 22%;
-  /* margin-right: 1.25rem; */
-  padding-bottom: 5%;
-  text-align: center;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 1.25rem;
-  line-height: 2rem;
-  letter-spacing: 0.02em;
-  font-feature-settings: "pnum" on, "onum" on;
-  opacity: 50%;
-  max-width: 60ch;
-  overflow-wrap: break-word;
-  color: rgba(72, 50, 49, 1);
-}
-blockquote > *:first-child {
-  margin-block-start: 0;
-}
-blockquote > *:last-child {
-  margin-block-end: 0;
-}
-
-.chaupadtag {
-  
   width: 100%;
   height: auto;
   text-align: left;
@@ -285,15 +181,16 @@ blockquote > *:last-child {
   /* background-color: purple; */
   display: block;
   padding: 3%;
-text-align: left;
-  
+  text-align: left;
 }
 .chaupad h4 {
   text-align: left;
   font-size: 1.3em;
+  line-height: 1em;
   color: rgb(100, 80, 62);
   opacity: 70%;
-  padding-left: 10rem;
+  padding-left: 10%;
+  text-transform: uppercase;
 }
 .chaupad h2 {
   text-align: left;
@@ -301,16 +198,15 @@ text-align: left;
   font-weight: 400;
   color: rgb(100, 80, 62);
   opacity: 70%;
-  padding-left: 10rem;
-  padding-top: 1.4rem;
+  line-height: 1em;
+  padding-left: 10%;
+  text-transform: uppercase;
 }
 .chaupad p {
-  margin-top: 2%;
-  padding-left: 10rem;
-  padding-right: 40rem;
+  padding-left: 10%;
+  padding-right: 50%;
   text-align: left;
   font-family: Nunito, sans-serif;
-  /* margin-bottom: 5%; */
   color: rgb(83, 81, 81);
 
   font-style: normal;
@@ -322,65 +218,58 @@ text-align: left;
   opacity: 50%;
 }
 
-
 /* ____________________________________text-with images_______________________ */
-.txtimgcontainer2{
+.txtimgcontainer2 {
+  position: relative;
   text-align: center;
+  height: auto;
   background-color: rgba(240, 231, 223, 1);
+  display: flex;
+  flex-direction: column;
 }
-.mid-logo img{
+.txtimgcontainer2 img {
+  width: 100%;
+  height: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
+  align-items: center;
+  object-fit: cover;
+}
+.mid-logo img {
   height: 14%;
   width: 14%;
   padding: 3%;
   opacity: 50%;
 }
-.mid-logo h2{
+.mid-logo h2 {
   font-family: Nunito Sans, sans-serif;
-    text-transform: uppercase;
-    font-style: normal;
-    line-height: 100%;
-    white-space: unset;
-    font-size: 2.5rem;
-    font-weight: 300;
-    letter-spacing: 0;
-    opacity: 72%;
-    overflow-wrap: break-word;
-    color: rgba(72, 50, 49, 1);
-    text-align: center;
+  text-transform: uppercase;
+  font-style: normal;
+  line-height: 100%;
+  white-space: unset;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0;
+  opacity: 72%;
+  overflow-wrap: break-word;
+  color: rgba(72, 50, 49, 1);
+  text-align: center;
 }
-.painting h3{
-  font-family: Nunito Sans, sans-serif;
-    text-transform: uppercase;
-    font-style: normal;
-    font-weight: 200;
-    line-height: 100%;
-    padding-top: .05em;
-    text-wrap: balance;
-    white-space: unset;
-    font-size: 1.75rem;
-    font-weight: 400;
-    letter-spacing: .02em;
-    opacity: 70%;
-    overflow-wrap: break-word;
-    color: rgba(72, 50, 49, 1);
-    text-align: center;
-    padding-top: 1rem;
-}
-.block{
+.block {
   font-family: Nunito, sans-serif;
   padding-left: 27rem;
   padding-right: 27rem;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1em;
-    line-height: 1.8rem;
-    letter-spacing: .02em;
-    font-feature-settings: "pnum" on, "onum" on;
-   padding-top: 1rem;
-    overflow-wrap: break-word;
-    color: rgba(72, 50, 49, 1);
-    text-align: center;
-    opacity: 80%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 1.8rem;
+  letter-spacing: 0.02em;
+  font-feature-settings: "pnum" on, "onum" on;
+  padding-top: 1rem;
+  overflow-wrap: break-word;
+  color: rgba(72, 50, 49, 1);
+  text-align: center;
+  opacity: 80%;
 }
 
 .img-container4 {
@@ -388,190 +277,536 @@ text-align: left;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: auto;
+  width: 100%;
+  background-color: rgba(240, 231, 223, 1);
+  padding-top: 1%;
 }
-.image-wrapper {
+
+.img-container4 img {
   position: relative;
-  display: inline-block;
-}
-.image-wrapper img {
   display: block;
+  width: 100%;
+  height: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  /* padding-top: 0.5%; */
 }
 .txt-container4 {
   position: absolute;
-  top: 50%;
-  right: 15%;
-  /* transform: translateY(-50%); */
-  /* padding: 10px; */
+  align-items: center;
+  padding-left: 35%;
+  padding-top: 10%;
 }
-.txt-container4 p{
+.txt-container4 p {
   color: #fff;
   font-family: Nunito, sans-serif;
-    font-style: normal;
-    text-align: start;
-    font-weight: 600;
-    font-size: 1em;
-    line-height: 1.75rem;
-    letter-spacing: .02em;
-    font-feature-settings: "pnum" on, "onum" on;
-    overflow-wrap: break-word;
-    max-width: 60ch;
+  font-style: normal;
+  text-align: start;
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 1.75rem;
+  letter-spacing: 0.02em;
+  font-feature-settings: "pnum" on, "onum" on;
+  overflow-wrap: break-word;
+  max-width: 60ch;
 }
-/* _______________________ artisan text section_____________*/
-.artisans-slide{
-  padding: 3%;
-  height: auto;
+.block-carving {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  background-color: rgba(240, 231, 223, 1);
+  padding-top: 5%;
 }
-.artisans h2{
+.block-carving img {
+  height: 100%;
+  width: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
+  align-items: center;
+  object-fit: cover;
+}
+.block-carving h3 {
   font-family: Nunito Sans, sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    font-style: normal;
-    font-weight: 200;
-    line-height: 100%;
-    padding-top: .05em;
-    text-wrap: balance;
-    white-space: unset;
-    font-size: 2.5rem;
-    font-weight: 300;
-    letter-spacing: 0;
-    opacity: 72%;
-    overflow-wrap: break-word;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 100%;
+  padding-top: 0.05em;
+  text-wrap: balance;
+  white-space: unset;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  opacity: 70%;
+  overflow-wrap: break-word;
+  color: rgba(72, 50, 49, 1);
+  text-align: center;
+  padding-top: 1rem;
 }
-.artisan{
-  margin-top: 3%;
+.namda-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(240, 231, 223, 1);
+  padding-top: 5%;
 }
-.artisan .artisandiv{
-  /* width: 70%; */
-  margin-top: -5%;
-  margin-right: 12%;
-  padding-block-start: 1rem;
-  padding-block-end: 1rem;
-  display: grid;
-  row-gap: 1.25rem;
-  column-gap: 1.25rem;
+.namda-container img {
+  height: 100%;
+  width: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
+  align-items: center;
+  object-fit: cover;
+}
+.namda-container h3 {
+  font-family: Nunito Sans, sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 100%;
+  padding-top: 0.05em;
+  text-wrap: balance;
+  white-space: unset;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  opacity: 70%;
+  overflow-wrap: break-word;
+  color: rgba(72, 50, 49, 1);
+  text-align: center;
+  padding-top: 1rem;
+}
+.paint h3 {
+  font-family: Nunito Sans, sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 100%;
+  padding-top: 0.05em;
+  text-wrap: balance;
+  white-space: unset;
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  opacity: 70%;
+  overflow-wrap: break-word;
+  color: rgba(72, 50, 49, 1);
+  text-align: center;
+  padding-top: 1rem;
 }
 
-.artisan img{
-  width: unset;
-  margin-left: 62%;
+/* _______________________ artisan text section_____________*/
+.artisans-slide {
+  padding: 5%;
+  height: auto;
+  width: 100%;
+  height: auto;
+  position: relative;
 }
-.artisan{
-  /* width: 70%; */
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 1.25rem;
-  column-gap: 1.25rem;
-  justify-items: center;
-}
-.artisan h4{
+.artisans h2 {
   font-family: Nunito Sans, sans-serif;
-    text-transform: uppercase;
-    font-style: normal;
-    line-height: 100%;
-    padding-top: .05em;
-    white-space: unset;
-    font-size: 1.25rem;
-    font-weight: 600;
-    letter-spacing: .04em;
-    opacity: 66%;
-    overflow-wrap: break-word;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 100%;
+  padding-top: 0.05em;
+  text-wrap: balance;
+  white-space: unset;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0;
+  opacity: 72%;
+  overflow-wrap: break-word;
 }
-.artisan h5{
-  font-family:Arial, Helvetica, sans-serif ;
-    text-transform: uppercase;
-    font-style: normal;
-    margin-top: -4%;
-    line-height: 100%;
-    padding-top: .05em;
-    white-space: unset;
-    font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: .04em;
-    opacity: 60%;
-    overflow-wrap: break-word;
+.artisan-container {
+  padding-top: 5%;
 }
-.artisan p{
-  font-family: Nunito, sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1em;
-    line-height: 1.75rem;
-    letter-spacing: .02em;
-    font-feature-settings: "pnum" on, "onum" on;
-    max-width: 60ch;
-    overflow-wrap: break-word;
-    margin-top: -5%;
-    margin-right: 17%;
-    /* margin-left: 70%; */
-}
-.artisan2{
-  margin-top: 3%;
-}
-.artisan2 .artisandiv2{
-  /* width: 70%; */
-  /* margin-top: 5%; */
-  margin-left: 12%;
+.artisandiv {
   padding-block-start: 1rem;
   padding-block-end: 1rem;
   display: grid;
   row-gap: 1.25rem;
   column-gap: 1.25rem;
+  max-width: 100ch;
 }
-.artisan2 img{
+.artisan img {
   width: unset;
-  margin-right: 62%;
+  padding-left: 80%;
 }
-.artisan2{
+.artisan-container {
   /* width: 70%; */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   row-gap: 1.25rem;
   column-gap: 1.25rem;
   justify-items: center;
 }
-.artisan2 h4{
+.artisandiv h4 {
   font-family: Nunito Sans, sans-serif;
-    text-transform: uppercase;
-    font-style: normal;
-    text-align: end;
-    line-height: 100%;
-    padding-top: .05em;
-    white-space: unset;
-    font-size: 1.25rem;
-    font-weight: 600;
-    letter-spacing: .04em;
-    opacity: 66%;
-    overflow-wrap: break-word;
+  text-transform: uppercase;
+  font-style: normal;
+  line-height: 100%;
+  padding-top: 0.05em;
+  white-space: unset;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  opacity: 66%;
+  overflow-wrap: break-word;
 }
-.artisan2 h5{
-  font-family: Nunito Sans, sans-serif;
-    text-transform: uppercase;
-    text-align: end;
-    margin-top: -4%;
-    font-style: normal;
-    line-height: 100%;
-    padding-top: .05em;
-    white-space: unset;
-    font-size: 1rem;
-    font-weight: 900;
-    letter-spacing: .04em;
-    opacity: 60%;
-    overflow-wrap: break-word;
+.artisandiv h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  margin-top: -4%;
+  line-height: 100%;
+  padding-top: 0.05em;
+  white-space: unset;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  opacity: 80%;
+  overflow-wrap: break-word;
 }
-.artisan2 p{
+.artisandiv p {
   font-family: Nunito, sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1em;
-    line-height: 1.75rem;
-    letter-spacing: .02em;
-    font-feature-settings: "pnum" on, "onum" on;
-    max-width: 60ch;
-    overflow-wrap: break-word;
-    margin-top: -5%;
-    margin-left: 15%;
-    text-align: end;
-    /* margin-left: 70%; */
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 1.75rem;
+  letter-spacing: 0.02em;
+  font-feature-settings: "pnum" on, "onum" on;
+  max-width: 100ch;
+  overflow-wrap: break-word;
+  padding-right: 15%;
+  
+}
+.artisan-container2 {
+  padding-top: 3%;
+}
+.artisandiv2 {
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+  display: grid;
+  row-gap: 1.25rem;
+  column-gap: 1.25rem;
+  max-width: 75ch;
+  
+}
+.artisan2 img {
+  width: unset;
+  
+  padding-right: 80%;
+ 
+}
+.artisan-container2 {
+  /* width: 70%; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1.25rem;
+  column-gap: 1.25rem;
+  justify-items: start;
+}
+.artisandiv2 h4 {
+  font-family: Nunito Sans, sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  text-align: end;
+  line-height: 100%;
+  padding-top: 0.05em;
+  white-space: unset;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  opacity: 66%;
+  overflow-wrap: break-word;
+}
+.artisandiv2 h5 {
+  font-family: Nunito Sans, sans-serif;
+  text-transform: uppercase;
+  text-align: end;
+  margin-top: -4%;
+  font-style: normal;
+  line-height: 100%;
+  padding-top: 0.05em;
+  white-space: unset;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  opacity: 80%;
+  overflow-wrap: break-word;
+}
+.artisandiv2 p {
+  font-family: Nunito, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 1.75rem;
+  letter-spacing: 0.02em;
+  font-feature-settings: "pnum" on, "onum" on;
+  max-width: 100ch;
+  overflow-wrap: break-word;
+  padding-left: 10%;
+  text-align: end;
+  
+}
+
+@media (max-width: 1160px) {
+  .image-container {
+    display: none;
+  }
+  .T2container {
+    position: relative;
+    background-color: rgba(227, 210, 197, 0.4);
+    text-align: left;
+    padding-right: 5%;
+  }
+}
+@media (max-width: 768px) {
+  .image-container {
+    display: none;
+  }
+  .T2container {
+    position: relative;
+    background-color: rgba(227, 210, 197, 0.4);
+    text-align: left;
+    padding-right: 5%;
+  }
+  .container2 {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .txtimgcontainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .text-section1,
+  .image-section1 {
+    width: 100%;
+  }
+  .text-section1 h1 {
+    text-align: center;
+    padding-top: 5%;
+  }
+  .text-section1 p {
+    text-align: center;
+  }
+  .token--featured {
+    text-align: center;
+  }
+  .image-section1 img {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    padding: 1rem;
+  }
+  blockquote p {
+    text-align: center;
+  }
+  #img-design {
+    grid-template-columns: repeat(3, 1fr);
+
+    padding-bottom: 8%;
+  }
+  #img-design img {
+    padding: 3%;
+  }
+
+  .chaupad h4 {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+  }
+  .chaupad h2 {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .chaupad p {
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+  }
+
+  .block {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .img-container4 {
+    flex-direction: column;
+  }
+  .img-container4 img {
+    height: auto;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .txt-container4 {
+    position: absolute;
+    padding-left: 50%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: right;
+    font-size: 1rem;
+    /* width: 50%; */
+  }
+  /* ____________________________________________________________ */
+  .artisan img {
+    width: unset;
+    padding-left: 10%;
+  }
+
+  .artisandiv h4 {
+    font-size: 1.4rem;
+  }
+  .artisandiv h5 {
+    margin-top: -7%;
+    font-size: 1rem;
+  }
+  .artisandiv p {
+    padding-right: 5%;
+  }
+  .artisan2 {
+    padding-top: 3%;
+  }
+
+  .artisan2 img {
+    width: unset;
+    
+    padding-right: 10%;
+   
+  }
+  
+  .artisandiv2 h4 {
+   
+    font-size: 1.4rem;
+    
+  }
+  .artisandiv2 h5 {
+   
+    margin-top: -7%;
+    
+    font-size: 1rem;
+    
+  }
+  .artisandiv2 p {
+    
+    padding-left: 5%;
+    
+  }
+}
+@media (max-width: 714px) {
+  .img-container4 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .txt-container4 {
+    position: static;
+    padding: 0 5%;
+    text-align: center;
+    font-size: 1rem;
+    order: 1;
+  }
+  .txt-container4 p {
+    color: rgba(72, 50, 49, 1);
+  }
+  .img-container4 img {
+    width: 90%;
+    height: auto;
+    order: 2;
+  }
+  /* _________________________ */
+
+  .artisan-container {
+    position: static;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+   
+    width: 100%;
+  }
+  .artisan img {
+    width: unset;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .artisandiv h4 {
+    text-align: center;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .artisandiv h5 {
+   
+    padding-top: 3%;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .artisandiv p {
+   
+  text-align: center;
+    max-width: 100ch;
+   
+    padding-left: 5%;
+   
+  }
+  .artisan-container2 {
+    /* position: static; */
+    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+   
+    width: 100%;
+  }
+  
+  .artisan2 img {
+    width: unset;
+    
+    padding-left: 5%;
+    padding-right: 5%;
+    order: 1;
+   
+  }
+  .artisandiv2{
+    order: 2;
+  }
+  .artisandiv2 h4 {
+    text-align: center;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    /* font-size: 1rem; */
+    
+  }
+  .artisandiv2 h5 {
+    padding-top: 3%;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+   
+  }
+  .artisandiv2 p {
+    text-align: center;
+    max-width: 100ch;
+   
+    padding-left: 5%;
+
+    
+  }
 }
