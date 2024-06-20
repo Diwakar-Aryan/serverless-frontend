@@ -96,8 +96,7 @@ export class ContactUsPageComponent {
 
   shouldShowImages(selectedWorkshop: string): boolean {
     return (this.selectedLocation === 'Any' || this.selectedLocation === 'Bagru' || this.selectedLocation === 'Delhi'
-      || this.selectedLocation === 'Jaipur' || this.selectedLocation === 'Online'
-    ) &&
+      || this.selectedLocation === 'Jaipur' || this.selectedLocation === 'Online' ) &&
            this.workshopOptionsWithImagesAnyTab.includes(selectedWorkshop);
   }
   updateImageDisplay() {

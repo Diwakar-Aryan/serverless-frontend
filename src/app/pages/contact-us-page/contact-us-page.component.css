@@ -181,11 +181,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .message-container {
   flex-grow: 1;
+
 }
 
 .message-container form {
@@ -459,6 +460,7 @@ input[type="text"] {
   cursor: pointer;
 }
 
+
 .excursion-item.selected {
   border-color: rgb(11, 97, 20);
 }
@@ -717,8 +719,12 @@ padding-left: 55%;
   }
   .excursion-group {
     padding-right: 10%;
+
    }
    .excursions-group{
+    padding-right: 10%;
+   }
+   .image-group{
     padding-right: 10%;
    }
 }
@@ -845,6 +851,9 @@ padding-left: 55%;
   .submit-btn {
     padding: 10px 30px;
   }
+  .image-group{
+    padding-right: 10%;
+   }
 }
 
 @media (max-width: 576px) {
@@ -900,6 +909,9 @@ padding-left: 55%;
   .submit-btn {
     padding: 10px 30px;
   }
+  .image-group{
+    padding-right: 10%;
+   }
 }
 
 @media (max-width: 400px) {
@@ -959,4 +971,7 @@ padding-left: 55%;
   .submit-btn {
     padding: 10px 30px;
   }
+  .image-group{
+    padding-right: 10%;
+   }
 }

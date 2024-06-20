@@ -104,18 +104,7 @@
                   name="workshop" 
                   (change)="onWorkshopChange($event)">
                   <option value="" disabled selected>Select</option>
-                  <!-- <option value="Half-day Block Printing">Half-day Block Printing</option>
-                  <option value="Half-day Natural Dye">Half-day Natural Dye</option>
-                  <option value="One-day Block Carving">One-day Block Carving</option>
-                  <option value="One-day Block Print & Natural Dye">One-day Block Print & Natural Dye</option>
-                  <option value="One-day Natural Dye">One-day Natural Dye</option>
-                  <option value="One-day Natural Indigo">One-day Natural Indigo</option>
-                  <option value="Table Cloth Large">One-day Resist Printing</option>
-                  <option value="One-day Resist Printing">Two-day Block Print & Natural Dye</option>
-                  <option value="Two-day Resist Printing">Two-day Resist Printing</option>
-                  <option value="Four-day Workshop">Four-day Workshop</option>
-                  <option value="Six-day Workshop">Six-day Workshop</option>
-                  <option value="Eight-day Workshop">Eight-day Workshop</option> -->
+                 
                   <option *ngFor="let workshop of filteredWorkshops" [value]="workshop">{{ workshop }}</option>
                 </select>
               </div>
@@ -125,7 +114,7 @@
                 </p>
               </div>
             </div>
-            <div class="excursion-group" *ngIf="showImages">
+            <div class="image-group" *ngIf="showImages">
               <label for="excursions">OPTIONAL EXCURSIONS</label>
               <div class="excursions-options">
                 <div class="excursion-item"
@@ -170,17 +159,34 @@
               <div class="excursion-group">
                 <label for="location">Location*</label>
                 <div class="location-options">
-                  <div class="location-tab active">Any</div>
-                  <div class="location-tab">Bagru</div>
-                  <div class="location-tab">Delhi</div>
-                  <div class="location-tab">Jaipur</div>
-                  <div class="location-tab">Online</div>
+                  <div 
+                    class="location-tab" 
+                    [class.active]="selectedLocation === 'Any'" 
+                    (click)="selectLocation('Any')">Any</div>
+                  <div 
+                    class="location-tab" 
+                    [class.active]="selectedLocation === 'Bagru'" 
+                    (click)="selectLocation('Bagru')">Bagru</div>
+                  <div 
+                    class="location-tab" 
+                    [class.active]="selectedLocation === 'Delhi'" 
+                    (click)="selectLocation('Delhi')">Delhi</div>
+                  <div 
+                    class="location-tab" 
+                    [class.active]="selectedLocation === 'Jaipur'" 
+                    (click)="selectLocation('Jaipur')">Jaipur</div>
+                  <div 
+                    class="location-tab" 
+                    [class.active]="selectedLocation === 'Online'" 
+                    (click)="selectLocation('Online')">Online</div>
                 </div>
+               
               </div>
-              <div class="excursions-group">
+              <div class="excursion-group">
                 <label for="excursions">Excursions*</label>
                 <div class="excursions-options">
                   <div class="excursion-item"
+                  *ngIf="selectedLocation === 'Any' || selectedLocation === 'Bagru'"
                   [class.selected]="selectedExcursion === 'Bagru Ka Tour'"
                   (click)="selectExcursion('Bagru Ka Tour')">
                     <img src="/assets/images/2022_04.jpg" alt="Bagru Ka Tour" />
@@ -192,6 +198,7 @@
                     </div>
                   </div>
                   <div  class="excursion-item"
+                  *ngIf="selectedLocation === 'Any' || selectedLocation === 'Bagru'"
                   [class.selected]="selectedExcursion === 'Traditional Textiles'"
                   (click)="selectExcursion('Traditional Textiles')">
                     <img src="/assets/images/2022_05.jpg" alt="Traditional Textiles" />
