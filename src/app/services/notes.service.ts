@@ -7,7 +7,15 @@ import { environment } from '../../environments/environments';
 })
 export class NotesService {
 
-  constructor() {}
+  constructor() {
+    axios.interceptors.request.use(config => {
+      const authToken = localStorage.getItem('tokenId');
+      if(authToken) {
+        config.headers.Authorization = `Bearer ${authToken}`
+      }
+      return config;
+    })
+  }
 
   async getAllNotes() {
     try {
@@ -20,6 +28,19 @@ export class NotesService {
 
     } catch (error) {
       console.error(error)
+    }
+  }
+
+  async getLockedNotes() {
+    try {
+      const notesResponse = await axios.get(`${environment.BACKENDAPI}notes/locked`);
+      if(notesResponse.status === 200 ) {
+        return notesResponse.data;
+      } else {
+        return [];
+      }
+    } catch (error) {
+
     }
   }
 }

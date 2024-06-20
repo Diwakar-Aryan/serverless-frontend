@@ -15,12 +15,22 @@ export class CartPageComponent implements OnInit{
   embeddedPayment: boolean = false
   cartItem: any[] =[]
 
+
+
   async ngOnInit(): Promise<void> {
     this.embeddedPayment = false;
     const localStorageItem = await localStorage.getItem("cart");
     if(localStorageItem) {
       this.cartItem = JSON.parse(localStorageItem);
     }
+    axios.interceptors.request.use(config => {
+      const authToken = localStorage.getItem('tokenId');
+      if(authToken) {
+        config.headers.Authorization = `Bearer ${authToken}`
+      }
+      return config;
+    })
+
   }
 
   async doCheckout(){

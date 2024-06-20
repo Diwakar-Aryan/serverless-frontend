@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import axios from 'axios';
 
 @Component({
@@ -8,12 +8,21 @@ import axios from 'axios';
   templateUrl: './redirect.component.html',
   styleUrl: './redirect.component.css'
 })
-export class RedirectComponent {
+export class RedirectComponent implements OnInit{
 
 
   @Input('sessionId') sessionId: string = ''
   paymentStatus: boolean = false;
+  
   ngOnInit(){
+    axios.interceptors.request.use(config => {
+      const authToken = localStorage.getItem('tokenId');
+      if(authToken) {
+        config.headers.Authorization = `Bearer ${authToken}`
+      }
+      return config;
+    })
+
     this.getSessionStatus()
   }
 

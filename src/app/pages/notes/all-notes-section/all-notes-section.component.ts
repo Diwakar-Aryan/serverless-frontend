@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { NotesService } from '../../../services/notes.service';
 
 @Component({
@@ -13,15 +13,46 @@ export class AllNotesSectionComponent implements OnInit {
   currentFilter: string[] = [];
   currentContent = 'dfa';
   allNotes: any[] = [];
+  lockedNotes: any[] = [];
   lockStatus: number = 0;
-  constructor(private notesService: NotesService) {}
+
+  filteredNotes: any[] = []
+
+  notesService = inject(NotesService)
 
   async ngOnInit(): Promise<void> {
     this.allNotes = await this.notesService.getAllNotes();
+    this.lockedNotes = await this.notesService.getLockedNotes();
+    this.applyLockFilter(0)
   }
   showContent(content: string): void {
     console.log('Something');
   }
+
+  //Lock Filter 0-> All 1-> Locked 2-> Unlocked
+  applyLockFilter(lockType: number) {
+
+    if(lockType === 0) {
+      if(this.filteredNotes.length === 0) {
+
+        this.filteredNotes= this.allNotes;
+
+      }
+
+
+    }
+    else if(lockType === 1) {
+
+      this.filteredNotes = this.lockedNotes
+
+    } else {
+
+      this.filteredNotes = this.allNotes.filter(notes => !this.lockedNotes.includes(notes))
+
+    }
+
+  }
+
 
   updateCart(note: any, add: boolean) {
     let existingCart: any[];
