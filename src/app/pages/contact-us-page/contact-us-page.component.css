@@ -1,4 +1,3 @@
-
 .container1 {
   position: relative;
   width: 100%;
@@ -22,294 +21,320 @@
   background-color: rgba(60, 12, 12, 0.5);
   z-index: 1;
 }
-.container1 h1 {
-    position: absolute;
-    top: 30%;
-    left: 14%;
-    padding-top: 18rem;
-    /* transform: translate(-50%, -50%); */
-    color: white;
-    font-family: Nunito Sans, sans-serif;
-    text-transform: uppercase;
-    font-style: normal;
-    line-height: 100%;
-    padding-top: .05em;
-    font-size: 3.25rem;
-    font-weight: 400;
-    letter-spacing: -.02em;
-    /* opacity: 75%; */
-}
-.container1 .line {
-    position: absolute;
-    top:39.5%; /* Slightly below the text */
-    left: 35%;
-    width: 50%;
-    height: 2px;
-    background-color: white;
-}
-
-
 
 .container2 {
-    margin-top: -1.5%;
-    background-color: gray;
+  position: relative;
+  height: auto;
+  background-color: gray;
+  width: 100%;
 }
 
 .container2 .para1 {
-    margin-left: 15%;
-    padding-top: 4%;
-    margin-right: 35%;
-    font-family: Nunito, sans-serif;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 1.25rem;
-    line-height: 2rem;
-    letter-spacing: .02em;
-    font-feature-settings: "pnum" on, "onum" on;
-    opacity: 50%;
-    overflow-wrap: break-word;
-    color: rgba(255, 255, 255, 1);
+  padding-left: 15%;
+  padding-top: 4%;
+  padding-right: 35%;
+  font-family: Nunito, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  letter-spacing: 0.02em;
+  font-feature-settings: "pnum" on, "onum" on;
+  opacity: 50%;
+  overflow-wrap: break-word;
+  color: rgba(255, 255, 255, 1);
 }
-.container2 .para2{
-    margin-left: 15%;
-    padding-top: 2%;
-    margin-right: 35%;
-    padding-bottom: 4%;
-    font-family: Nunito, sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1em;
-    line-height: 1.75rem;
-    letter-spacing: .02em;
-    font-feature-settings: "pnum" on, "onum" on;
-    overflow-wrap: break-word;
-    color: white;
+.container2 .para2 {
+  padding-left: 15%;
+  padding-top: 2%;
+  padding-right: 35%;
+  padding-bottom: 4%;
+  font-family: Nunito, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 1.75rem;
+  letter-spacing: 0.02em;
+  font-feature-settings: "pnum" on, "onum" on;
+  overflow-wrap: break-word;
+  color: white;
 }
-
-
 
 .form-section {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    border-bottom: 1px solid #ccc;
-    max-width: 80%;
-    /* margin: auto; */
+  display: flex;
+  justify-content: space-between;
+  padding-left: 7.5%;
+  width: 100%;
+}
+.bottom-line {
+  flex-grow: 1;
+  background-color: #524949;
+  height: 1px;
+
+  margin-right: 10%;
+  margin-left: 10%;
 }
 
 .form-section form {
-    flex: 3;
-    display: flex;
-    flex-wrap: wrap;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
 }
 
-.form-section form div {
-    flex: 1;
-    margin: 10px 10px 0 0;
+.form-section form .full-width {
+  padding-top: 4%;
+  padding-left: 5%;
+  flex-basis: 50%;
 }
-
-.form-section form div.full-width {
-    margin-top: 4%;
-    margin-left: 10%;
-    flex-basis: 50%;
+.input-row {
+  display: flex;
+  flex-direction: row;
 }
-
 .form-section label {
-    font-family: Nunito, sans-serif;
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 800;
-    font-style: normal;
-    font-weight: 800;
-    font-size: .6875rem;
-    line-height: 100%;
-    letter-spacing: .06em;
-    text-transform: uppercase;
+  font-family: Nunito, sans-serif;
+  display: block;
+  padding-bottom: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.6875rem;
+  line-height: 100%;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .form-section input {
-    width: 100%;
-    padding: 10px;
-    font-style: normal;
-    font-weight: 800;
-    font-size: .6875rem;
-    line-height: 100%;
-    letter-spacing: .09em;
-    text-transform: uppercase;
-    padding: .50rem 0 .0775rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f0f0f0;
+  width: 100%;
+  /* padding: 10px; */
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.6875rem;
+  line-height: 100%;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 0.5rem 0 0.0775rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f0f0f0;
 }
 
 .info-text {
-    font-family: Nunito, sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.05rem;
-    line-height: 1.3rem;
-    letter-spacing: .02em;
-    font-feature-settings: "pnum" on, "onum" on;
-    flex: 1;
-    padding: 2%;
-    color: #333;
-    margin-left: 5%;
-    margin-top: 2%;
-    overflow-wrap: break-word;
+  font-family: Nunito, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.3rem;
+  letter-spacing: 0.02em;
+  font-feature-settings: "pnum" on, "onum" on;
+  flex: 1;
+  padding: 2%;
+  color: #333;
+  padding-left: 3%;
+  padding-top: 5%;
+  padding-right: 10%;
+  overflow-wrap: break-word;
 }
-/* .line2 {
-    width: 100%;
-    height: 5%;
-    background-color: #ff0000;
-} */
 
-#message{
+#message {
   padding-bottom: 10%;
 }
-
 .form-section2 {
-    box-sizing: border-box;
-    /* display: flex; */
-    /* justify-content: space-between; */
-    border-bottom: 1px solid #ccc;
-    max-width: 90%;
-    margin-top: 2%;
-    margin-left: 15% ;
+  display: block;
+  padding-left: 10.5%;
+  width: 100%;
 }
 
 .form-section2 form {
-    flex: 3;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .form-section2 form div {
-    width: 100%;
-    margin-bottom: 2%;
+  width: 100%;
+  padding-bottom: 2%;
 }
 
 .form-section2 label {
-    display: block;
-    margin-bottom: 1%;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 80%;
+  display: block;
+  padding-bottom: 1%;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 80%;
 }
 
 /* .form-section2 input[type="text"], */
 .form-section2 textarea {
-    width: 100%;
-    padding: 1%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f0f0f0;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 1%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  box-sizing: border-box;
 }
-.topic-cont{
+.content-active {
+  width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.message-container {
+  flex-grow: 1;
+}
+
+.message-container form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.message-container label {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 80%;
+}
+
+.message-container textarea {
+  width: 100%;
+  padding: 2%;
+  font-family: Nunito, sans-serif;
+  font-size: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+.button {
+  padding-left: 5%;
+  padding-right: 10%;
+  padding-top: 0;
+}
+
+.submit-btn {
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 60px;
+  font-family: Nunito, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #464748;
+  opacity: 50%;
+}
+.topic-count {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 .topic-options {
-    display: flex;
-    width: 58%;
-    justify-content: space-between;
-    /* background-color: gray; */
-    height: fit-content;
-    /* padding: 1%; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .tab {
-    flex: 1;
-    height: fit-content;
-    text-align: center;
-    padding: 1%;
-    border: 1px solid #ccc;
-    background-color: #f0f0f0;
-    margin-right: 1%;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  flex: 1;
+  height: fit-content;
+  text-align: center;
+  padding: 1%;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  padding-right: 1%;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .tab:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .tab:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 .tab.active {
-    background-color: gray;
-    color: white;
+  background-color: gray;
+  color: white;
 }
-.tab-content{
-    display: flex;
+.tab-content {
+  display: flex;
+  flex-direction: column;
 }
 .tab-content .content {
-    margin-top: 2%;
-    width: 58%;
-    display: none;
+  padding-top: 1%;
+  width: 100%;
+  display: flex;
 }
-.content textarea{
-    height: 10rem;
+.content textarea {
+  height: 10rem;
 }
 
 .tab-content .content.active {
-    display: block;
+  display: block;
 }
 
 .info-text2 p {
   font-family: Nunito, sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.05rem;
-    line-height: 1.3rem;
-    letter-spacing: .02em;
-    font-feature-settings: "pnum" on, "onum" on;
-    flex: 1;
-    padding: 2%;
-    color: #333;
-    margin-left: 5%;
-    margin-top: 2%;
-    overflow-wrap: break-word;
-} 
-.info-text2{
-  margin-left: 5%;
-  width: 25%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.3rem;
+  letter-spacing: 0.02em;
+  font-feature-settings: "pnum" on, "onum" on;
+  flex: 1;
+  padding: 2%;
+  padding-left: 5%;
+  padding-right: 15%;
+  color: #333;
+  overflow-wrap: break-word;
+}
+.info-text2 {
+  margin-top: -4%;
+  padding: 5%;
   align-items: flex-end;
 }
-.info-text2 .submit-btn {
-  width: fit-content;
-  font-family: Nunito, sans-serif;
-    font-style: normal;
-    display: block;
-    height: 35%;
-    width: 70%;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    background-color: gray;
-    color: white;
-    margin-left: 10%;
-    /* text-align: center; */
-    border-radius: 20px;
-    /* text-transform: uppercase; */
-    cursor: pointer;
-    border: none;
-    font-size: 90%;
-    font-weight: 600;
-    letter-spacing: .1rem;
+.content form{
+  display: flex;
+  flex-direction: row;
 }
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; 
+  width: 100%;
+}
+.tab-text{
+  padding-left: 5%;
+}
+.img-text{
+  padding-left: 5%;
+  padding-right: 10%;
+}
+
+.excursions-section, .select-section {
+  flex: 1;
+}
+
 
 /* collectios tab*/
 
 .select-section {
   max-width: 50%;
-  margin: 2% auto;
+  /* margin: 2% auto; */
 }
 
 .select-section form div {
@@ -323,10 +348,10 @@ label {
   text-transform: uppercase;
   font-size: 90%;
 }
-.select-part{
+.select-part {
   align-items: start;
-  margin-left: -50%;
-  margin-top: -10%;
+  padding-left: -50%;
+  padding-left: -10%;
 }
 .select-item {
   font-family: Nunito, sans-serif;
@@ -347,7 +372,7 @@ label {
   background-repeat: no-repeat;
   background-position: right 10px center;
 }
-.select-item option{
+.select-item option {
   font-family: Nunito, sans-serif;
   font-weight: 600;
 }
@@ -359,18 +384,18 @@ label {
 /* excursion */
 
 .excursions-section {
-  max-width: 100%;
-  margin: 2% auto;
-  margin-left: -.5%;
+  width: 100%;
+  margin-top: -5%;
+ 
 }
 
-.excursions-group {
-  margin-bottom: 2%;
+.excursion-group {
+ padding-right: 36%;
 }
 
 label {
   display: block;
-  margin-bottom: 0.5%;
+  padding-bottom: 0.5%;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 90%;
@@ -388,10 +413,15 @@ input[type="text"] {
 
 .location-options {
   display: flex;
-  gap: 1%;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
+
+
 .location-tab {
+  display: inline-block;
   flex: 1;
   text-align: center;
   padding: 1%;
@@ -412,7 +442,7 @@ input[type="text"] {
   gap: 2%;
 }
 
-.excursion-item {
+/* .excursion-item {
   position: relative;
   flex: 1;
   border: 1px solid #ccc;
@@ -420,8 +450,18 @@ input[type="text"] {
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s;
+} */
+.excursion-item {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  cursor: pointer;
 }
 
+.excursion-item.selected {
+  border-color: rgb(11, 97, 20);
+}
 .excursion-item:hover {
   transform: scale(1.05);
 }
@@ -432,15 +472,27 @@ input[type="text"] {
   display: block;
 }
 
-.excursion-select {
+
+/* .tick-mark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: rgb(15, 142, 23);
+  font-size: 24px;
+  font-weight: bold;
+} */
+/* .excursion-select {
   position: absolute;
   top: 10%;
-  left: 10%;
+  left: 40%;
+  right: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   background-color: rgba(255, 255, 255, 0.7);
   padding: 5px 10px;
   border-radius: 20px;
   font-weight: bold;
-}
+} */
 
 .excursion-info {
   padding: 10px;
@@ -459,31 +511,22 @@ input[type="text"] {
   color: gray;
 }
 
-.excursion-item[data-selected="true"] {
-  border: 2px solid blue;
-  background-color: rgba(0, 0, 255, 0.1);
-}
 
-.excursion-item[data-selected="true"] .excursion-select {
-  background-color: blue;
-  color: white;
-}
 .overlay-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #fff; 
+  color: #fff;
   width: 100%;
   z-index: 2;
 }
 
-
-.overlay-text{
+.overlay-text {
   display: flex;
   align-items: center;
-  width: 100%; 
+  width: 100%;
   z-index: 2;
   padding-left: 10%;
   padding-right: 20%;
@@ -499,7 +542,7 @@ input[type="text"] {
 }
 
 .topic-text {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 5rem;
   color: #fff;
   /* letter-spacing: 0.3em; */
@@ -540,7 +583,6 @@ input[type="text"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  
 }
 
 /* Individual column styles */
@@ -574,9 +616,8 @@ input[type="text"] {
     max-width: 100%;
     text-align: left;
   }
-  .text-container h1{
+  .text-container h1 {
     font-size: 2rem;
-
   }
   .topic-text {
     font-size: 3rem;
@@ -590,109 +631,226 @@ input[type="text"] {
   }
 
   .horizontal-line {
-    /* margin: 10px 0; */
     height: 3px;
   }
+
+  .form-section {
+    flex: 3;
+    display: block;
+    flex-direction: column;
+    order: 1;
+  }
+  .form-section form {
+    padding-right: 10%;
+  }
+
+  .form-section form .full-width {
+    padding-top: 4%;
+    padding-left: 5%;
+  }
+  .input-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .info-text {
+    order: 2;
+    padding-left: 55%;
+    padding-right: 10%;
+  }
+  .topic-count {
+    display: flex;
+    flex-direction: column;
+  }
+  .topic-options {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: fit-content;
+    padding-right: 10%;
+  }
+  .info-text2 {
+    padding-left: 55%;
+    padding-right: 10%;
+  }
+
+  .content-active {
+    flex-direction: column;
+    align-items: stretch;
+    padding-right: 10%;
+  }
+
+  .message-container form {
+    flex-direction: column;
+
+    text-align: left;
+  }
+
+  .button {
+    padding-top: 2rem;
+    text-align: right;
+  }
+  .message-container label {
+    text-align: left;
+    padding-right: 90%;
+  }
+  .excursions-section{
+    display: flex;
+    flex-direction: column;
+    order: 1;
+  }
+.tab-text{
+padding-left: 55%;
+  order: 2;
+}
+.form-row{
+  display: flex;
+  flex-direction: column;
+}
+.excursions-options{
+  display: flex;
+  flex-direction: column;
+  order: 1;
+}
+  .img-text{
+    order: 2;
+  }
+  .excursion-group {
+    padding-right: 10%;
+   }
+   .excursions-group{
+    padding-right: 10%;
+   }
 }
 
 @media (max-width: 350px) {
-  .container1 img {
-      display: block;
-      width: 100%;
+  .container1 {
+    height: 300px;
   }
   .container1 h1 {
-      top: 20%;
-      left: 10%;
-      font-size: 2rem;
-      padding-top: 1rem;
+    top: 20%;
+    left: 10%;
+    font-size: 2rem;
+    padding-top: 1rem;
   }
-  .container1 .line {
-      top: 25%;
-      left: 10%;
-      width: 80%;
-  }
-  .container2 .para1, 
+  .container2 .para1,
   .container2 .para2 {
-      margin-left: 5%;
-      margin-right: 5%;
-      padding-top: 2%;
-      padding-bottom: 2%;
-      font-size: 1rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 1rem;
   }
+  .input-row {
+    display: flex;
+    flex-direction: column;
+  }
+
   .form-section {
     flex: 1;
     display: block;
-      flex-direction: column;
-      
+    flex-direction: column;
   }
   .form-section form {
     display: block;
-      flex-direction: column;
+    flex-direction: column;
   }
   .form-section form div {
-      width: 100%;
-      margin: 5px 0;
+    width: 100%;
+    margin: 5px 0;
   }
   .form-section label,
   .form-section input {
-      font-size: 0.875rem;
+    font-size: 0.875rem;
   }
   .info-text {
-      font-size: 0.875rem;
-      
+    order: 2;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .info-text {
+    font-size: 0.875rem;
   }
   .form-section2 {
-      max-width: 95%;
-      margin: auto;
+    flex: 1;
+    display: block;
+    flex-direction: column;
   }
   .topic-cont {
-      flex-direction: column;
+    flex-direction: column;
   }
   .topic-options {
-      width: 95%;
-      margin: auto;
-  }
-  .tab-content .content {
-      width: 95%;
+    display: flex;
+    flex-direction: column;
   }
   .info-text2 {
-      width: 100%;
-      margin-left: 0;
+    padding-left: 5%;
+    padding-right: 5%;
   }
+  .tab-content .content {
+    width: 95%;
+  }
+
   .info-text2 .submit-btn {
-      width: 80%;
-      margin: 10% auto;
+    width: 80%;
+    margin: 10% auto;
   }
   .select-section {
-      max-width: 95%;
-      margin: auto;
+    max-width: 95%;
+    margin: auto;
   }
   .select-part {
-      margin-left: 0;
+    margin-left: 0;
   }
   .select-item {
-      font-size: 0.875rem;
+    font-size: 0.875rem;
   }
   .excursions-section {
-      max-width: 95%;
-      margin: auto;
+    max-width: 95%;
+    margin: auto;
   }
   .location-options,
   .excursions-options {
-      flex-direction: column;
+    flex-direction: column;
   }
   .location-tab,
   .excursion-item {
-      width: 100%;
-      margin-bottom: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
   }
   .excursion-info h3,
   .excursion-info p {
-      font-size: 0.875rem;
+    font-size: 0.875rem;
+  }
+  .content-active {
+    flex-direction: column;
+    align-items: stretch;
+    padding-right: 10%;
+  }
+
+  .message-container form {
+    flex-direction: column;
+
+    text-align: left;
+  }
+
+  .button {
+    padding-top: 2rem;
+    text-align: center;
+  }
+  .message-container label {
+    text-align: left;
+    padding-right: 80%;
+  }
+  .submit-btn {
+    padding: 10px 30px;
   }
 }
 
 @media (max-width: 576px) {
+  .container1 {
+    height: 300px;
+  }
   .topic-text {
     font-size: 2.5rem;
   }
@@ -702,9 +860,52 @@ input[type="text"] {
     padding-right: 5%;
     display: block;
   }
+  .input-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .info-text {
+    order: 2;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .topic-options {
+    display: flex;
+    flex-direction: column;
+  }
+  .info-text2 {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .content-active {
+    flex-direction: column;
+    align-items: stretch;
+    padding-right: 10%;
+  }
+
+  .message-container form {
+    flex-direction: column;
+
+    text-align: left;
+  }
+
+  .button {
+    padding-top: 2rem;
+    text-align: center;
+  }
+  .message-container label {
+    text-align: left;
+    padding-right: 80%;
+  }
+  .submit-btn {
+    padding: 10px 30px;
+  }
 }
 
 @media (max-width: 400px) {
+  .container1 {
+    height: 300px;
+  }
   .topic-text {
     font-size: 2rem;
   }
@@ -717,5 +918,45 @@ input[type="text"] {
 
   .horizontal-line {
     height: 2px;
+  }
+  .input-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .info-text {
+    order: 2;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .topic-options {
+    display: flex;
+    flex-direction: column;
+  }
+  .info-text2 {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .content-active {
+    flex-direction: column;
+    align-items: stretch;
+    padding-right: 10%;
+  }
+
+  .message-container form {
+    flex-direction: column;
+
+    text-align: left;
+  }
+
+  .button {
+    padding-top: 2rem;
+    text-align: center;
+  }
+  .message-container label {
+    text-align: left;
+    padding-right: 80%;
+  }
+  .submit-btn {
+    padding: 10px 30px;
   }
 }

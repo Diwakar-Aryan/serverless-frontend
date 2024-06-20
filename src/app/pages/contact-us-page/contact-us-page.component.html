@@ -15,84 +15,159 @@
     <p class="para2">Find our contact form below—</p>
   </div>
 
-  <div class="form-section">
-    <form>
-      <div class="full-width">
-        <label for="name">Name*</label>
-        <input type="text" id="name" name="name" />
+  <div class="contact-section">
+    <div class="form-section">
+      <form>
+        <div class="full-width">
+          <label for="name">Name*</label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <div class="input-row">
+          <div class="full-width">
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="full-width">
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" />
+          </div>
+        </div>
+      </form>
+      <div class="info-text">
+        We will only use your personal details to reach back to you, and they
+        will not be shared with any third party.
       </div>
-      <div class="full-width">
-        <label for="email">Email*</label>
-        <input type="email" id="email" name="email" />
-      </div>
-      <div>
-        <label for="country">Country</label>
-        <input type="text" id="country" name="country" />
-      </div>
-    </form>
-    <div class="info-text">
-      We will only use your personal details to reach back to you, and they will
-      not be shared with any third party.
     </div>
+    <hr class="bottom-line" />
   </div>
-  <!-- <div class="line2"></div> -->
-  <!-- <hr> -->
+
   <div class="form-section2">
-    <label for="topic">Topic</label>
-    <div class="topic-cont">
-      <div class="topic-options">
-        <div class="tab" data-target="workshops">Workshops</div>
-        <div class="tab" data-target="excursions">Excursions</div>
-        <div class="tab" data-target="collections">Collections</div>
-        <div class="tab active" data-target="message">Just a Message</div>
-      </div>
-      <div class="info-text2">
-        <p>
-          Please select what offering interests you, or if you’re just sending a
-          message.
-        </p>
-        <button class="submit-btn" type="submit">Send Message</button>
+    <div class="topic-container">
+      <label for="topic">Topic</label>
+      <div class="topic-count">
+        <div class="topic-options">
+          <div class="tab" [class.active]="activeTab === 'workshops'" (click)="setActiveTab('workshops')">Workshops</div>
+        <div class="tab" [class.active]="activeTab === 'excursions'" (click)="setActiveTab('excursions')">Excursions</div>
+        <div class="tab" [class.active]="activeTab === 'collections'" (click)="setActiveTab('collections')">Collections</div>
+        <div class="tab" [class.active]="activeTab === 'message'" (click)="setActiveTab('message')">Just a Message</div>
+        </div>
+        <div class="info-text2">
+          <p>
+            Please select what offering interests you, or if you’re just sending
+            a message.
+          </p>
+        </div>
       </div>
     </div>
 
     <div class="tab-content">
-      <div class="content" id="workshops">
+      
+      <div class="content" *ngIf="activeTab === 'workshops'">
         <form>
-          <!-- Add specific content for Workshops here -->
           <div class="excursions-section">
-            <form>
-              <div class="excursions-group">
-                <label for="preferred-date">Preferred Date*</label>
-                <input type="date" id="preferred-date" name="preferred-date" />
-              </div>
-
+            <div class="excursion-group">
+              <label for="preferred-date">Preferred Date*</label>
+              <input type="date" id="preferred-date" name="preferred-date" />
+            </div>
+            <div class="form-row">
               <div class="excursions-group">
                 <label for="location">Location*</label>
                 <div class="location-options">
-                  <div class="location-tab active">Any</div>
-                  <div class="location-tab">Bagru</div>
-                  <div class="location-tab">Delhi</div>
-                  <div class="location-tab">Jaipur</div>
-                  <div class="location-tab">Online</div>
+                  <div 
+                    class="location-tab" 
+                    [class.active]="selectedLocation === 'Any'" 
+                    (click)="selectLocation('Any')">Any</div>
+                  <div 
+                    class="location-tab" 
+                    [class.active]="selectedLocation === 'Bagru'" 
+                    (click)="selectLocation('Bagru')">Bagru</div>
+                  <div 
+                    class="location-tab" 
+                    [class.active]="selectedLocation === 'Delhi'" 
+                    (click)="selectLocation('Delhi')">Delhi</div>
+                  <div 
+                    class="location-tab" 
+                    [class.active]="selectedLocation === 'Jaipur'" 
+                    (click)="selectLocation('Jaipur')">Jaipur</div>
+                  <div 
+                    class="location-tab" 
+                    [class.active]="selectedLocation === 'Online'" 
+                    (click)="selectLocation('Online')">Online</div>
+                </div>
+               
+              </div>
+              <div class="excursions-group">
+                <label for="workshop">WORKSHOP*</label>
+                <select 
+                  class="select-item" 
+                  id="workshop" 
+                  name="workshop" 
+                  (change)="onWorkshopChange($event)">
+                  <option value="" disabled selected>Select</option>
+                  <!-- <option value="Half-day Block Printing">Half-day Block Printing</option>
+                  <option value="Half-day Natural Dye">Half-day Natural Dye</option>
+                  <option value="One-day Block Carving">One-day Block Carving</option>
+                  <option value="One-day Block Print & Natural Dye">One-day Block Print & Natural Dye</option>
+                  <option value="One-day Natural Dye">One-day Natural Dye</option>
+                  <option value="One-day Natural Indigo">One-day Natural Indigo</option>
+                  <option value="Table Cloth Large">One-day Resist Printing</option>
+                  <option value="One-day Resist Printing">Two-day Block Print & Natural Dye</option>
+                  <option value="Two-day Resist Printing">Two-day Resist Printing</option>
+                  <option value="Four-day Workshop">Four-day Workshop</option>
+                  <option value="Six-day Workshop">Six-day Workshop</option>
+                  <option value="Eight-day Workshop">Eight-day Workshop</option> -->
+                  <option *ngFor="let workshop of filteredWorkshops" [value]="workshop">{{ workshop }}</option>
+                </select>
+              </div>
+              <div class="tab-text">
+                <p>
+                  This Workshop features:
+                </p>
+              </div>
+            </div>
+            <div class="excursion-group" *ngIf="showImages">
+              <label for="excursions">OPTIONAL EXCURSIONS</label>
+              <div class="excursions-options">
+                <div class="excursion-item"
+                  [class.selected]="selectedExcursion === 'Bagru Ka Tour'"
+                  (click)="selectExcursion('Bagru Ka Tour')">
+                  <img src="/assets/images/2022_04.jpg" alt="Bagru Ka Tour" />
+                  <div class="excursion-info">
+                    <h3>Bagru Ka Tour</h3>
+                    <p>Bagru · 2hr</p>
+                  </div>
+                </div>
+                <div class="excursion-item"
+                  [class.selected]="selectedExcursion === 'Traditional Textiles'"
+                  (click)="selectExcursion('Traditional Textiles')">
+                  <img src="/assets/images/2022_05.jpg" alt="Traditional Textiles" />
+                  <div class="excursion-info">
+                    <h3>Traditional Textiles</h3>
+                    <p>Bagru · 2hr</p>
+                  </div>
+                </div>
+                <div class="img-text">
+                  <p>
+                    You may visit any of these Excursions offered around your Workshop.
+                  </p>
                 </div>
               </div>
-            </form>
+             
+            </div>
           </div>
-          <label for="workshops-message">Message</label>
-          <textarea id="workshops-message" name="message" rows="4"></textarea>
         </form>
       </div>
-      <div class="content" id="excursions">
+      
+  
+      <div class="content" *ngIf="activeTab === 'excursions'">
         <form>
-          <!-- Add specific content for Excursions here -->
           <div class="excursions-section">
             <form>
-              <div class="excursions-group">
+              <div class="excursion-group">
                 <label for="preferred-date">Preferred Date*</label>
                 <input type="date" id="preferred-date" name="preferred-date" />
               </div>
-
-              <div class="excursions-group">
+              <div class="excursion-group">
                 <label for="location">Location*</label>
                 <div class="location-options">
                   <div class="location-tab active">Any</div>
@@ -102,57 +177,40 @@
                   <div class="location-tab">Online</div>
                 </div>
               </div>
-
               <div class="excursions-group">
                 <label for="excursions">Excursions*</label>
                 <div class="excursions-options">
-                  <div
-                    class="excursion-item"
-                    onclick="toggleSelect(this)"
-                    data-selected="false"
-                  >
-                    <img src="assets/images/2022_04.jpg" alt="Bagru Ka Tour" />
-                    <div class="excursion-select">Select</div>
+                  <div class="excursion-item"
+                  [class.selected]="selectedExcursion === 'Bagru Ka Tour'"
+                  (click)="selectExcursion('Bagru Ka Tour')">
+                    <img src="/assets/images/2022_04.jpg" alt="Bagru Ka Tour" />
+                    
                     <div class="excursion-info">
                       <h3>Bagru Ka Tour</h3>
                       <p>Bagru · 2hr</p>
+                      <!-- <div class="tick-mark" *ngIf="selectedExcursion === 'Bagru Ka Tour'">✓</div> -->
                     </div>
                   </div>
-                  <div
-                    class="excursion-item"
-                    onclick="toggleSelect(this)"
-                    data-selected="false"
-                  >
-                    <img
-                      src="assets/images/2022_05.jpg"
-                      alt="Traditional Textiles"
-                    />
-                    <div class="excursion-select">Select</div>
+                  <div  class="excursion-item"
+                  [class.selected]="selectedExcursion === 'Traditional Textiles'"
+                  (click)="selectExcursion('Traditional Textiles')">
+                    <img src="/assets/images/2022_05.jpg" alt="Traditional Textiles" />
+                    
                     <div class="excursion-info">
                       <h3>Traditional Textiles</h3>
                       <p>Bagru · 2hr</p>
+                      <!-- <div class="tick-mark" *ngIf="selectedExcursion === 'Traditional Textiles'">✓</div> -->
                     </div>
                   </div>
                 </div>
               </div>
             </form>
           </div>
-
-          <script>
-            function toggleSelect(element) {
-              const isSelected =
-                element.getAttribute("data-selected") === "true";
-              element.setAttribute("data-selected", !isSelected);
-            }
-          </script>
-
-          <label for="excursions-message">Message</label>
-          <textarea id="excursions-message" name="message" rows="4"></textarea>
         </form>
       </div>
-      <div class="content" id="collections">
+  
+      <div class="content" *ngIf="activeTab === 'collections'">
         <form>
-          <!-- Add specific content for Collections here -->
           <div class="select-section">
             <form>
               <div class="select-part">
@@ -169,22 +227,20 @@
               </div>
             </form>
           </div>
-          <div>
-            <label for="collections-message">Message</label>
-            <textarea
-              id="collections-message"
-              name="message"
-              rows="4"
-            ></textarea>
-          </div>
+          
         </form>
       </div>
-      <div class="content active" id="message">
-        <form>
-          <!-- Add specific content for Just a Message here -->
-          <label for="message-content">Message</label>
-          <textarea id="message-content" name="message" rows="4"></textarea>
-        </form>
+  
+      <div class="content-active" id="message">
+        <div class="message-container">
+          <form>
+            <label for="message-content">Message</label>
+            <textarea id="message-content" name="message" rows="5"></textarea>
+          </form>
+        </div>
+        <div class="button">
+          <button class="submit-btn" type="submit">Send Message</button>
+        </div>
       </div>
     </div>
   </div>
