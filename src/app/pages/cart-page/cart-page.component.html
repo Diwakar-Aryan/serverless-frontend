@@ -15,7 +15,7 @@
       </div>
       <div class="net-total">
         <span>NET TOTAL</span>
-        <span>0.00</span>
+        <span>{{ cartItem.length > 0 ? getTotalCost() : '0.00' }}</span>
       </div>
     </div>
     <hr class="horizontal-line-product" />
@@ -24,11 +24,12 @@
         <p>No items in cart.</p>
       </div>
       <div class="cart-body">
-       <div class="cart-tem" *ngFor="let item of cartItem">
+       <div class="cart-item" *ngFor="let item of cartItem let i = index">
         <span class="product">{{item.name}}</span>
         <span class="price">{{item.cost}}</span>
-        <span class="quantity">1</span>
-        <span class="total">{{item.cost}}</span>
+        <span class="quantityvalue">1<button class="remove-button" (click)="removeItem(i)">&#10005;</button>
+        </span>
+        <span class="totalvalue">{{item.cost}}</span>
        </div>
       </div>
       <div class="login-button">
@@ -36,6 +37,7 @@
       </div>
     </div>
     <hr class="horizontal-line-product" />
+    
   </div>
 </section>
 

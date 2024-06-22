@@ -21,7 +21,7 @@ import { RedirectComponent } from './redirect/redirect.component';
 
 export const routes: Routes = [
     {
-        path:"",redirectTo:"/contactus",pathMatch:"full"
+        path:"",redirectTo:"/home",pathMatch:"full"
     },
     {
         path:"home",component:HomeComponent

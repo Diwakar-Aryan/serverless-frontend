@@ -20,6 +20,7 @@ export class CartPageComponent implements OnInit{
     const localStorageItem = await localStorage.getItem("cart");
     if(localStorageItem) {
       this.cartItem = JSON.parse(localStorageItem);
+      this.cartItem.forEach(item => item.cost = Number(item.cost));
     }
   }
 
@@ -37,5 +38,11 @@ export class CartPageComponent implements OnInit{
     // Mount Checkout
     checkout?.mount('#checkout');
   }
-
+  getTotalCost(): number {
+    return this.cartItem.reduce((total, item) => total + item.cost, 0);
+  }
+  removeItem(index: number) {
+    this.cartItem.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(this.cartItem));
+  }
 }

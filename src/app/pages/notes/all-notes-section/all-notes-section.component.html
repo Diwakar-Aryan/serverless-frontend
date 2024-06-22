@@ -1,8 +1,8 @@
 <section>
   <div class="tabs-container">
     <div class="tabs-left">
-      <a href="#" class="tab" id="all-tab" (click)="showContent('all')">ALL</a>
-      <a href="#" class="tab" id="placeholder-tab">PLACEHOLDER</a>
+      <a  class="tab" id="all-tab" [class.active]="showContent('all')"  (click)="showContent('all')">ALL</a>
+      <a  class="tab" id="placeholder-tab">PLACEHOLDER</a>
     </div>
     <div class="line-and-topic">
       <hr class="horizontal-line" />
@@ -11,10 +11,10 @@
   </div>
   <div class="tabs-container2">
     <div class="tabs-left2">
-      <a href="#" class="tab2" id="all-tab2" (click)="showContent('all')"
+      <a  class="tab2" id="all-tab2" (click)="showContent('all')"
         >ALL</a
       >
-      <a href="#" class="tab2" id="english-tab2">ENGLISH</a>
+      <a  class="tab2" id="english-tab2">ENGLISH</a>
     </div>
     <div class="line-and-topic2">
       <hr class="horizontal-line2" />
@@ -63,7 +63,7 @@
           <p class="sub-text">{{note.title}}</p>
         </div>
         <div class="right-content">
-          <button class="add-to-cart" (click)="updateCart(note,note?.addedToCart ? false : true)">{{note?.addedToCart ? 'Added To Cart' : note.cost}}</button>
+          <button class="add-to-cart" (click)="updateCart(note, !note.addedToCart)">{{note?.addedToCart ? 'Added To Cart' : note.cost}}</button>
         </div>
       </div>
     </div>
