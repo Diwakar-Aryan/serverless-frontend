@@ -33,3 +33,58 @@ padding: 2%;
     overflow-wrap: break-word;
 }
 
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .term-page {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  
+    .term-page h1 {
+      font-size: 2.75rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .terms{
+        margin-top: 5%;
+    }
+    .term-page {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  
+    .term-page h1 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .term-page {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  
+    .term-page h1 {
+      font-size: 2.25rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .terms{
+        margin-top: 14%;
+    }
+    .term-page {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  
+    .term-page h1 {
+      font-size: 2rem;
+    }
+  
+    .term-page p {
+      font-size: 0.9em;
+      line-height: 1.5rem;
+    }
+  }

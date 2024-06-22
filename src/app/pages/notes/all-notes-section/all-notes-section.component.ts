@@ -24,6 +24,13 @@ export class AllNotesSectionComponent implements OnInit {
     this.allNotes = await this.notesService.getAllNotes();
     this.lockedNotes = await this.notesService.getLockedNotes();
     this.applyLockFilter(0)
+    const localStorageData = localStorage.getItem('cart');
+    if (localStorageData) {
+      const cartItems = JSON.parse(localStorageData);
+      this.allNotes.forEach(note => {
+        note.addedToCart = cartItems.some((item: { id: any; }) => item.id === note._id);
+      });
+    }
   }
   showContent(content: string): void {
     console.log('Something');

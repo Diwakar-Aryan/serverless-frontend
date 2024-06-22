@@ -14,7 +14,7 @@
 }
 .text1 p {
   font-family: Nunito, sans-serif;
-  margin-bottom: 5%;
+  /* margin-bottom: 5%; */
   color: rgb(255, 255, 255);
 
   font-style: normal;
@@ -26,7 +26,7 @@
   opacity: 50%;
 }
 .text2 p {
-  margin-bottom: 5%;
+  /* margin-bottom: 5%; */
   color: rgb(255, 255, 255);
 
   font-weight: 500;
@@ -41,13 +41,13 @@
 .left-text,
 .right-text {
   flex: 1;
-  margin: 2%;
+  /* margin: 2%; */
   padding-left: 10%;
 }
 .right-text1 p {
   padding-right: 35%;
 
-  margin-bottom: 45%;
+  padding-bottom: 33%;
   color: rgb(255, 255, 255);
 
   font-style: normal;
@@ -56,4 +56,45 @@
 
   font-feature-settings: "pnum" on, "onum" on;
   opacity: 70%;
+}
+@media (max-width: 768px) {
+  .red-section{
+    height: auto;
+  }
+  .text-container {
+    display: block;
+   
+  }
+
+  .left-text,
+  .right-text {
+    flex: 100%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .right-text1 p {
+    padding-right: 5%;
+  padding-left: 60%;
+  padding-bottom: 5%;
+    
+    color: #fff;;
+  
+    font-style: normal;
+  
+    font-size: 1.2rem;
+  
+    font-feature-settings: "pnum" on, "onum" on;
+    /* opacity: 70%; */
+    z-index: 1;
+  }
+  
+}
+@media (max-width: 714px) {
+.right-text1 p{
+flex: 100%;
+padding-left: 0;
+padding-right: 5%;
+}
 }

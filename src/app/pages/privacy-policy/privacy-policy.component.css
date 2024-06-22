@@ -51,3 +51,65 @@
     font-feature-settings: "pnum" on, "onum" on;
     overflow-wrap: break-word;
   }
+
+  /* Media Queries */
+@media (max-width: 1200px) {
+  .text-container {
+      margin-left: 10%;
+      margin-right: 10%;
+  }
+}
+
+@media (max-width: 992px) {
+  .text-container {
+      margin-left: 8%;
+      margin-right: 8%;
+  }
+
+  .text-container h1 {
+      font-size: 2.75rem;
+  }
+
+  .text-container h2 {
+      font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-container {
+      margin-left: 5%;
+      margin-right: 5%;
+  }
+
+  .text-container h1 {
+      font-size: 2.25rem;
+  }
+
+  .text-container h2 {
+      font-size: 1.75rem;
+  }
+
+  .text-container p, .text-container ul li {
+      font-size: 0.95em;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-container {
+      margin-left: 3%;
+      margin-right: 3%;
+      margin-top: 15%;
+  }
+
+  .text-container h1 {
+      font-size: 2rem;
+  }
+
+  .text-container h2 {
+      font-size: 1.5rem;
+  }
+
+  .text-container p, .text-container ul li {
+      font-size: 0.9em;
+  }
+}

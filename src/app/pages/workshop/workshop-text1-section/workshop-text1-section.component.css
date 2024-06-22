@@ -1,4 +1,4 @@
-/* workshop-text.component.css */
+
 .red-section {
   background-color: rgba(134, 13, 13, 0.9);
   color: white;
@@ -55,4 +55,54 @@
 
   font-feature-settings: "pnum" on, "onum" on;
   opacity: 70%;
+}
+/* * Media query for tablets  */
+@media screen and (max-width: 1024px) {
+  .left-text, .right-text {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .right-text p {
+    padding-right: 25%;
+    margin-bottom: 20%;
+  }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .text-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-text, .right-text {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 5% 0;
+  }
+
+  .right-text p {
+    padding-right: 5%;
+    margin-bottom: 10%;
+  }
+}
+
+/* Media query for small mobile devices */
+@media screen and (max-width: 480px) {
+  .text1 p, .text2 p, .right-text p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .left-text, .right-text {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 5% 0;
+  }
+
+  .right-text p {
+    padding-right: 5%;
+    margin-bottom: 10%;
+  }
 }

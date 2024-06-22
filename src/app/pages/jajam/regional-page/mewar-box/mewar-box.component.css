@@ -41,7 +41,7 @@
 
 
 .join-button {
-  margin-left: auto;
+  margin-left: 0;
   padding-right: 4rem;
    
 }
@@ -60,3 +60,196 @@
   /* opacity: 50%; */
   transition: background-color 0.3s ease;
 }
+
+
+@media (max-width: 768px){
+  .comming-soon {
+    background-color: #fff;
+    
+    width: 100%;
+    height: auto;
+  }
+  .comming-soon h1 {
+    /* padding: 3.2%; */
+    text-align: center;
+    font-family: Nunito Sans, sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    line-height: 100%;
+    white-space: unset;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    opacity: 72%;
+  }
+  .mewar-container {
+    background-color: rgba(80, 78, 78, 0.2);
+    width: 100%;
+  }
+  
+  .mewar-container {
+    display: block;
+    /* justify-content: space-between; */
+    align-items: start;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+  
+  .row-text {
+    display: block;
+    align-items: start;
+  }
+  .text-column{
+      padding-right: 0;
+      padding-left: 0;
+  }
+  .text-column h4{
+      font-family: Nunito Sans, sans-serif;
+      text-transform: uppercase;
+      font-style: normal;
+      line-height: 100%;
+      font-size: 1.75rem;
+      font-weight: 400;
+      letter-spacing: .02em;
+      opacity: 70%;
+      overflow-wrap: break-word;
+      color: rgba(101, 101, 101, 1);
+  }
+  .text-column p{
+    max-width: 60ch;
+    padding-top: 5%;
+    padding-right: 0;
+    font-family: Nunito, sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1em;
+      line-height: 1.75rem;
+      letter-spacing: .02em;
+      font-feature-settings: "pnum" on, "onum" on;
+      overflow-wrap: break-word;
+      opacity: 70%;
+      color: rgba(101, 101, 101, 1);
+  }
+  
+  .join-button {
+    margin-left: 0;
+    padding-right: 0;
+    /* padding-left: 50%; */
+    align-items: end;
+     
+  }
+  
+  .btn {
+    align-items: end;
+    padding: 0.6rem 6.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+    color: #fff;
+    line-height: 100%;
+   background-color: rgba(101, 101, 101, 1);
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 2rem;
+    font-weight: bold;
+    border: 0.2rem solid #e4eaf3;
+    /* opacity: 50%; */
+    transition: background-color 0.3s ease;
+  }
+}
+@media (max-width:350px){
+  .comming-soon {
+    background-color: #fff;
+    /* padding: 3%; */
+    width: 100%;
+    height: auto;
+  }
+  .comming-soon h1 {
+    /* padding: 3.2%; */
+    text-align: center;
+    font-family: Nunito Sans, sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    line-height: 100%;
+    white-space: unset;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    opacity: 72%;
+  }
+  .mewar-container {
+    background-color: rgba(80, 78, 78, 0.2);
+    width: 100%;
+  }
+  
+  .mewar-container {
+    display: block;
+    /* justify-content: space-between; */
+    align-items: start;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+  
+  .row-text {
+    display: block;
+    align-items: start;
+  }
+  .text-column{
+      padding-right: 0;
+      padding-left: 0;
+  }
+  .text-column h4{
+      font-family: Nunito Sans, sans-serif;
+      text-transform: uppercase;
+      font-style: normal;
+      line-height: 100%;
+      font-size: 1.75rem;
+      font-weight: 400;
+      letter-spacing: .02em;
+      opacity: 70%;
+      overflow-wrap: break-word;
+      color: rgba(101, 101, 101, 1);
+  }
+  .text-column p{
+    max-width: 60ch;
+    padding-top: 5%;
+    padding-right: 0;
+    font-family: Nunito, sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1em;
+      opacity: 70%;
+      line-height: 1.75rem;
+      letter-spacing: .02em;
+      font-feature-settings: "pnum" on, "onum" on;
+      overflow-wrap: break-word;
+      color: rgba(101, 101, 101, 1);
+  }
+  
+  .join-button {
+    margin-left: 0;
+    padding-right: 0;
+    
+     
+  }
+  
+  .btn {
+    padding: 0.6rem 6.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+    color: #fff;
+    line-height: 100%;
+   background-color: rgba(101, 101, 101, 1);
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 2rem;
+    font-weight: bold;
+    border: 0.2rem solid #e4eaf3;
+    /* opacity: 50%; */
+    transition: background-color 0.3s ease;
+  }
+}
+
