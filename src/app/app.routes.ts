@@ -27,7 +27,7 @@ export const routes: Routes = [
         path:"home",component:HomeComponent
     },
     {
-      path:"account",component: AccountComponent,canActivate: [authGuard] 
+      path:"account",component: AccountComponent,
     },
     {
          path: "workshops", component: WorkshopComponent,
@@ -55,7 +55,7 @@ export const routes: Routes = [
     },
     {
       path:"payment/redirect/:sessionId", component: RedirectComponent
-       
+
     },
     {
         path: "contactus", component: ContactUsPageComponent,

@@ -13,9 +13,10 @@ export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes,  withComponentInputBinding()), provideClientHydration(), provideAuth0({
     domain: environment.auth.domain,
     clientId: environment.auth.clientId,
-    authorizationParams: {
-      redirect_uri: 'http://localhost:4200/account',
+    authorizationParams:{
+      redirect_uri: 'http://localhost:4200/account'
     }
+
   }),
   provideHttpClient(),
 
