@@ -79,6 +79,9 @@
     /* margin: 10px 0; */
     height: 3px;
   }
+  .image-container{
+    margin-top: 3.7%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -90,6 +93,9 @@
     padding-left: 5%;
     padding-right: 5%;
     display: block;
+  }
+  .image-container{
+    margin-top: 6.7%;
   }
 }
 
@@ -106,5 +112,8 @@
 
   .horizontal-line {
     height: 2px;
+  }
+  .image-container{
+    margin-top: 11.8%;
   }
 }

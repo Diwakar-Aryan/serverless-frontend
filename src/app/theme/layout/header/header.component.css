@@ -106,8 +106,22 @@
   font-weight: bold;
   color: black;
 }
+.cart-count {
+  position: absolute;
+  top: -8px; 
+  right: -10px; 
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 1px 5px;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+}
 
-
+.navbar-item i {
+  position: relative;
+}
 @media (max-width: 768px) {
   .navbar {
     display: block;

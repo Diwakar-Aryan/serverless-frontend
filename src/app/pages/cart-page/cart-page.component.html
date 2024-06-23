@@ -6,41 +6,44 @@
     </div>
   </div>
   <div class="cart-container">
-    <div class="cart-row">
+    <div class="cart-table">
       <div class="cart-header">
         <span class="product">PRODUCT</span>
         <span class="price">PRICE</span>
         <span class="quantity">QUANTITY</span>
         <span class="total">TOTAL</span>
       </div>
-      <div class="net-total">
-        <span>NET TOTAL</span>
-        <span>{{ cartItem.length > 0 ? getTotalCost() : '0.00' }}</span>
+      <hr class="horizontal-line-product" />
+      <div class="cart-body-row">
+        <div class="cart-body" *ngIf="cartItem.length == 0">
+          <p>No items in cart.</p>
+        </div>
+        <div class="cart-body">
+          <div class="cart-item" *ngFor="let item of cartItem; let i = index">
+            <span class="product">{{ item.name }}</span>
+            <span class="price">{{ item.cost }}</span>
+            <span class="quantity"
+              >1<button class="remove-button" (click)="removeItem(item.id)">
+                &#10005;
+              </button>
+            </span>
+            <span class="total">{{ item.cost }}</span>
+          </div>
+        </div>
       </div>
+      <hr class="horizontal-line-product" />
     </div>
-    <hr class="horizontal-line-product" />
-    <div class="cart-body-row">
-      <div class="cart-body" *ngIf="cartItem.length == 0">
-        <p>No items in cart.</p>
-      </div>
-      <div class="cart-body">
-       <div class="cart-item" *ngFor="let item of cartItem let i = index">
-        <span class="product">{{item.name}}</span>
-        <span class="price">{{item.cost}}</span>
-        <span class="quantityvalue">1<button class="remove-button" (click)="removeItem(i)">&#10005;</button>
-        </span>
-        <span class="totalvalue">{{item.cost}}</span>
-       </div>
+   
+    <div class="button-side">
+      <div class="net-total">
+        <span class="net-label">NET TOTAL</span>
+        <span class="net-value">{{ cartItem.length > 0 ? getTotalCost() : "0.00" }}</span>
       </div>
       <div class="login-button">
-        <button class="checkout-button" (click)="doCheckout()">Log in to checkout</button>
+        <button class="checkout-button" (click)="doCheckout()">
+          Log in to checkout
+        </button>
       </div>
     </div>
-    <hr class="horizontal-line-product" />
-    
   </div>
 </section>
-
-<div id="checkout">
-
-</div>

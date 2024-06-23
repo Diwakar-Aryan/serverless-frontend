@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { NotesService } from '../../../services/notes.service';
+import { CartService } from '../../../services/cart.service';
 
 @Component({
   selector: 'app-all-notes-section',
@@ -15,10 +16,12 @@ export class AllNotesSectionComponent implements OnInit {
   allNotes: any[] = [];
   lockedNotes: any[] = [];
   lockStatus: number = 0;
-
+  selectedNoteId: string | null = null;
   filteredNotes: any[] = []
 
   notesService = inject(NotesService)
+  cartService = inject(CartService);
+  
 
   async ngOnInit(): Promise<void> {
     this.allNotes = await this.notesService.getAllNotes();
@@ -33,31 +36,27 @@ export class AllNotesSectionComponent implements OnInit {
     }
   }
   showContent(content: string): void {
-    console.log('Something');
+    if (content === 'all') {
+      this.lockStatus = 0;
+    } else if (content === 'locked') {
+      this.lockStatus = 1;
+    } else if (content === 'unlocked') {
+      this.lockStatus = 2;
+    }
+    this.applyLockFilter(this.lockStatus);
   }
+  
+
 
   //Lock Filter 0-> All 1-> Locked 2-> Unlocked
   applyLockFilter(lockType: number) {
-
-    if(lockType === 0) {
-      if(this.filteredNotes.length === 0) {
-
-        this.filteredNotes= this.allNotes;
-
-      }
-
-
-    }
-    else if(lockType === 1) {
-
-      this.filteredNotes = this.lockedNotes
-
+    if (lockType === 0) {
+      this.filteredNotes = this.allNotes;
+    } else if (lockType === 1) {
+      this.filteredNotes = this.allNotes;
     } else {
-
-      this.filteredNotes = this.allNotes.filter(notes => !this.lockedNotes.includes(notes))
-
+      this.filteredNotes = this.allNotes.filter(note => !this.lockedNotes.includes(note));
     }
-
   }
 
 
@@ -72,28 +71,33 @@ export class AllNotesSectionComponent implements OnInit {
     };
     if (add) {
       note.addedToCart = true;
-      const localStorageData: any = localStorage.getItem('cart');
-      if(localStorageData && localStorageData !== '[]') {
+      this.cartService.addToCart(item);
+      // const localStorageData: any = localStorage.getItem('cart');
+      // if(localStorageData && localStorageData !== '[]') {
 
-        existingCart = JSON.parse(localStorageData) ;
-        existingCart.push(item)
+      //   existingCart = JSON.parse(localStorageData) ;
+      //   existingCart.push(item)
 
-        localStorage.setItem('cart', JSON.stringify(existingCart));
+      //   localStorage.setItem('cart', JSON.stringify(existingCart));
 
-      } else {
+      // } else {
 
-        localStorage.setItem('cart', JSON.stringify([item]));
-      }
+      //   localStorage.setItem('cart', JSON.stringify([item]));
+      // }
     } else {
       note.addedToCart = false;
-      const localStorageData: any = localStorage.getItem('cart');
-      if(localStorageData && localStorageData !== '[]') {
+      this.cartService.removeFromCart(note._id);
+      // const localStorageData: any = localStorage.getItem('cart');
+      // if(localStorageData && localStorageData !== '[]') {
 
-        existingCart = JSON.parse(localStorageData) ;
-        const cart = existingCart.filter((obj) => { return obj.id !== note._id })
+      //   existingCart = JSON.parse(localStorageData) ;
+      //   const cart = existingCart.filter((obj) => { return obj.id !== note._id })
 
-        localStorage.setItem('cart', JSON.stringify(cart));
-      }
+      //   localStorage.setItem('cart', JSON.stringify(cart));
+      // }
     }
+  }
+  toggleNoteDetails(noteId: string) {
+    this.selectedNoteId = this.selectedNoteId === noteId ? null : noteId;
   }
 }

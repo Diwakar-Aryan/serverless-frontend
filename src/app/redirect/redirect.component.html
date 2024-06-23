@@ -1,5 +1,19 @@
-<p>redirect works!</p>
-<div>Loading Icon</div>
-<div>We will redirect to the home page once we get payment status</div>
-
-<div> Your Payment Status: {{paymentStatus}}</div>
+<div class="thank-you-container">
+    <div class="loading-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="64px" height="64px" fill="#0c5c1f">
+          <path d="M459.635 67.333c-17.001-17.003-44.654-17.003-61.655 0L181.334 303.69 114.07 236.426c-17.003-17.003-44.654-17.003-61.655 0s-17.001 44.654 0 61.655l128 128c8.501 8.498 19.673 12.752 30.827 12.752s22.325-4.254 30.827-12.752l256-256c17.003-17.003 17.003-44.654 0-61.655z"/>
+        </svg>
+      </div>
+      
+    <div class="message">
+      <p>Thank you for your payment!</p>
+      <p>We will redirect you to the home page shortly.</p>
+    </div>
+    <div class="status">
+      <p>Your Payment Status: <span>{{ paymentStatus }}</span> </p>
+    </div>
+    <div class="button-container">
+      <a href="/" class="home-button">Click here if you are not redirected</a>
+    </div>
+  </div>
+  

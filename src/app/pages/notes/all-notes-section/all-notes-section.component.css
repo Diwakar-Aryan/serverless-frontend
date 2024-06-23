@@ -12,6 +12,8 @@ section {
   justify-content: space-between;
   padding: 1%;
   background-color: #f8f8f8; /* Light background for tabs */
+  padding-left: 7%;
+  padding-right: 7%;
 }
 
 .tabs-left,.tabs-left2,
@@ -41,7 +43,7 @@ section {
 
 .tab.active,.tab2.active,
 .tab3.active {
-  background-color: #551404;
+  background-color: #6d6b6d;
   color: #fff;
 }
 
@@ -70,20 +72,10 @@ section {
   font-weight: bold;
 }
 
-/* Adjust margins to ensure proper alignment */
-/* .tabs-container2 .line-and-topic2 {
-  margin-left: 28%; 
-}
 
-.tabs-container3 .line-and-topic3 {
-  margin-left: 40%; 
-} */
-
-/* Locked Content Styles */
 .locked-content {
   display: flex; 
   /* margin-top: 6px; */
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
@@ -92,15 +84,23 @@ section {
  
   
 }
-
-.left-content {
-  flex: 1;
-  padding-left: 5%;
-
-  margin-right: 10%;
-  padding-top: 2%;
-  width: 100%;
+.unlocked-notes{
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  padding-left: 8%;
 }
+.note-row{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  padding-top: 3%;
+  padding-left: 8%;
+  padding-right: 7%;
+}
+
 
 .right-content {
   flex: 1;
@@ -117,21 +117,39 @@ section {
   font-feature-settings: "pnum" on, "onum" on;
   opacity: 50%;
   line-height: 0cap;
+  cursor: pointer;
 }
 
 .sub-text {
   font-size: 0.9rem;
   opacity: 50%;
-  padding-left: 2%;
+  cursor: pointer;
 }
 
 .add-to-cart {
-  padding: 5px 40px;
-  background-color: #161416;
-  border: none;
-  color: #fff;
+  background-color: #4e4f51; 
+  color: white; 
+  border: none; 
+  border-radius: 4px; 
+  width: 20%;
+  height: 60%;
+  font-size: 14px; 
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; 
 }
+
+.add-to-cart:hover {
+  background-color: #292a2b; 
+  transform: translateY(-2px); 
+}
+
+.add-to-cart:active {
+  background-color: #292a2b;
+  transform: translateY(0); 
+}
+
+
+
 
 .unlocked-content {
   margin-top: 20px;
@@ -150,6 +168,22 @@ section {
   line-height: 0cap;
   padding-left: 4%;
 }
+.note-details .right-content img{
+  width: 100%;
+  height: 100%; 
+}
+.note-details .right-content{
+  padding-left: 15%;
+}
+.note-details{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 8%;
+  padding-right: 10%;
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .tabs-container,
   .tabs-container2,
@@ -169,19 +203,39 @@ section {
   .line-and-topic3 {
     width: 100%;
   }
-
+.note-row{
+  display: flex;
+  flex-direction: row;
+}
+.note-row .right-content{
+  width: 40%;
+}
   .locked-content {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
   }
 
-  .right-content {
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .add-to-cart {
+  .note-details .right-content img{
     width: 100%;
+    height: 100%; 
+  }
+  .note-details .right-content{
+    padding-left: 45%;
+  }
+  .note-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 8%;
+    padding-right: 10%;
+    width: 100%;
+  }
+  
+  .add-to-cart {
+    
+    width: 30%;
+    height: 60%;
+   
   }
   @media (max-width: 580px) {
   .tabs-container3 {
@@ -196,6 +250,12 @@ section {
       flex: 1 0 45%; 
       margin: 5px;
       text-align: center;
+    }
+    .add-to-cart {
+    
+      width: 40%;
+      height: 60%;
+     
     }
   }
   @media (max-width: 441px) {
@@ -213,5 +273,35 @@ section {
         margin: 5px;
         text-align: center;
       }
+      .add-to-cart {
+    
+        width: 60%;
+        height: 60%;
+       
+      }
+     
     }
+    @media (max-width: 715px) {
+     
+      .note-details
+      .right-content{
+        order: 1;
+        align-items: center;
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+      .note-details, 
+      .right-content img{
+        height: 100%;
+        width: 100%;
+        align-items: center;
+      }
+
+     .note-details .left-content {
+        order: 2;
+        align-items: center;
+      }
+      }
+     
 }

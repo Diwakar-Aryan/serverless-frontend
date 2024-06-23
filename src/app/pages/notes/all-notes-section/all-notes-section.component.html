@@ -1,8 +1,8 @@
 <section>
   <div class="tabs-container">
     <div class="tabs-left">
-      <a  class="tab" id="all-tab" [class.active]="showContent('all')"  (click)="showContent('all')">ALL</a>
-      <a  class="tab" id="placeholder-tab">PLACEHOLDER</a>
+      <a class="tab" id="all-tab" [class.active]="lockStatus === 0" (click)="showContent('all')">ALL</a>
+      <a class="tab" id="placeholder-tab">PLACEHOLDER</a>
     </div>
     <div class="line-and-topic">
       <hr class="horizontal-line" />
@@ -11,10 +11,8 @@
   </div>
   <div class="tabs-container2">
     <div class="tabs-left2">
-      <a  class="tab2" id="all-tab2" (click)="showContent('all')"
-        >ALL</a
-      >
-      <a  class="tab2" id="english-tab2">ENGLISH</a>
+      <a class="tab2" id="all-tab2" [class.active]="lockStatus === 0" (click)="showContent('all')">ALL</a>
+      <a class="tab2" id="english-tab2">ENGLISH</a>
     </div>
     <div class="line-and-topic2">
       <hr class="horizontal-line2" />
@@ -24,13 +22,9 @@
 
   <div class="tabs-container3">
     <div class="tabs-left3">
-      <a class="tab3" id="all-tab3" (click)="showContent('locked')">ALL</a>
-      <a class="tab3" id="locked-tab3" (click)="showContent('locked')"
-        >LOCKED</a
-      >
-      <a class="tab3" id="unlocked-tab3" (click)="showContent('unlocked')"
-        >UNLOCKED</a
-      >
+      <a class="tab3" id="all-tab3" [class.active]="lockStatus === 0" (click)="showContent('all')">ALL</a>
+      <a class="tab3" id="locked-tab3" [class.active]="lockStatus === 1" (click)="showContent('locked')">LOCKED</a>
+      <a class="tab3" id="unlocked-tab3" [class.active]="lockStatus === 2" (click)="showContent('unlocked')">UNLOCKED</a>
     </div>
     <div class="line-and-topic3">
       <hr class="horizontal-line3" />
@@ -38,37 +32,60 @@
     </div>
   </div>
 
-  <div
-    *ngIf="currentContent === 'locked'"
-    class="locked-content"
-    id="locked-content"
-  >
-    <div class="left-content">
-      <p class="note">Placeholder Note</p>
-      <p class="sub-text">placeholder</p>
-    </div>
-    <div class="right-content">
-      <button class="add-to-cart">Add to Cart</button>
-    </div>
-  </div>
-  <div *ngIf="currentContent === 'unlocked'" class="unlocked-content">
-    <p>No Notes found</p>
-  </div>
-
   <div class="content">
-    <div class="all-notes" *ngIf="lockStatus == 0">
-      <div class="notes" *ngFor="let note of allNotes">
-        <div class="left-content">
-          <p class="note">{{note.name}}</p>
-          <p class="sub-text">{{note.title}}</p>
+    <div class="all-notes" *ngIf="lockStatus === 0">
+      <div class="note-container" *ngFor="let note of filteredNotes">
+        <div class="note-row">
+          <div class="left-content">
+            <div class="title" (click)="toggleNoteDetails(note._id)">
+              <p class="note" >{{note.name}}</p>
+              <p class="sub-text" >{{note.title}}</p>
+            </div>
+          </div>
+          <div class="right-content">
+            <button class="add-to-cart" (click)="updateCart(note, !note.addedToCart)">
+              {{note?.addedToCart ? 'Added To Cart' : note.cost}}
+            </button>
+          </div>
         </div>
-        <div class="right-content">
-          <button class="add-to-cart" (click)="updateCart(note, !note.addedToCart)">{{note?.addedToCart ? 'Added To Cart' : note.cost}}</button>
+        <div class="note-details" *ngIf="selectedNoteId === note._id">
+          <div class="left-content">
+            <p>This is a placeholder Note. And the text you’re reading is a placeholder preview for the Note.</p>
+          </div>
+          <div class="right-content">
+            <img src="https://wabisabi-notes-directory.s3.ap-south-1.amazonaws.com/cover/test.jpg" alt="Note Cover Image" />
+          </div>
         </div>
       </div>
     </div>
-    <div class="unlocked-notes" *ngIf="lockStatus == 1"></div>
-    <div class="locked-status" *ngIf="lockStatus == 2"></div>
-    <div class="note" *ngFor="let note; of"></div>
+    <div class="locked-notes" *ngIf="lockStatus === 1">
+      <div class="note-container" *ngFor="let note of filteredNotes">
+        <div class="note-row">
+          <div class="left-content">
+            <div class="title" (click)="toggleNoteDetails(note._id)">
+              <p class="note" >{{note.name}}</p>
+              <p class="sub-text" >{{note.title}}</p>
+            </div>
+           
+          </div>
+          <div class="right-content">
+            <button class="add-to-cart" (click)="updateCart(note, !note.addedToCart)">
+              {{note?.addedToCart ? 'Added To Cart' : note.cost}}
+            </button>
+          </div>
+        </div>
+        <div class="note-details" *ngIf="selectedNoteId === note._id">
+          <div class="left-content">
+            <p>This is a placeholder Note. And the text you’re reading is a placeholder preview for the Note.</p>
+          </div>
+          <div class="right-content">
+            <img src="https://wabisabi-notes-directory.s3.ap-south-1.amazonaws.com/cover/test.jpg" alt="Note Cover Image" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="unlocked-notes" *ngIf="lockStatus === 2">
+      <p>No items found</p>
+    </div>
   </div>
 </section>
