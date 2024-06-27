@@ -14,7 +14,7 @@ import { RegionalPageComponent } from '../regional-page/regional-page.component'
   styleUrl: './tabs-nav-bar.component.css'
 })
 export class TabsNavBarComponent {
-  currentTab: string = 'Tab3';
+  currentTab: string = 'Tab1';
   isRegionShow: boolean = true;
 
   openTab(tabName: string): void {

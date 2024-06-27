@@ -89,11 +89,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  max-width: 1200px;
+  width: 100%;
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 5%;
-  width: 100%;
+
 }
 .T3image-container4 {
   position: relative;

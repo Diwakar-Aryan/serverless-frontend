@@ -12,7 +12,7 @@ import { JourneyPageComponent } from './journey-page/journey-page.component';
   styleUrl: './jajam.component.css'
 })
 export class JajamComponent {
-  currentTab: string = 'Tab3';
+  currentTab: string = 'Tab1';
 
   openTab(tabName: string): void {
     this.currentTab = tabName;

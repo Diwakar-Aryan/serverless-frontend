@@ -20,6 +20,7 @@ import { ContactUsPageComponent } from './pages/contact-us-page/contact-us-page.
 import { RedirectComponent } from './redirect/redirect.component';
 import { TexttileImageComponent } from './pages/contact-us-page/texttile-image/texttile-image.component';
 import { BagruImageComponent } from './pages/contact-us-page/bagru-image/bagru-image.component';
+import { RegionalPageComponent } from './pages/jajam/regional-page/regional-page.component';
 
 export const routes: Routes = [
     {
@@ -90,5 +91,7 @@ export const routes: Routes = [
     {
         path: "texttile", component: TexttileImageComponent,
     },
-
+    {
+        path: "jajam/regional", component: RegionalPageComponent,
+    }
 ];

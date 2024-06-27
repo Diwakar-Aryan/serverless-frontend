@@ -431,7 +431,7 @@
 }
 
 .research-container .btn:hover {
-  background-color: rgba(210, 78, 113, 0.8);
+  background-color: rgba(245, 241, 242, 0.8);
 }
 
 .map {
@@ -499,6 +499,9 @@
   text-align: center;
   color: rgba(72, 50, 49, 1);
   overflow-wrap: break-word;
+}
+.read{
+  color: rgba(72, 50, 49, 1);
 }
 
 .travel-text1 h4 {
@@ -666,6 +669,7 @@
   .travel-text2 p {
     font-size: 0.9rem;
   }
+
   .travel-text1 p {
     font-family: Nunito, sans-serif;
     font-weight: 800;

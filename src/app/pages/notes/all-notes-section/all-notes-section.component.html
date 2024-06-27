@@ -85,7 +85,9 @@
       </div>
     </div>
     <div class="unlocked-notes" *ngIf="lockStatus === 2">
-      <p>No items found</p>
+    
+      <button (click)="openPdfInNewTab()">Read</button>
+     
     </div>
   </div>
 </section>

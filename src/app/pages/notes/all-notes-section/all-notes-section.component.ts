@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { NotesService } from '../../../services/notes.service';
 import { CartService } from '../../../services/cart.service';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @Component({
   selector: 'app-all-notes-section',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,PdfViewerModule],
   templateUrl: './all-notes-section.component.html',
   styleUrl: './all-notes-section.component.css',
 })
@@ -18,7 +19,7 @@ export class AllNotesSectionComponent implements OnInit {
   lockStatus: number = 0;
   selectedNoteId: string | null = null;
   filteredNotes: any[] = []
-
+  pdfSrc = "https://wabisabi-notes-directory.s3.ap-south-1.amazonaws.com/pdfNotes/dmmy.pdf";
   notesService = inject(NotesService)
   cartService = inject(CartService);
   
@@ -47,7 +48,8 @@ export class AllNotesSectionComponent implements OnInit {
   }
   
 
-
+ 
+  
   //Lock Filter 0-> All 1-> Locked 2-> Unlocked
   applyLockFilter(lockType: number) {
     if (lockType === 0) {
@@ -99,5 +101,23 @@ export class AllNotesSectionComponent implements OnInit {
   }
   toggleNoteDetails(noteId: string) {
     this.selectedNoteId = this.selectedNoteId === noteId ? null : noteId;
+  }
+  openPdfInNewTab() {
+    const pdfWindow = window.open('', '_blank');
+    if (pdfWindow) {
+      pdfWindow.document.write(`
+        <html>
+          <head>
+            <title>PDF</title>
+          </head>
+          <body style="margin:0;">
+            <iframe src="${this.pdfSrc +'#toolbar=0'}" frameborder="0" style="border:none; width:100%; height:100vh;"></iframe>
+          </body>
+        </html>
+      `);
+    } else {
+
+      console.error('Failed to open new window/tab for PDF.');
+    }
   }
 }

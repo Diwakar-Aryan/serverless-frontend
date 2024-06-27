@@ -57,18 +57,18 @@
     </p>
   </div>
   <div class="tabs">
-    <a class="tablinks"> Documentary </a>
+    <a class="tablinks" (click)="scrollTo('documentary')">Documentary</a>
     <div class="horizontal-line"></div>
-    <a class="tablinks"> Production </a>
+    <a class="tablinks" (click)="scrollTo('production')">Production</a>
     <div class="horizontal-line"></div>
-    <a class="tablinks"> Research </a>
+    <a class="tablinks" (click)="scrollTo('research')">Research</a>
     <div class="horizontal-line"></div>
-    <a class="tablinks"> Exhibition </a>
+    <a class="tablinks" (click)="scrollTo('exhibition')">Exhibition</a>
   </div>
 </Section>
 
 <section>
-  <div class="image-container2">
+  <div class="image-container2" id="documentry">
     <img src="/assets/images/jajam4.jpg" alt="img">
     <div class="txt-container2">
       <h4>REDISCOVERING</h4>
@@ -93,7 +93,7 @@
 </section>
 
 <section>
-  <div class="wish-container">
+  <div class="wish-container" id="production">
     <img class="img1" src="assets/images/jajam5.png" alt="" />
     <h2>The Wish to Make. One. Many</h2>
     <p>
@@ -105,13 +105,13 @@
       apparel and home furnishings. In our heart of hearts, we hope the concept
       of coming together is revisited in today’s digital age.
     </p>
-    <button class="btn" type="button"><span>Visit Our Collection</span></button>
+    <button class="btn" type="button" routerLink="/collections"><span>Visit Our Collection</span></button>
     <img class="img2" src="assets/images/jajam6.jpg" alt="" />
   </div>
 </section>
 
 <section>
-  <div class="research-container">
+  <div class="research-container" id="research">
     <h4>On-going Research</h4>
     <p>
       During our research, we could trace the roots of Jajam to various parts of
@@ -129,7 +129,7 @@
       the exhibition of craftspeople's skills and their labor of love is the
       best way forward.
     </p>
-    <button class="btn" type="button">
+    <button class="btn" type="button" routerLink="/jajam/regional">
       <span>Explore Regional Jajam</span>
     </button>
   </div>
@@ -144,7 +144,7 @@
 </section>
 
 <section class="travel">
-  <div class="traveling-container">
+  <div class="traveling-container" id="exhibition">
     <img src="/assets/images/jajam7.jpg" alt="img">
   </div>
   <div class="travel-text1">
@@ -185,7 +185,7 @@
     </p>
     <p>
       We are delighted to have willing support from Anokhi in documenting Jajam
-      and exhibiting in the museum.
+      and exhibiting in the museum. <a href="https://www.anokhimuseum.com/rediscovering-jajam/" class="read">Read more↝</a>
     </p>
   </div>
 </section>
