@@ -18,6 +18,8 @@ import { SekhawatiBoxComponent } from './pages/jajam/regional-page/sekhawati-box
 import { authGuard } from './theme/shared/services/auth-guard/auth.guard';
 import { ContactUsPageComponent } from './pages/contact-us-page/contact-us-page.component';
 import { RedirectComponent } from './redirect/redirect.component';
+import { TexttileImageComponent } from './pages/contact-us-page/texttile-image/texttile-image.component';
+import { BagruImageComponent } from './pages/contact-us-page/bagru-image/bagru-image.component';
 
 export const routes: Routes = [
     {
@@ -78,6 +80,15 @@ export const routes: Routes = [
     },
     {
         path: "jajam/region-sekhawati", component: SekhawatiBoxComponent,
-    }
+    },
+    {
+        path: "jajam/region-mewar", component: MewarBoxComponent,
+    },
+    {
+        path: "bagru", component: BagruImageComponent,
+    },
+    {
+        path: "texttile", component: TexttileImageComponent,
+    },
 
 ];
