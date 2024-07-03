@@ -18,6 +18,7 @@ export class BlockPrintingComponent {
 
   isJaipur=false;
   isOnline=false;
+  currentContent = 'BAGRU';
 
   toggleContent() {
     this.isHalfDayVisible = !this.isHalfDayVisible;
@@ -43,5 +44,9 @@ export class BlockPrintingComponent {
   }
   onlineContent() {
     this.isOnline = !this.isOnline;
+  }
+
+  switchContent(content: string) {
+    this.currentContent = content;
   }
 }

@@ -28,6 +28,7 @@ import { BlockPrintingComponent } from './pages/workshop/workshop-images-screen/
 import { NaturalDyeComponent } from './pages/workshop/workshop-images-screen/natural-dye/natural-dye.component';
 import { NaturalIndigoComponent } from './pages/workshop/workshop-images-screen/natural-indigo/natural-indigo.component';
 import { ResistPrintingComponent } from './pages/workshop/workshop-images-screen/resist-printing/resist-printing.component';
+import { JajamSpreadComponent } from './pages/collections/jajam-spread/jajam-spread.component';
 
 export const routes: Routes = [
     {
@@ -107,6 +108,9 @@ export const routes: Routes = [
     },
     {
         path: "collections/chaupad", component: ChaupadGameComponent,
+    },
+    {
+        path: "collections/jajam-chaupad", component: JajamSpreadComponent,
     },
     {
         path: "workshops/block-carving", component: BlockCarvingComponent,
