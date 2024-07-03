@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-workshop-content-section',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule,RouterOutlet],
   templateUrl: './workshop-content-section.component.html',
   styleUrl: './workshop-content-section.component.css'
 })

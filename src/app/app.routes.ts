@@ -21,6 +21,13 @@ import { RedirectComponent } from './redirect/redirect.component';
 import { TexttileImageComponent } from './pages/contact-us-page/texttile-image/texttile-image.component';
 import { BagruImageComponent } from './pages/contact-us-page/bagru-image/bagru-image.component';
 import { RegionalPageComponent } from './pages/jajam/regional-page/regional-page.component';
+import { BichhauniPageComponent } from './pages/collections/bichhauni-page/bichhauni-page.component';
+import { ChaupadGameComponent } from './pages/collections/chaupad-game/chaupad-game.component';
+import { BlockCarvingComponent } from './pages/workshop/workshop-images-screen/block-carving/block-carving.component';
+import { BlockPrintingComponent } from './pages/workshop/workshop-images-screen/block-printing/block-printing.component';
+import { NaturalDyeComponent } from './pages/workshop/workshop-images-screen/natural-dye/natural-dye.component';
+import { NaturalIndigoComponent } from './pages/workshop/workshop-images-screen/natural-indigo/natural-indigo.component';
+import { ResistPrintingComponent } from './pages/workshop/workshop-images-screen/resist-printing/resist-printing.component';
 
 export const routes: Routes = [
     {
@@ -93,5 +100,27 @@ export const routes: Routes = [
     },
     {
         path: "jajam/regional", component: RegionalPageComponent,
+    },
+
+    {
+        path: "collections/bedsheet-procession", component: BichhauniPageComponent,
+    },
+    {
+        path: "collections/chaupad", component: ChaupadGameComponent,
+    },
+    {
+        path: "workshops/block-carving", component: BlockCarvingComponent,
+    },
+    {
+        path: "workshops/block-printing", component: BlockPrintingComponent,
+    },
+    {
+        path: "workshops/natural-dye", component: NaturalDyeComponent,
+    },
+    {
+        path: "workshops/natural-indigo", component: NaturalIndigoComponent,
+    },
+    {
+        path: "workshops/resist-printing", component: ResistPrintingComponent,
     }
 ];

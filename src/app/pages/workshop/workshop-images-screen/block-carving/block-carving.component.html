@@ -1,0 +1,419 @@
+<section>
+  <section>
+    <div class="image-container">
+      <img src="assets/images/blockimg1.jpg" alt="" />
+      <div class="overlay-text">
+        <span class="topic-text">BLOCK CARVING</span>
+        <hr class="horizontal-line" />
+        <span class="topic1-text">PROGRAM</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="text-container">
+      <div class="text">
+        <p>
+          Transforming a rigid form into an expression of thoughts and
+          imagination is a work of art. This time-honored and admirable skill is
+          a matter of technique, patience, and much technical practice. The
+          accumulation of these virtues evolve into a continuity of cultural
+          inheritance and identity, among traditional family of block carvers.
+        </p>
+      </div>
+      <div class="headline">
+        <h3>Recommended by</h3>
+      </div>
+      <div class="recommended-links">
+        <div class="first-half">
+          <div class="anokhi">
+            <a href="">Anokhi museum of hand printing</a>
+          </div>
+          <div class="new-york">
+            <a href="">The new york Times</a>
+          </div>
+          <div class="planet">
+            <a href="">lonley Planet</a>
+          </div>
+          <div class="travel">
+            <a href="">travel</a>
+          </div>
+        </div>
+
+        <div class="download-button">
+          <button class="btn">Download Brochure</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sec2">
+    <div class="program-section">
+      <div class="program-header" (click)="toggleContent()">
+        <span>ONE-DAY BLOCK CARVING</span>
+        <hr class="horizontal-line" />
+        <span id="block-carving-icon" class="toggle-icon">{{
+          isContentVisible ? "-" : "+"
+        }}</span>
+      </div>
+      <div
+        id="block-carving-content"
+        class="program-content"
+        *ngIf="isContentVisible"
+      >
+        <div class="text-row">
+          <div class="text-part">
+            <p class="para1">
+              Spend a day working alongside the master block carvers of the
+              traditional <span>Kharaudi</span> community at their studio.
+              Witness how countless moments of logic and imagination are
+              balanced with dispassionate precision.
+            </p>
+          </div>
+          <div class="register-button">
+            <button class="regbtn">Register!</button>
+          </div>
+        </div>
+        <div class="small">
+          <div class="details">
+            <div class="individual">
+              <div class="topic">10000 INR</div>
+              <div class="label">Individual Cost</div>
+            </div>
+            <div class="group-cost">
+              <div class="topic">8000 INR</div>
+              <div class="label">Group Cost Per Person (2+)</div>
+            </div>
+            <div class="per-request">
+              <div class="topic">Per request</div>
+              <div class="label">Date</div>
+            </div>
+            <div class="hours">
+              <div class="topic">6 hours per day</div>
+              <div class="label">time</div>
+            </div>
+            <div class="offer">
+              <div class="topic">Jaipur</div>
+              <div class="label">Offered At</div>
+            </div>
+
+            <div class="topic-level">
+              <div class="topic">Block Carving</div>
+              <div class="label">Programs Included</div>
+            </div>
+            <div class="optional-level">
+              <div class="topic">___</div>
+              <div class="label">OPTIONAL EXCURSIONS</div>
+            </div>
+          </div>
+          <div class="three">
+            <p class="para2">
+              Interact with traditional block carvers’ family. Contextual
+              insights into wood as a material. Flip through archives of
+              designs. Trace designs on wood. Hand carve your own blocks from
+              start to finish.
+            </p>
+          </div>
+          <div class="image">
+            <img src="/assets/images/carving.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="program-section">
+      <div class="program-header" (click)="eightDayContent()">
+        <span>EIGHT-DAY WORKSHOP</span>
+        <hr class="horizontal-line" />
+        <span id="workshop-icon" class="toggle-icon">{{
+          isEightDayVisible ? "-" : "+"
+        }}</span>
+      </div>
+      <div
+        id="workshop-content"
+        class="program-content"
+        *ngIf="isEightDayVisible"
+      >
+        <div class="text-row">
+          <div class="text-part">
+            <p>
+              Dissolving assumed and conventional separations between notions
+              offer a new way of retaining and expanding sensitivity to multiple
+              inherited traditions. Be humbled by the incredible degree of
+              diversity and regional specialization when the boundaries amongst
+              four ancient crafts are blurred.
+            </p>
+          </div>
+          <div class="register-button">
+            <button class="regbtn">Register!</button>
+          </div>
+        </div>
+
+        <div class="small">
+          <div class="details">
+            <div class="individual">
+              <div class="topic">82000 INR</div>
+              <div class="label">Individual Cost</div>
+            </div>
+            <div class="group-cost">
+              <div class="topic">70000 INR</div>
+              <div class="label">Group Cost Per Person (2+)</div>
+            </div>
+            <div class="per-request">
+              <div class="topic">Per request</div>
+              <div class="label">Date</div>
+            </div>
+            <div class="hours">
+              <div class="topic">6 hours per day</div>
+              <div class="label">time</div>
+            </div>
+            <div class="offer">
+              <div class="topic">Bagru,Jaipur</div>
+              <div class="label">Offered At</div>
+            </div>
+            <div class="topic-level">
+              <div class="topic">
+                Block PrintingNatural DyeResist PrintingBlock CarvingBagru ka
+                Tour
+              </div>
+              <div class="label">Programs Included</div>
+            </div>
+            <div class="optional-level">
+              <div class="topic">Traditional Textiles</div>
+              <div class="label">OPTIONAL EXCURSIONS</div>
+            </div>
+          </div>
+          <div class="three">
+            <p class="para2">
+              Spend a day with master block carvers, carve your own designs, and
+              learn the craft’s nuances. Print on cotton with self-carved block
+              designs or draw with brush, tjanting. Use traditional inks, hot
+              wax-resist, mud-resist, shibori, tie-dye, and various natural dyes
+              and pastes to create your collection and swatches. Insights into
+              the nature of cellulose, protein fibers, the role of minerals,
+              plant based mordants. Set up a natural indigo fermentation vat and
+              learn the science of extracting indigo plant to pigment.
+            </p>
+          </div>
+          <div class="image">
+            <img src="/assets/images/Img5457L.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="block_carving_script.js"></script>
+  </section>
+  <section class="sec3">
+    <div class="line">
+      <span class="topic-text1">Photos from us</span>
+      <hr class="horizontal1-line" />
+    </div>
+    <div class="photo-sec">
+      <img loading="eager" src="assets/images/blockimg2.jpg" alt="" />
+      <img loading="eager" src="assets/images/blockimg3.jpg" alt="" />
+      <img loading="eager" src="assets/images/blockimg4.jpg" alt="" />
+      <img loading="eager" src="assets/images/blockimg05.png" alt="" />
+      <img loading="eager" src="assets/images/blockimg6.jpg" alt="" />
+      <img loading="eager" src="assets/images/blockimg2.jpg" alt="" />
+    </div>
+    <button class="img-btn">See More Photos &rarr;</button>
+  </section>
+
+  <section class="quotes-sec">
+    <div class="line">
+      <span class="topic-text1">QUOTES FROM YOU</span>
+      <hr class="horizontal1-line" />
+    </div>
+    <div class="testimonial-section">
+      <div class="testimonial">
+        <p class="quote">
+          “ The process, the tempo, the structure and the way in which
+          information was shared was excellent. I felt neither rushed nor
+          overwhelmed over the course of the two days despite all the
+          information I was so eager to know and learn. ”
+        </p>
+        <div class="user-info">
+          <img src="assets/images/erin.jpg" alt="Aimee Vandersteen" />
+          <p class="user-name">ERIN DOWDING</p>
+        </div>
+      </div>
+      <div class="testimonial-section">
+        <div class="testimonial">
+          <p class="quote">
+            “ The information presented with mix of theory and practical and the
+            focus on the process was something I enjoyed the most. I really
+            appreciate the work you have done in developing Wabisabi and your
+            commitment to natural dyes and then to share that knowledge. ”
+          </p>
+          <div class="user-info">
+            <img src="assets/images/JOSHUA.jpg" alt="Aimee Vandersteen" />
+            <p class="user-name">JOSHUA BURGESS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="quotes-sec">
+    <div class="testimonial-section">
+      <div class="testimonial">
+        <p class="quote">
+          “ Very friendly and relaxed environment. I appreciate the deep respect
+          you have for the craft and it’s history. I enjoyed how you let us
+          gradually get into the groove and so much knowledge you willingly
+          shared. ”
+        </p>
+        <div class="user-info">
+          <img src="assets/images/TORIL.jpg" alt="Aimee Vandersteen" />
+          <p class="user-name">TORIL GRUE</p>
+        </div>
+      </div>
+      <div class="testimonial-section">
+        <div class="testimonial">
+          <p class="quote">
+            “ I enjoyed learning about the history and traditional processes,
+            the flexibility of tailoring the experience to work for our unique
+            need and the tour of Bagru. This will be our special memories I will
+            carry away from our India trip. ”
+          </p>
+          <div class="user-info">
+            <img src="assets/images/ANN.jpg" alt="Aimee Vandersteen" />
+            <p class="user-name">ANN SMITH</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="quotes-sec">
+    <div class="testimonial-section">
+      <div class="testimonial">
+        <p class="quote">
+          “ I loved that we get free reign to create whatever we wanted. The
+          space was so calm and soothing to be in, felt really at home and free
+          to explore. Felt welcomed to ask questions. ”
+        </p>
+        <div class="user-info">
+          <img src="assets/images/AIMEE.jpg" alt="Aimee Vandersteen" />
+          <p class="user-name">AIMEE VANDERSTEEN</p>
+        </div>
+      </div>
+      <div class="testimonial-section">
+        <div class="testimonial">
+          <p class="quote">
+            “ I really enjoyed being immersed in the art of block printing and
+            dyeing. It was an amazing experience for our entire group. I would
+            like to come again. ”
+          </p>
+          <div class="user-info">
+            <img src="assets/images/SUJATA.jpg" alt="Aimee Vandersteen" />
+            <p class="user-name">SUJATA SHAH</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec4">
+    <div class="line">
+      <span class="topic-text1">RECOMMENDED EXCURSIONS</span>
+      <hr class="horizontal1-line" />
+    </div>
+    <div class="rec-sec">
+      <div class="textsec">
+        <div class="h1txt">BAGRU KA TOUR</div>
+        <p class="smallp">Bagru · 2hr</p>
+        <p class="bigp">
+          Bagru ka Tour is an experience of walking through a series of visceral
+          nature of livelihoods connected to the crafts of hand-making in
+          textiles.
+        </p>
+        <button class="exc-btn">Visit Excursion</button>
+      </div>
+      <div class="picsec">
+        <img src="assets/images/blockimg7.jpg" alt="" />
+      </div>
+    </div>
+  </section>
+  <section id="last-sec" class="tabcontent1">
+    <div class="line">
+      <span class="topic-text1">RECOMMENDED PROGRAMS </span>
+      <hr class="horizontal1-line" />
+    </div>
+    <div class="container">
+      <div class="item" onclick="window.location='#'">
+        <img src="assets/images/block_prints.jpg" alt="Block Printing" />
+        <p>BLOCK PRINTING</p>
+        <p class="location">Jaipur, Online</p>
+      </div>
+      <div class="item" onclick="window.location='#'">
+        <img src="assets/images/Natural_dyes.JPG" alt="Natural Dye" />
+        <p>NATURAL DYE</p>
+        <p class="location">Bagru, Delhi, Online</p>
+      </div>
+      <div class="item" onclick="window.location='#'">
+        <img src="assets/images/resist-printing.jpg" alt="Natural Indigo" />
+        <p>RESIST PAINTING</p>
+        <p class="location">Bahru, Online</p>
+      </div>
+    </div>
+  </section>
+  <section class="breathe">
+    <div class="breathe-container">
+      <h1>BREATHE EASY</h1>
+      <div class="headline-text">
+        <p>
+          The countryside location of our studio has been designed with natural
+          ventilation in mind, with large windows and doors that allow the
+          breeze to flow through.
+        </p>
+      </div>
+
+      <div class="row-text">
+        <div class="text1-column">
+          <p>
+            The design prioritizes open spaces for people can move around and
+            socialize freely without feeling confined. The pockets of privacy
+            and community provide a sense of security and belonging. The
+          </p>
+        </div>
+        <div class="text2-column">
+          <p>
+            studio embraces industrial style and leaves essential elements and
+            services exposed, albeit neatly arranged, providing easy access for
+            maintenance.
+          </p>
+        </div>
+        <div class="text3-column">
+          <p>
+            The studio is designed to be healthy, comfortable, and welcoming.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="jaipur">
+    <div class="jaipur-section">
+      <div class="jaipur-header" (click)="jaipurContent()">
+        <span>JAIPUR</span>
+        <hr class="horizontal2-line" />
+        <span id="workshop-icon" class="toggle-icon">{{
+          isJaipur ? "-" : "+"
+        }}</span>
+      </div>
+      <div id="workshop-content" class="jaipur-content" *ngIf="isJaipur">
+        <div class="jaipur-text">
+          <p>
+            Our collaboration extends to Abdul Sattar Kharadi, who hosts block
+            carving workshops at his studio. He proudly carries forward a rich
+            tradition of block carvers that spans nearly three centuries. During
+            the inception of Jaipur, his forebears were resettled from Sanganer
+            to Purani Basti. Eventually, he relocated to his present studio,
+            situated in close proximity to Albert Hall. Within his community,
+            the craft of block carving is held in high esteem, emphasizing the
+            pursuit of excellence through the creation of blocks known for their
+            exceptional quality.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
