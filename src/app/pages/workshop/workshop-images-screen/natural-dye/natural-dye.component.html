@@ -1,16 +1,16 @@
 <section>
   <section>
-    <div class="firstimg">
+    <div class="image-container">
       <img src="assets/images/dye1.jpg" alt="" />
       <div class="overlay-text">
-        <span class="topic-text">NATURAL DYE</span>
-        <hr class="horizontal-line" />
-        <span class="topic1-text">PROGRAM</span>
+        <span class="img-text">NATURAL DYE</span>
+        <hr class="img-line" />
+        <span class="img1-text">PROGRAM</span>
       </div>
     </div>
   </section>
 
-  <section class="sec1">
+  <section>
     <div class="text-container">
       <div class="text">
         <p>
@@ -48,32 +48,29 @@
   </section>
   <section class="sec2">
     <div class="tabs-container">
-      <div class="tabs">
-        <button
-          class="tablinks"
-          onclick="openTab(event, 'ALL')"
-          id="defaultOpen"
-        >
-          BAGRU
-        </button>
-        <button class="tablinks" onclick="openTab(event, 'BAGRU')">
-          ONLINE
-        </button>
+      <div class="tabs-left">
+        <a class="tab" id="all-tab" [class.active]="currentContent === 'BAGRU'" (click)="switchContent('BAGRU')">BAGRU</a>
+        <a class="tab" id="placeholder-tab" [class.active]="currentContent === 'DELHI'" (click)="switchContent('DELHI')">DELHI</a>
+        <a class="tab" id="online-tab" [class.active]="currentContent === 'ONLINE'" (click)="switchContent('ONLINE')">ONLINE</a>
+      </div>
+      <div class="line-and-topic">
+        <hr class="horizontal-line" />
+        <span class="topic-text">ONLINE</span>
       </div>
     </div>
-    <div id="ALL" class="tabcontent">
+    <div *ngIf="currentContent === 'BAGRU'" id="BAGRU" class="tabcontent">
       <div class="program-section">
         <div class="program-header" (click)="toggleContent()">
           <span>HALF-DAY NATURAL DYE</span>
           <hr class="horizontal-line" />
           <span id="block-carving-icon" class="toggle-icon">{{
-            isContentVisible ? "-" : "+"
+            isHalfDayVisible ? "-" : "+"
           }}</span>
         </div>
         <div
           id="block-carving-content"
           class="program-content"
-          *ngIf="isContentVisible"
+          *ngIf="isHalfDayVisible"
         >
           <div class="text-row">
             <div class="text-part">
@@ -134,17 +131,17 @@
       </div>
 
       <div class="program-section">
-        <div class="program-header" (click)="toggleContent()">
+        <div class="program-header" (click)="oneDayContent()">
           <span>ONE-DAY BLOCK PAINTING & NATURAL DYE</span>
           <hr class="horizontal-line" />
           <span id="block-carving-icon" class="toggle-icon">{{
-            isContentVisible ? "-" : "+"
+            isOneDayVisible ? "-" : "+"
           }}</span>
         </div>
         <div
           id="block-carving-content"
           class="program-content"
-          *ngIf="isContentVisible"
+          *ngIf="isOneDayVisible"
         >
           <div class="text-row">
             <div class="text-part">
@@ -214,17 +211,17 @@
       </div>
 
       <div class="program-section">
-        <div class="program-header" (click)="toggleContent()">
+        <div class="program-header" (click)="twoDayContent()">
           <span>TWO-DAY BLOCK PAINTING & NATURAL DYE</span>
           <hr class="horizontal-line" />
           <span id="block-carving-icon" class="toggle-icon">{{
-            isContentVisible ? "-" : "+"
+            isTwoDayVisible ? "-" : "+"
           }}</span>
         </div>
         <div
           id="block-carving-content"
           class="program-content"
-          *ngIf="isContentVisible"
+          *ngIf="isTwoDayVisible"
         >
           <div class="text-row">
             <div class="text-part">
@@ -287,17 +284,17 @@
       </div>
 
       <div class="program-section">
-        <div class="program-header" (click)="toggleContent()">
+        <div class="program-header" (click)="fourDayContent()">
           <span>FOUR-DAY WORKSHOP</span>
           <hr class="horizontal-line" />
           <span id="block-carving-icon" class="toggle-icon">{{
-            isContentVisible ? "-" : "+"
+            isFourDayVisible ? "-" : "+"
           }}</span>
         </div>
         <div
           id="block-carving-content"
           class="program-content"
-          *ngIf="isContentVisible"
+          *ngIf="isFourDayVisible"
         >
           <div class="text-row">
             <div class="text-part">
@@ -364,17 +361,17 @@
       </div>
 
       <div class="program-section">
-        <div class="program-header" (click)="toggleContent()">
+        <div class="program-header" (click)="sixDayContent()">
           <span>SIX-DAY WORKSHOP</span>
           <hr class="horizontal-line" />
           <span id="block-carving-icon" class="toggle-icon">{{
-            isContentVisible ? "-" : "+"
+            isSixDayVisible ? "-" : "+"
           }}</span>
         </div>
         <div
           id="block-carving-content"
           class="program-content"
-          *ngIf="isContentVisible"
+          *ngIf="isSixDayVisible"
         >
           <div class="text-row">
             <div class="text-part">
@@ -443,17 +440,17 @@
       </div>
 
       <div class="program-section">
-        <div class="program-header" (click)="toggleContent()">
+        <div class="program-header" (click)="eightDayContent()">
           <span>EIGHT-DAY WORKSHOP</span>
           <hr class="horizontal-line" />
           <span id="block-carving-icon" class="toggle-icon">{{
-            isContentVisible ? "-" : "+"
+            isEightDayVisible ? "-" : "+"
           }}</span>
         </div>
         <div
           id="block-carving-content"
           class="program-content"
-          *ngIf="isContentVisible"
+          *ngIf="isEightDayVisible"
         >
           <div class="text-row">
             <div class="text-part">
@@ -522,6 +519,457 @@
         </div>
       </div>
 
+    </div>
+    <div *ngIf="currentContent === 'DELHI'" class="delhi-container" id="DELHI">
+      <div class="program-section">
+          <div class="program-header" (click)="oneDayContent()">
+              <span>ONE-DAY NATURAL DYE</span>
+              <hr class="horizontal-line" />
+              <span id="block-carving-icon" class="toggle-icon">{{
+                  isOneDayVisible ? "-" : "+"
+                  }}</span>
+          </div>
+          <div id="block-carving-content" class="program-content" *ngIf="isOneDayVisible">
+              <div class="text-row">
+                  <div class="text-part">
+                      <p class="para1">
+                        The exceptional proficiency of Indian dyeing techniques ranges from simple to the skilful manipulation of a complex range of processes. Take yourself into a playful journey of the bounty and fragility of Nature’s colours.
+                      </p>
+                      
+                  </div>
+                  <div class="register-button">
+                      <button class="regbtn">Register!</button>
+                  </div>
+              </div>
+              <div class="small">
+                  <div class="details">
+                      <div class="individual">
+                          <div class="topic">_______</div>
+                          <div class="label">Individual Cost</div>
+                      </div>
+                      <div class="group-cost">
+                          <div class="topic">5000 INR</div>
+                          <div class="label">Group Cost Per Person (2+)</div>
+                      </div>
+                      <div class="per-request">
+                          <div class="topic">Per request</div>
+                          <div class="label">Date</div>
+                      </div>
+                      <div class="hours">
+                          <div class="topic">6 hours per day</div>
+                          <div class="label">time</div>
+                      </div>
+                      <div class="offer">
+                          <div class="topic">Delhi</div>
+                          <div class="label">Offered At</div>
+                      </div>
+
+                      <div class="topic-level">
+                          <div class="topic">Natural Dye</div>
+                          <div class="label">Programs Included</div>
+                      </div>
+                      <div class="optional-level">
+                          <div class="topic">___</div>
+                          <div class="label">OPTIONAL EXCURSIONS</div>
+                      </div>
+                  </div>
+                  <div class="three">
+                      <p class="para2">
+                        Transform a silk scarves into vibrant shades of yellow, pink, red, brown, orange, green. Add design patterns with tie-dye or shibori techniques. Shift colours by mixing colours.
+                      </p>
+                  </div>
+                  <div class="image">
+                      <img src="https://wabisabiproject.com/media/botanical-drawings/Img5516L.jpg" alt="" />
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    <div  *ngIf="currentContent === 'ONLINE'" class="online-container" id="ONLINE">
+      <div id="BAGRU" class="tabcontent">
+        <div class="program-section">
+          <div class="program-header" (click)="toggleContent()">
+            <span>HALF-DAY NATURAL DYE</span>
+            <hr class="horizontal-line" />
+            <span id="block-carving-icon" class="toggle-icon">{{
+              isHalfDayVisible ? "-" : "+"
+            }}</span>
+          </div>
+          <div
+            id="block-carving-content"
+            class="program-content"
+            *ngIf="isHalfDayVisible"
+          >
+            <div class="text-row">
+              <div class="text-part">
+                <p class="para1">
+                  Participate in bringing cultural heritage and fun of 
+                  a live experience together. Expose yourself to the 
+                  bounty and fragility of Nature’s colours.
+                </p>
+              </div>
+              <div class="register-button">
+                <button class="regbtn">Register!</button>
+              </div>
+            </div>
+            <div class="small">
+              <div class="details">
+                <div class="individual">
+                  <div class="topic">3500 INR</div>
+                  <div class="label">Individual Cost</div>
+                </div>
+                <div class="group-cost">
+                  <div class="topic">2500 INR</div>
+                  <div class="label">Group Cost Per Person (2+)</div>
+                </div>
+                <div class="per-request">
+                  <div class="topic">Per request</div>
+                  <div class="label">Date</div>
+                </div>
+                <div class="hours">
+                  <div class="topic">3 hours per day</div>
+                  <div class="label">time</div>
+                </div>
+                <div class="offer">
+                  <div class="topic">Bagru, Online</div>
+                  <div class="label">Offered At</div>
+                </div>
+    
+                <div class="topic-level">
+                  <div class="topic">Natural Dye</div>
+                  <div class="label">Programs Included</div>
+                </div>
+                <div class="optional-level">
+                  <div class="topic">Bagru ka Tour, Traditional Textiles</div>
+                  <div class="label">OPTIONAL EXCURSIONS</div>
+                </div>
+              </div>
+              <div class="three">
+                <p class="para2">
+                  Tie and dye a silk scarf from an array of natural shades of green, 
+                  yellow, pink, blue, brown and red, Learn simple shibori (Japanese tie-dye) 
+                  techniques to create beautiful patterns.
+                </p>
+              </div>
+              <div class="image">
+                <img src="/assets/images/carving.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="program-section">
+          <div class="program-header" (click)="oneDayContent()">
+            <span>ONE-DAY BLOCK PAINTING & NATURAL DYE</span>
+            <hr class="horizontal-line" />
+            <span id="block-carving-icon" class="toggle-icon">{{
+              isOneDayVisible ? "-" : "+"
+            }}</span>
+          </div>
+          <div
+            id="block-carving-content"
+            class="program-content"
+            *ngIf="isOneDayVisible"
+          >
+            <div class="text-row">
+              <div class="text-part">
+                <p class="para1">
+                  Surrender. And. Play.
+                </p>
+                <p class="para1">
+                  Surrender to the current of the impulses and feelings. 
+                  Let playfulness be the way of being for a day. 
+                  Immerse yourself in the process of ‘making’.
+                </p>
+                <p class="para1">
+                  Experiment and explore the beauty and magic of the two 
+                  amazing ancient crafts of India.
+                </p>
+              </div>
+              <div class="register-button">
+                <button class="regbtn">Register!</button>
+              </div>
+            </div>
+            <div class="small">
+              <div class="details">
+                <div class="individual">
+                  <div class="topic">8000 INR</div>
+                  <div class="label">Individual Cost</div>
+                </div>
+                <div class="group-cost">
+                  <div class="topic">5500 INR</div>
+                  <div class="label">Group Cost Per Person (2+)</div>
+                </div>
+                <div class="per-request">
+                  <div class="topic">Per request</div>
+                  <div class="label">Date</div>
+                </div>
+                <div class="hours">
+                  <div class="topic">6 hours per day</div>
+                  <div class="label">time</div>
+                </div>
+                <div class="offer">
+                  <div class="topic">Bagru, Online</div>
+                  <div class="label">Offered At</div>
+                </div>
+    
+                <div class="topic-level">
+                  <div class="topic">Block Printing, Natural Dye</div>
+                  <div class="label">Programs Included</div>
+                </div>
+                <div class="optional-level">
+                  <div class="topic">Bagru ka Tour, Traditional Textiles</div>
+                  <div class="label">OPTIONAL EXCURSIONS</div>
+                </div>
+              </div>
+              <div class="three">
+                <p class="para2">
+                  Discover the basics of fibres. Make and dye in your own indigo sugar vat. 
+                  Learn the science behind block printing techniques. 
+                  Print mud-resist on a cotton scarf with wooden blocks. 
+                  Tie-dye a silk scarf in madder red. Prepare dye liquor, 
+                  and shift colors with iron black and indigo blue.
+                </p>
+              </div>
+              <div class="image">
+                <img src="/assets/images/carving.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="program-section">
+          <div class="program-header" (click)="oneDayContent()">
+            <span>TWO-DAY BLOCK PAINTING & NATURAL DYE</span>
+            <hr class="horizontal-line" />
+            <span id="block-carving-icon" class="toggle-icon">{{
+              isTwoDayVisible ? "-" : "+"
+            }}</span>
+          </div>
+          <div
+            id="block-carving-content"
+            class="program-content"
+            *ngIf="isTwoDayVisible"
+          >
+            <div class="text-row">
+              <div class="text-part">
+                <p class="para1">
+                  Let’s factor nature back in. Practice understanding craft, processes, 
+                  and techniques, but more importantly, a way of seeing - while acknowledging 
+                  its limitations, pressures, and fatigue.
+                </p>
+              </div>
+              <div class="register-button">
+                <button class="regbtn">Register!</button>
+              </div>
+            </div>
+            <div class="small">
+              <div class="details">
+                <div class="individual">
+                  <div class="topic">15000 INR</div>
+                  <div class="label">Individual Cost</div>
+                </div>
+                <div class="group-cost">
+                  <div class="topic">12000 INR</div>
+                  <div class="label">Group Cost Per Person (2+)</div>
+                </div>
+                <div class="per-request">
+                  <div class="topic">Per request</div>
+                  <div class="label">Date</div>
+                </div>
+                <div class="hours">
+                  <div class="topic">6 hours per day</div>
+                  <div class="label">time</div>
+                </div>
+                <div class="offer">
+                  <div class="topic">Bagru, Online</div>
+                  <div class="label">Offered At</div>
+                </div>
+    
+                <div class="topic-level">
+                  <div class="topic">Block Printing, Natural Dye</div>
+                  <div class="label">Programs Included</div>
+                </div>
+                <div class="optional-level">
+                  <div class="topic">Bagru ka Tour, Traditional Textiles</div>
+                  <div class="label">OPTIONAL EXCURSIONS</div>
+                </div>
+              </div>
+              <div class="three">
+                <p class="para2">
+                  Begin with scouring and mordanting the cloth. Make and learn the 
+                  science of natural indigo vat. Prepare binders and printing pastes. 
+                  Block print with mud resist and traditional inks. Nuances of woodblock carving. 
+                  Use cold dyes - indigo/iron sulfate. Shibori silk scarf and dip in hot dyes with 
+                  flowers, barks, roots, leaves.
+                </p>
+              </div>
+              <div class="image">
+                <img src="/assets/images/carving.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="program-section">
+          <div class="program-header" (click)="fourDayContent()">
+            <span>FOUR-DAY WORKSHOP</span>
+            <hr class="horizontal-line" />
+            <span id="block-carving-icon" class="toggle-icon">{{
+              isFourDayVisible ? "-" : "+"
+            }}</span>
+          </div>
+          <div
+            id="block-carving-content"
+            class="program-content"
+            *ngIf="isFourDayVisible"
+          >
+            <div class="text-row">
+              <div class="text-part">
+                <p class="para1">
+                  Philosophical speculation, attention to detail, perspective talking, 
+                  asking questions - sure are the raw materials for life, and so for crafts. 
+                  An insatiable curious four-day journey into the scientific and almost 
+                  mysterious virtuosity of local flora, water, and climate.
+                </p>
+                <p class="para1">
+                  We ensure that your learnings of these crafts outlast this scheduled programme.
+                </p>
+              </div>
+              <div class="register-button">
+                <button class="regbtn">Register!</button>
+              </div>
+            </div>
+            <div class="small">
+              <div class="details">
+                <div class="individual">
+                  <div class="topic">28000 INR</div>
+                  <div class="label">Individual Cost</div>
+                </div>
+                <div class="group-cost">
+                  <div class="topic">22000 INR</div>
+                  <div class="label">Group Cost Per Person (2+)</div>
+                </div>
+                <div class="per-request">
+                  <div class="topic">Per request</div>
+                  <div class="label">Date</div>
+                </div>
+                <div class="hours">
+                  <div class="topic">6 hours per day</div>
+                  <div class="label">time</div>
+                </div>
+                <div class="offer">
+                  <div class="topic">Bagru, Online</div>
+                  <div class="label">Offered At</div>
+                </div>
+    
+                <div class="topic-level">
+                  <div class="topic">Block Printing, Natural Dye</div>
+                  <div class="label">Programs Included</div>
+                </div>
+                <div class="optional-level">
+                  <div class="topic">Bagru ka Tour, Traditional Textiles</div>
+                  <div class="label">OPTIONAL EXCURSIONS</div>
+                </div>
+              </div>
+              <div class="three">
+                <p class="para2">
+                  A self-paced inclusive module with hands-on learning and in-depth understanding 
+                  with mentors and master craftspersons. Experience a grey cloth transform into a 
+                  finished piece along with conversations replete with history, traditions and 
+                  modern dyeing methods. Create a swatch book studded in natural colors and 
+                  various block printing techniques.
+                </p>
+              </div>
+              <div class="image">
+                <img src="/assets/images/carving.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="program-section">
+          <div class="program-header" (click)="sixDayContent()">
+            <span>SIX-DAY WORKSHOP</span>
+            <hr class="horizontal-line" />
+            <span id="block-carving-icon" class="toggle-icon">{{
+              isSixDayVisible ? "-" : "+"
+            }}</span>
+          </div>
+          <div
+            id="block-carving-content"
+            class="program-content"
+            *ngIf="isSixDayVisible"
+          >
+            <div class="text-row">
+              <div class="text-part">
+                <p class="para1">
+                  So much of what propels our pursuit of beauty stems from the invisible 
+                  connection between nature and labor, realized only with time. 
+                  Experience of working in the crafts for six consecutive days 
+                  will reveal new insights into the alchemy of multiple 
+                  pre-industrial processes; aided by organic and plant produce.
+                </p>
+                <p class="para1">
+                  We are delighted to host enthusiasts seeking to create a color 
+                  palette of their own with direct and compound dyes.
+                </p>
+              </div>
+              <div class="register-button">
+                <button class="regbtn">Register!</button>
+              </div>
+            </div>
+            <div class="small">
+              <div class="details">
+                <div class="individual">
+                  <div class="topic">54000 INR</div>
+                  <div class="label">Individual Cost</div>
+                </div>
+                <div class="group-cost">
+                  <div class="topic">37000 INR</div>
+                  <div class="label">Group Cost Per Person (2+)</div>
+                </div>
+                <div class="per-request">
+                  <div class="topic">Per request</div>
+                  <div class="label">Date</div>
+                </div>
+                <div class="hours">
+                  <div class="topic">6 hours per day</div>
+                  <div class="label">time</div>
+                </div>
+                <div class="offer">
+                  <div class="topic">Bagru, Online</div>
+                  <div class="label">Offered At</div>
+                </div>
+    
+                <div class="topic-level">
+                  <div class="topic">Block Printing, Natural Dye, Resist Printing</div>
+                  <div class="label">Programs Included</div>
+                </div>
+                <div class="optional-level">
+                  <div class="topic">Bagru ka Tour, Traditional Textiles</div>
+                  <div class="label">OPTIONAL EXCURSIONS</div>
+                </div>
+              </div>
+              <div class="three">
+                <p class="para2">
+                  More number of days means more colors. Prepare dye extracts from real dye-stuffs, 
+                  understand the effects of water quality, pH and decode traditional scouring methods. 
+                  Use flowers, barks, roots, insect dyes to dye protein and cellulose fibres. 
+                  Set up a natural Indigo fermentation vat and make printing inks and mud resist paste. 
+                  Learn woodblock making techniques and traditional, modern dyeing methods with one-to-one mentoring.
+                </p>
+              </div>
+              <div class="image">
+                <img src="/assets/images/carving.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        
+  
+      </div>
     </div>
     <script src="natural_dye.js"></script>
   </section>
@@ -714,14 +1162,14 @@
   </section>
   <section class="jaipur">
     <div class="jaipur-section">
-      <div class="jaipur-header" (click)="jaipurContent()">
+      <div class="jaipur-header" (click)="bagruContent()">
         <span>BAGRU</span>
         <hr class="horizontal2-line" />
         <span id="workshop-icon" class="toggle-icon">{{
-          isJaipur ? "-" : "+"
+          isBagru ? "-" : "+"
         }}</span>
       </div>
-      <div id="workshop-content" class="jaipur-content" *ngIf="isJaipur">
+      <div id="workshop-content" class="jaipur-content" *ngIf="isBagru">
         <div class="jaipur-text">
           <p>
             Bagru, a small village town in Rajasthan, is situated at a distance of 32 kms. 
@@ -740,15 +1188,16 @@
           </p>
         </div>
       </div>
-
-      <div class="jaipur-header" (click)="jaipurContent()">
+    </div>
+    <div class="jaipur-section">
+      <div class="jaipur-header" (click)="delhiContent()">
         <span>DELHI</span>
         <hr class="horizontal2-line" />
         <span id="workshop-icon" class="toggle-icon">{{
-          isJaipur ? "-" : "+"
+          isDelhi ? "-" : "+"
         }}</span>
       </div>
-      <div id="workshop-content" class="jaipur-content" *ngIf="isJaipur">
+      <div id="workshop-content" class="jaipur-content" *ngIf="isDelhi">
         <div class="jaipur-text">
           <p>
             We have established a collaborative partnership with SSMI, a Delhi-based NGO dedicated to the promotion of 
@@ -760,15 +1209,16 @@
           </p>
         </div>
       </div>
-
-      <div class="jaipur-header" (click)="jaipurContent()">
+    </div>
+    <div class="jaipur-section">
+      <div class="jaipur-header" (click)="onlineContent()">
         <span>ONLINE</span>
         <hr class="horizontal2-line" />
         <span id="workshop-icon" class="toggle-icon">{{
-          isJaipur ? "-" : "+"
+          isOnline ? "-" : "+"
         }}</span>
       </div>
-      <div id="workshop-content" class="jaipur-content" *ngIf="isJaipur">
+      <div id="workshop-content" class="jaipur-content" *ngIf="isOnline">
         <div class="jaipur-text">
           <p>
             During the global COVID lockdowns when travel and in-person gatherings were restricted, we initiated virtual 

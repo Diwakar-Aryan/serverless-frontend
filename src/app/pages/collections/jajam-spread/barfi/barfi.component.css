@@ -400,12 +400,7 @@ height: 100%;
     }
 }
 @media (max-width: 468px) {
-    .image-container{
-        margin-top: 12%;
-      }
-      .img-text {
-        font-size: 2rem;
-      }
+   
 
     .main{
         margin-top: 7%;
@@ -449,6 +444,7 @@ height: 100%;
     
 }
 @media (max-width: 360px) {
+   
     .image-container{
         margin-top: 12%;
       }
@@ -519,5 +515,4 @@ height: 100%;
       .line-and-topic {
         width: 100%;
       }
-    
 }

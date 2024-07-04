@@ -3,17 +3,18 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-jajam-spread',
+  selector: 'app-barfi',
   standalone: true,
   imports: [CommonModule,RouterModule,RouterOutlet],
-  templateUrl: './jajam-spread.component.html',
-  styleUrl: './jajam-spread.component.css'
+  templateUrl: './barfi.component.html',
+  styleUrl: './barfi.component.css'
 })
-export class JajamSpreadComponent implements OnInit {
+export class BarfiComponent implements OnInit  {
   currentContent = '';
   isHalfDayVisible = false;
   isDelhi=false;
   isOnline=false;
+
   constructor(private router: Router) {}
 
   ngOnInit() {
@@ -25,10 +26,6 @@ export class JajamSpreadComponent implements OnInit {
     
   }
 
-  switchContent(content: string) {
-    this.currentContent = content;
-    
-  }
   updateActiveTab() {
     const currentRoute = this.router.url;
     if (currentRoute.includes('jajam-barfi')) {
@@ -38,6 +35,9 @@ export class JajamSpreadComponent implements OnInit {
     } else {
       this.currentContent = 'CHAUPAD';
     }
+  }
+  switchContent(content: string) {
+    this.currentContent = content;
   }
   toggleContent() {
     this.isHalfDayVisible = !this.isHalfDayVisible;

@@ -9,17 +9,48 @@ import { Component } from '@angular/core';
   styleUrl: './natural-dye.component.css'
 })
 export class NaturalDyeComponent {
-  isContentVisible = false;
+  isHalfDayVisible = false;
   isEightDayVisible = false;
-  isJaipur=false;
+  isOneDayVisible=false;
+  isTwoDayVisible=false;
+  isFourDayVisible=false;
+  isSixDayVisible=false;
+  
+  isDelhi=false;
+  isOnline=false;
+  isBagru=false;
 
+  currentContent = 'BAGRU';
   toggleContent() {
-    this.isContentVisible = !this.isContentVisible;
+    this.isHalfDayVisible = !this.isHalfDayVisible;
   }
   eightDayContent() {
     this.isEightDayVisible = !this.isEightDayVisible;
   }
-  jaipurContent() {
-    this.isJaipur = !this.isJaipur;
+  oneDayContent() {
+    this.isOneDayVisible = !this.isOneDayVisible;
+  }
+
+  twoDayContent() {
+    this.isTwoDayVisible = !this.isTwoDayVisible;
+  }
+  fourDayContent() {
+    this.isFourDayVisible = !this.isFourDayVisible;
+  }
+  sixDayContent() {
+    this.isSixDayVisible = !this.isSixDayVisible;
+  }
+ 
+  delhiContent() {
+    this.isDelhi = !this.isDelhi;
+  }
+  onlineContent() {
+    this.isOnline = !this.isOnline;
+  }
+  bagruContent() {
+    this.isBagru = !this.isBagru;
+  }
+  switchContent(content: string) {
+    this.currentContent = content;
   }
 }

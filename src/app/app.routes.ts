@@ -29,6 +29,8 @@ import { NaturalDyeComponent } from './pages/workshop/workshop-images-screen/nat
 import { NaturalIndigoComponent } from './pages/workshop/workshop-images-screen/natural-indigo/natural-indigo.component';
 import { ResistPrintingComponent } from './pages/workshop/workshop-images-screen/resist-printing/resist-printing.component';
 import { JajamSpreadComponent } from './pages/collections/jajam-spread/jajam-spread.component';
+import { CharChaukorComponent } from './pages/collections/jajam-spread/char-chaukor/char-chaukor.component';
+import { BarfiComponent } from './pages/collections/jajam-spread/barfi/barfi.component';
 
 export const routes: Routes = [
     {
@@ -111,6 +113,12 @@ export const routes: Routes = [
     },
     {
         path: "collections/jajam-chaupad", component: JajamSpreadComponent,
+    },
+    {
+        path: "collections/jajam-barfi", component: BarfiComponent,
+    },
+    {
+        path: "collections/jajam-char-chaukor", component: CharChaukorComponent,
     },
     {
         path: "workshops/block-carving", component: BlockCarvingComponent,

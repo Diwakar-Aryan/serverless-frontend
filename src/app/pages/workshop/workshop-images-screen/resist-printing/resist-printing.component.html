@@ -1,590 +1,866 @@
 <section>
-    <section>
-        <div class="firstimg">
-            <img src="assets/images/resist1.jpg" alt="" />
-            <div class="overlay-text">
-            <span class="topic-text">RESIST PAINTING</span>
-            <hr class="horizontal-line" />
-            <span class="topic1-text">PROGRAM</span>
-        </div>
+  <section>
+    <div class="image-container">
+      <img src="assets/images/resist1.jpg" alt="" />
+      <div class="overlay-text">
+        <span class="img-text">RESIST PAINTING</span>
+        <hr class="img-line" />
+        <span class="img1-text">PROGRAM</span>
+      </div>
     </div>
-    </section>
-    <section class="sec1">
-        <div class="text-container">
-          <div class="text">
-            <p>
-                A style of printing that blends intuition, repetition and chance 
-                while still retaining rigid and precise structure. The uncanny ability 
-                to balance the two approaches can be experienced when mud/wax as a form 
-                of resist play between depth and surface.
-            </p>
+  </section>
+  <section>
+    <div class="text-container">
+      <div class="text">
+        <p>
+          A style of printing that blends intuition, repetition and chance while
+          still retaining rigid and precise structure. The uncanny ability to
+          balance the two approaches can be experienced when mud/wax as a form
+          of resist play between depth and surface.
+        </p>
+      </div>
+      <div class="headline">
+        <h3>Recommended by</h3>
+      </div>
+      <div class="recommended-links">
+        <div class="first-half">
+          <div class="anokhi">
+            <a href="">Anokhi museum of hand printing</a>
           </div>
-          <div class="headline">
-            <h3>Recommended by</h3>
+          <div class="new-york">
+            <a href="">The new york Times</a>
           </div>
-          <div class="recommended-links">
-            <div class="first-half">
-              <div class="anokhi">
-                <a href="">Anokhi museum of hand printing</a>
-              </div>
-              <div class="new-york">
-                <a href="">The new york Times</a>
-              </div>
-              <div class="planet">
-                <a href="">lonley Planet</a>
-              </div>
-              <div class="travel">
-                <a href="">travel</a>
-              </div>
-            </div>
-    
-            <div class="download-button">
-              <button class="btn">Download Brochure</button>
-            </div>
+          <div class="planet">
+            <a href="">lonley Planet</a>
+          </div>
+          <div class="travel">
+            <a href="">travel</a>
           </div>
         </div>
-      </section>
-    <section class="sec2">
-        <div class="tabs-container">
-            <div class="tabs">
-                <button
-                class="tablinks"
-                onclick="openTab(event, 'ALL')"
-                id="defaultOpen"
-            >
-                BAGRU
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'BAGRU')">
-                ONLINE
-                </button>
-            </div>
-        </div>
-        <div id="ALL" class="tabcontent">
-          <div class="program-section">
-            <div class="program-header" (click)="toggleContent()">
-              <span>ONE-DAY RESIST PAINTING</span>
-              <hr class="horizontal-line" />
-              <span id="block-carving-icon" class="toggle-icon">{{
-                isContentVisible ? "-" : "+"
-              }}</span>
-            </div>
-            <div
-              id="block-carving-content"
-              class="program-content"
-              *ngIf="isContentVisible"
-            >
-              <div class="text-row">
-                <div class="text-part">
-                  <p class="para1">
-                    Surrender. And. Play.
-                  </p>
-                  <p class="para1">
-                    <span>‘Mendh ki Chapai’</span> (Wax Printing) is now a bygone phrase amongst the 
-                    artisans of hand block printing. A craft practice lost in unstable and constant flux. 
-                    We, happened to be part of the swan song, quietly reserved a small piece of its 
-                    history with us. Jacked up on optimism and defiance, we nurtured that part at our 
-                    studio over the past few years.
-                  </p>
-                  <p class="para1">
-                    We now present this ‘old’ crafting technique with tiny and subtle intervention.
-                  </p>
-                </div>
-                <div class="register-button">
-                  <button class="regbtn">Register!</button>
-                </div>
-              </div>
-              <div class="small">
-                <div class="details">
-                  <div class="individual">
-                    <div class="topic">7000 INR</div>
-                    <div class="label">Individual Cost</div>
-                  </div>
-                  <div class="group-cost">
-                    <div class="topic">5000 INR</div>
-                    <div class="label">Group Cost Per Person (2+)</div>
-                  </div>
-                  <div class="per-request">
-                    <div class="topic">Per request</div>
-                    <div class="label">Date</div>
-                  </div>
-                  <div class="hours">
-                    <div class="topic">6 hours per day</div>
-                    <div class="label">time</div>
-                  </div>
-                  <div class="offer">
-                    <div class="topic">Bagru, Online</div>
-                    <div class="label">Offered At</div>
-                  </div>
-      
-                  <div class="topic-level">
-                    <div class="topic">Resist Printing</div>
-                    <div class="label">Programs Included</div>
-                  </div>
-                  <div class="optional-level">
-                    <div class="topic">Bagru ka Tour, Traditional Textiles</div>
-                    <div class="label">OPTIONAL EXCURSIONS</div>
-                  </div>
-                </div>
-                <div class="three">
-                  <p class="para2">
-                    Use hot wax to draw and express. Move away from the rigidity of wooden blocks and repeat patterns. 
-                    Explore with us the fluidity of design with wax resist (no paraffin used), Create your own 
-                    designs or use existing blocks on cotton using hot wax method, Dye your scarf with flowers, 
-                    barks, roots, insect dyes.
-                  </p>
-                </div>
-                <div class="image">
-                  <img src="/assets/images/carving.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-    
-          <div class="program-section">
-            <div class="program-header" (click)="toggleContent()">
-              <span>TWO-DAY RESIST PAINTING</span>
-              <hr class="horizontal-line" />
-              <span id="block-carving-icon" class="toggle-icon">{{
-                isContentVisible ? "-" : "+"
-              }}</span>
-            </div>
-            <div
-              id="block-carving-content"
-              class="program-content"
-              *ngIf="isContentVisible"
-            >
-              <div class="text-row">
-                <div class="text-part">
-                  <p class="para1">
-                    Resist. Because it is - the process of undoing, one is separated into two. Mud or wax, 
-                    when manifested on cloth, creates spaces - positive and negative. 
-                    Meandering between the opposites, we sought to reclaim the synthesis 
-                    of the (seemingly) two into one holistic gesture of doing - inside and outside.
-                  </p>
-                </div>
-                <div class="register-button">
-                  <button class="regbtn">Register!</button>
-                </div>
-              </div>
-              <div class="small">
-                <div class="details">
-                  <div class="individual">
-                    <div class="topic">14000 INR</div>
-                    <div class="label">Individual Cost</div>
-                  </div>
-                  <div class="group-cost">
-                    <div class="topic">10000 INR</div>
-                    <div class="label">Group Cost Per Person (2+)</div>
-                  </div>
-                  <div class="per-request">
-                    <div class="topic">Per request</div>
-                    <div class="label">Date</div>
-                  </div>
-                  <div class="hours">
-                    <div class="topic">6 hours per day</div>
-                    <div class="label">time</div>
-                  </div>
-                  <div class="offer">
-                    <div class="topic">Bagru, Online</div>
-                    <div class="label">Offered At</div>
-                  </div>
-      
-                  <div class="topic-level">
-                    <div class="topic">Resist Printing</div>
-                    <div class="label">Programs Included</div>
-                  </div>
-                  <div class="optional-level">
-                    <div class="topic">Bagru ka Tour, Traditional Textiles</div>
-                    <div class="label">OPTIONAL EXCURSIONS</div>
-                  </div>
-                </div>
-                <div class="three">
-                  <p class="para2">
-                    Get hand-on to make the mud and wax resist pastes. Understand the pros and cons 
-                    of the resist printing techniques and why one is more practiced than the other. 
-                    Print patterns on cotton cloth with wood block. Use brush and tjanting tools to 
-                    create fluid designs. Dye with flowers, barks, roots, insect dyes. Over-dye to 
-                    create multiple color shades.
-                  </p>
-                </div>
-                <div class="image">
-                  <img src="/assets/images/carving.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-    
-          <div class="program-section">
-            <div class="program-header" (click)="toggleContent()">
-              <span>SIX-DAY WORKSHOP</span>
-              <hr class="horizontal-line" />
-              <span id="block-carving-icon" class="toggle-icon">{{
-                isContentVisible ? "-" : "+"
-              }}</span>
-            </div>
-            <div
-              id="block-carving-content"
-              class="program-content"
-              *ngIf="isContentVisible"
-            >
-              <div class="text-row">
-                <div class="text-part">
-                  <p class="para1">
-                    So much of what propels our pursuit of beauty stems from the invisible 
-                    connection between nature and labor, realized only with time. Experience of 
-                    working in the crafts for six consecutive days will reveal new insights into 
-                    the alchemy of multiple pre-industrial processes; aided by organic and plant produce.
-                  </p>
-                  <p class="para1">
-                    We are delighted to host enthusiasts seeking to create a color palette of their 
-                    own with direct and compound dyes.
-                  </p>
-                </div>
-                <div class="register-button">
-                  <button class="regbtn">Register!</button>
-                </div>
-              </div>
-              <div class="small">
-                <div class="details">
-                  <div class="individual">
-                    <div class="topic">54000 INR</div>
-                    <div class="label">Individual Cost</div>
-                  </div>
-                  <div class="group-cost">
-                    <div class="topic">37000 INR</div>
-                    <div class="label">Group Cost Per Person (2+)</div>
-                  </div>
-                  <div class="per-request">
-                    <div class="topic">Per request</div>
-                    <div class="label">Date</div>
-                  </div>
-                  <div class="hours">
-                    <div class="topic">6 hours per day</div>
-                    <div class="label">time</div>
-                  </div>
-                  <div class="offer">
-                    <div class="topic">Bagru, Online</div>
-                    <div class="label">Offered At</div>
-                  </div>
-      
-                  <div class="topic-level">
-                    <div class="topic">Block Printing, Natural Dye, Resist Printing</div>
-                    <div class="label">Programs Included</div>
-                  </div>
-                  <div class="optional-level">
-                    <div class="topic">Bagru ka Tour, Traditional Textiles</div>
-                    <div class="label">OPTIONAL EXCURSIONS</div>
-                  </div>
-                </div>
-                <div class="three">
-                  <p class="para2">
-                    More number of days means more colors. Prepare dye extracts from real dye-stuffs, 
-                    understand the effects of water quality, pH and decode traditional scouring methods. 
-                    Use flowers, barks, roots, insect dyes to dye protein and cellulose fibres. 
-                    Set up a natural Indigo fermentation vat and make printing inks and mud resist paste. 
-                    Learn woodblock making techniques and traditional, modern dyeing methods with one-to-one mentoring.
-                  </p>
-                </div>
-                <div class="image">
-                  <img src="/assets/images/carving.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-    
-          <div class="program-section">
-            <div class="program-header" (click)="toggleContent()">
-              <span>EIGHT-DAY WORKSHOP</span>
-              <hr class="horizontal-line" />
-              <span id="block-carving-icon" class="toggle-icon">{{
-                isContentVisible ? "-" : "+"
-              }}</span>
-            </div>
-            <div
-              id="block-carving-content"
-              class="program-content"
-              *ngIf="isContentVisible"
-            >
-              <div class="text-row">
-                <div class="text-part">
-                  <p class="para1">
-                    Dissolving assumed and conventional separations between notions 
-                    offer a new way of retaining and expanding sensitivity to multiple 
-                    inherited traditions. Be humbled by the incredible degree of 
-                    diversity and regional specialisation when the boundaries amongst 
-                    four ancient crafts are blurred.
-                  </p>
-                  <p class="para1">
-                    We let your method and approach overtake the dominant aesthetic.
-                  </p>
-                </div>
-                <div class="register-button">
-                  <button class="regbtn">Register!</button>
-                </div>
-              </div>
-              <div class="small">
-                <div class="details">
-                  <div class="individual">
-                    <div class="topic">82000 INR</div>
-                    <div class="label">Individual Cost</div>
-                  </div>
-                  <div class="group-cost">
-                    <div class="topic">70000 INR</div>
-                    <div class="label">Group Cost Per Person (2+)</div>
-                  </div>
-                  <div class="per-request">
-                    <div class="topic">Per request</div>
-                    <div class="label">Date</div>
-                  </div>
-                  <div class="hours">
-                    <div class="topic">6 hours per day</div>
-                    <div class="label">time</div>
-                  </div>
-                  <div class="offer">
-                    <div class="topic">Bagru, Jaipur</div>
-                    <div class="label">Offered At</div>
-                  </div>
-      
-                  <div class="topic-level">
-                    <div class="topic">Block Printing, Natural Dye, Resist Printing, Block Carving, Bagru ka Tour</div>
-                    <div class="label">Programs Included</div>
-                  </div>
-                  <div class="optional-level">
-                    <div class="topic">Traditional Textiles</div>
-                    <div class="label">OPTIONAL EXCURSIONS</div>
-                  </div>
-                </div>
-                <div class="three">
-                  <p class="para2">
-                    Spend a day with master block carvers, carve your own designs, and learn the craft’s nuances. 
-                    Print on cotton with self-carved block designs or draw with brush, tjanting. 
-                    Use traditional inks, hot wax-resist, mud-resist, shibori, tie-dye, 
-                    and various natural dyes and pastes to create your collection and swatches. 
-                    Insights into the nature of cellulose, protein fibers, the role of minerals, 
-                    plant based mordants. Set up a natural indigo fermentation vat and learn the 
-                    science of extracting indigo plant to pigment.
-                  </p>
-                </div>
-                <div class="image">
-                  <img src="/assets/images/carving.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-    
-        </div>
-        <script src="natural_dye.js"></script>
-      </section>
-    <section class="sec3">
-        <div class="line">
-            <span class="topic-text1">Photos from Us</span>
-            <hr class="horizontal1-line" />
-        </div>
-        <div class="photo-sec">
-            <img loading="eager" src="assets/images/resist2.jpg" alt="">
-            <img loading="eager" src="assets/images/resist3.jpg" alt="">
-            <img loading="eager" src="assets/images/resist4.jpg" alt="">
-            <img loading="eager" src="assets/images/resist5.jpg" alt="">
-            <img loading="eager" src="assets/images/resist6.jpg" alt="">
-            <img loading="eager" src="assets/images/resist07.png" alt="">
-            <img loading="eager" src="assets/images/resist08.png" alt="">
-            <img loading="eager" src="assets/images/resist9.jpg" alt="">
-        </div>
-            <button class="img-btn">See More Photos &rarr;</button>
-    </section>
 
-      <section class="quotes-sec">
-        <div class="testimonial-section">
-          <div class="testimonial">
-            <p class="quote">
-              “ Very friendly and relaxed environment. I appreciate the deep respect
-              you have for the craft and it’s history. I enjoyed how you let us
-              gradually get into the groove and so much knowledge you willingly
-              shared. ”
-            </p>
-            <div class="user-info">
-              <img src="assets/images/TORIL.jpg" alt="Aimee Vandersteen" />
-              <p class="user-name">TORIL GRUE</p>
+        <div class="download-button">
+          <button class="btn">Download Brochure</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sec2">
+    <div class="tabs-container">
+      <div class="tabs-left">
+        <a
+          class="tab"
+          id="all-tab"
+          [class.active]="currentContent === 'BAGRU'"
+          (click)="switchContent('BAGRU')"
+          >BAGRU</a
+        >
+
+        <a
+          class="tab"
+          id="online-tab"
+          [class.active]="currentContent === 'ONLINE'"
+          (click)="switchContent('ONLINE')"
+          >ONLINE</a
+        >
+      </div>
+      <div class="line-and-topic">
+        <hr class="horizontal-line" />
+        <span class="topic-text">ONLINE</span>
+      </div>
+    </div>
+    <div *ngIf="currentContent === 'BAGRU'" id="BAGRU" class="tabcontent">
+      <div class="program-section">
+        <div class="program-header" (click)="oneDayContent()">
+          <span>ONE-DAY RESIST PAINTING</span>
+          <hr class="horizontal-line" />
+          <span id="block-carving-icon" class="toggle-icon">{{
+            isOneDayVisible ? "-" : "+"
+          }}</span>
+        </div>
+        <div
+          id="block-carving-content"
+          class="program-content"
+          *ngIf="isOneDayVisible"
+        >
+          <div class="text-row">
+            <div class="text-part">
+              <p class="para1">Surrender. And. Play.</p>
+              <p class="para1">
+                <span>‘Mendh ki Chapai’</span> (Wax Printing) is now a bygone
+                phrase amongst the artisans of hand block printing. A craft
+                practice lost in unstable and constant flux. We, happened to be
+                part of the swan song, quietly reserved a small piece of its
+                history with us. Jacked up on optimism and defiance, we nurtured
+                that part at our studio over the past few years.
+              </p>
+              <p class="para1">
+                We now present this ‘old’ crafting technique with tiny and
+                subtle intervention.
+              </p>
+            </div>
+            <div class="register-button">
+              <button class="regbtn">Register!</button>
             </div>
           </div>
-          <div class="testimonial-section">
-            <div class="testimonial">
-              <p class="quote">
-                “ I enjoyed learning about the history and traditional processes,
-                the flexibility of tailoring the experience to work for our unique
-                need and the tour of Bagru. This will be our special memories I will
-                carry away from our India trip. ”
-              </p>
-              <div class="user-info">
-                <img src="assets/images/ANN.jpg" alt="Aimee Vandersteen" />
-                <p class="user-name">ANN SMITH</p>
+          <div class="small">
+            <div class="details">
+              <div class="individual">
+                <div class="topic">7000 INR</div>
+                <div class="label">Individual Cost</div>
+              </div>
+              <div class="group-cost">
+                <div class="topic">5000 INR</div>
+                <div class="label">Group Cost Per Person (2+)</div>
+              </div>
+              <div class="per-request">
+                <div class="topic">Per request</div>
+                <div class="label">Date</div>
+              </div>
+              <div class="hours">
+                <div class="topic">6 hours per day</div>
+                <div class="label">time</div>
+              </div>
+              <div class="offer">
+                <div class="topic">Bagru, Online</div>
+                <div class="label">Offered At</div>
+              </div>
+
+              <div class="topic-level">
+                <div class="topic">Resist Printing</div>
+                <div class="label">Programs Included</div>
+              </div>
+              <div class="optional-level">
+                <div class="topic">Bagru ka Tour, Traditional Textiles</div>
+                <div class="label">OPTIONAL EXCURSIONS</div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section class="quotes-sec">
-        <div class="testimonial-section">
-          <div class="testimonial">
-            <p class="quote">
-              “ I loved that we get free reign to create whatever we wanted. The
-              space was so calm and soothing to be in, felt really at home and free
-              to explore. Felt welcomed to ask questions. ”
-            </p>
-            <div class="user-info">
-              <img src="assets/images/AIMEE.jpg" alt="Aimee Vandersteen" />
-              <p class="user-name">AIMEE VANDERSTEEN</p>
+            <div class="three">
+              <p class="para2">
+                Use hot wax to draw and express. Move away from the rigidity of
+                wooden blocks and repeat patterns. Explore with us the fluidity
+                of design with wax resist (no paraffin used), Create your own
+                designs or use existing blocks on cotton using hot wax method,
+                Dye your scarf with flowers, barks, roots, insect dyes.
+              </p>
+            </div>
+            <div class="image">
+              <img src="/assets/images/carving.png" alt="" />
             </div>
           </div>
-          <div class="testimonial-section">
-            <div class="testimonial">
-              <p class="quote">
-                “ I really enjoyed being immersed in the art of block printing and
-                dyeing. It was an amazing experience for our entire group. I would
-                like to come again. ”
+        </div>
+      </div>
+
+      <div class="program-section">
+        <div class="program-header" (click)="twoDayContent()">
+          <span>TWO-DAY RESIST PAINTING</span>
+          <hr class="horizontal-line" />
+          <span id="block-carving-icon" class="toggle-icon">{{
+            isTwoDayVisible ? "-" : "+"
+          }}</span>
+        </div>
+        <div
+          id="block-carving-content"
+          class="program-content"
+          *ngIf="isTwoDayVisible"
+        >
+          <div class="text-row">
+            <div class="text-part">
+              <p class="para1">
+                Resist. Because it is - the process of undoing, one is separated
+                into two. Mud or wax, when manifested on cloth, creates spaces -
+                positive and negative. Meandering between the opposites, we
+                sought to reclaim the synthesis of the (seemingly) two into one
+                holistic gesture of doing - inside and outside.
               </p>
-              <div class="user-info">
-                <img src="assets/images/SUJATA.jpg" alt="Aimee Vandersteen" />
-                <p class="user-name">SUJATA SHAH</p>
+            </div>
+            <div class="register-button">
+              <button class="regbtn">Register!</button>
+            </div>
+          </div>
+          <div class="small">
+            <div class="details">
+              <div class="individual">
+                <div class="topic">14000 INR</div>
+                <div class="label">Individual Cost</div>
+              </div>
+              <div class="group-cost">
+                <div class="topic">10000 INR</div>
+                <div class="label">Group Cost Per Person (2+)</div>
+              </div>
+              <div class="per-request">
+                <div class="topic">Per request</div>
+                <div class="label">Date</div>
+              </div>
+              <div class="hours">
+                <div class="topic">6 hours per day</div>
+                <div class="label">time</div>
+              </div>
+              <div class="offer">
+                <div class="topic">Bagru, Online</div>
+                <div class="label">Offered At</div>
+              </div>
+
+              <div class="topic-level">
+                <div class="topic">Resist Printing</div>
+                <div class="label">Programs Included</div>
+              </div>
+              <div class="optional-level">
+                <div class="topic">Bagru ka Tour, Traditional Textiles</div>
+                <div class="label">OPTIONAL EXCURSIONS</div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section class="sec4">
-        <div class="line">
-          <span class="topic-text1">RECOMMENDED EXCURSIONS</span>
-          <hr class="horizontal1-line" />
-        </div>
-        <div class="rec-sec">
-          <div class="textsec">
-            <div class="h1txt">BAGRU KA TOUR</div>
-            <p class="smallp">Bagru · 2hr</p>
-            <p class="bigp">
-              Bagru ka Tour is an experience of walking through a series of visceral
-              nature of livelihoods connected to the crafts of hand-making in
-              textiles.
-            </p>
-            <button class="exc-btn">Visit Excursion</button>
-          </div>
-          <div class="picsec">
-            <img src="assets/images/blockimg7.jpg" alt="" />
-          </div>
-        </div>
-      </section>
-      <section id="last-sec" class="tabcontent1">
-        <div class="line">
-          <span class="topic-text1">RECOMMENDED PROGRAMS </span>
-          <hr class="horizontal1-line" />
-        </div>
-        <div class="container">
-          <div class="item" onclick="window.location='#'">
-            <img src="assets/images/block_prints.jpg" alt="Block Printing" />
-            <p>BLOCK PRINTING</p>
-            <p class="location">Jaipur, Online</p>
-          </div>
-          <div class="item" onclick="window.location='#'">
-            <img src="assets/images/Natural_dyes.JPG" alt="Natural Dye" />
-            <p>NATURAL DYE</p>
-            <p class="location">Bagru, Delhi, Online</p>
-          </div>
-          <div class="item" onclick="window.location='#'">
-            <img src="assets/images/resist-printing.jpg" alt="Natural Indigo" />
-            <p>RESIST PAINTING</p>
-            <p class="location">Bahru, Online</p>
-          </div>
-        </div>
-      </section>
-      <section class="breathe">
-        <div class="breathe-container">
-          <h1>BREATHE EASY</h1>
-          <div class="headline-text">
-            <p>
-              The countryside location of our studio has been designed with natural
-              ventilation in mind, with large windows and doors that allow the
-              breeze to flow through.
-            </p>
-          </div>
-    
-          <div class="row-text">
-            <div class="text1-column">
-              <p>
-                The design prioritizes open spaces for people can move around and
-                socialize freely without feeling confined. The pockets of privacy
-                and community provide a sense of security and belonging. The
+            <div class="three">
+              <p class="para2">
+                Get hand-on to make the mud and wax resist pastes. Understand
+                the pros and cons of the resist printing techniques and why one
+                is more practiced than the other. Print patterns on cotton cloth
+                with wood block. Use brush and tjanting tools to create fluid
+                designs. Dye with flowers, barks, roots, insect dyes. Over-dye
+                to create multiple color shades.
               </p>
             </div>
-            <div class="text2-column">
-              <p>
-                studio embraces industrial style and leaves essential elements and
-                services exposed, albeit neatly arranged, providing easy access for
-                maintenance.
-              </p>
-            </div>
-            <div class="text3-column">
-              <p>
-                The studio is designed to be healthy, comfortable, and welcoming.
-              </p>
+            <div class="image">
+              <img src="/assets/images/carving.png" alt="" />
             </div>
           </div>
         </div>
-      </section>
-      <section class="jaipur">
-        <div class="jaipur-section">
-          <div class="jaipur-header" (click)="jaipurContent()">
-            <span>BAGRU</span>
-            <hr class="horizontal2-line" />
-            <span id="workshop-icon" class="toggle-icon">{{
-              isJaipur ? "-" : "+"
-            }}</span>
-          </div>
-          <div id="workshop-content" class="jaipur-content" *ngIf="isJaipur">
-            <div class="jaipur-text">
-              <p>
-                Bagru, a small village town in Rajasthan, is situated at a distance of 32 kms. 
-                south-west of Jaipur city. Its traditional processes of hand block printing on 
-                textiles with rich natural colors have been known for many centuries. 
-                With the attraction of foreign buyers for the traditional hand printed textiles, 
-                this village hums with much activity today, supplying exquisite printed 
-                materials for the export trade.
-              </p>
-              <p>
-                The hand printers, known as chhipas, came from Sawai Madhopur, Alwar, Jhunjhunu and Sikkar districts 
-                of Rajasthan to settle in Bagru and make it their home some 300 years ago. According to a legend, 
-                at the very outset, some two families of chhipas were brought by the Thakur of Bagru to settle in Bagru 
-                from Isarda, a village four miles from Jaipur and from then on migration of more families of chhipas 
-                continued from different places.
-              </p>
-            </div>
-          </div>
-    
-    
-          <div class="jaipur-header" (click)="jaipurContent()">
-            <span>ONLINE</span>
-            <hr class="horizontal2-line" />
-            <span id="workshop-icon" class="toggle-icon">{{
-              isJaipur ? "-" : "+"
-            }}</span>
-          </div>
-          <div id="workshop-content" class="jaipur-content" *ngIf="isJaipur">
-            <div class="jaipur-text">
-              <p>
-                During the global COVID lockdowns when travel and in-person gatherings were restricted, we initiated virtual 
-                adaptations of our workshops. This innovative approach to crafting has captured our attention, and we are dedicated to 
-                enhancing its sophistication. Our primary objective remains consistent in both virtual and physical 
-                versions – to maintain a personalized and engaging experience.
-              </p>
-              <p>
-                In the virtual workshops, upon enrollment, we dispatch a comprehensive dye-kit containing all the necessary 
-                ingredients and detailed instructions to your doorstep. To ensure you achieve the desired results and to 
-                foster a sense of inclusion, we complement this kit with daily online personal sessions led by experienced 
-                instructors. This approach allows you to fully participate and engage, even from a distance, 
-                preserving the essence of our craft workshops.
-              </p>
-            </div>
-          </div>
-    
+      </div>
+
+      <div class="program-section">
+        <div class="program-header" (click)="sixDayContent()">
+          <span>SIX-DAY WORKSHOP</span>
+          <hr class="horizontal-line" />
+          <span id="block-carving-icon" class="toggle-icon">{{
+            isSixDayVisible ? "-" : "+"
+          }}</span>
         </div>
-      </section>
-    </section>
+        <div
+          id="block-carving-content"
+          class="program-content"
+          *ngIf="isSixDayVisible"
+        >
+          <div class="text-row">
+            <div class="text-part">
+              <p class="para1">
+                So much of what propels our pursuit of beauty stems from the
+                invisible connection between nature and labor, realized only
+                with time. Experience of working in the crafts for six
+                consecutive days will reveal new insights into the alchemy of
+                multiple pre-industrial processes; aided by organic and plant
+                produce.
+              </p>
+              <p class="para1">
+                We are delighted to host enthusiasts seeking to create a color
+                palette of their own with direct and compound dyes.
+              </p>
+            </div>
+            <div class="register-button">
+              <button class="regbtn">Register!</button>
+            </div>
+          </div>
+          <div class="small">
+            <div class="details">
+              <div class="individual">
+                <div class="topic">54000 INR</div>
+                <div class="label">Individual Cost</div>
+              </div>
+              <div class="group-cost">
+                <div class="topic">37000 INR</div>
+                <div class="label">Group Cost Per Person (2+)</div>
+              </div>
+              <div class="per-request">
+                <div class="topic">Per request</div>
+                <div class="label">Date</div>
+              </div>
+              <div class="hours">
+                <div class="topic">6 hours per day</div>
+                <div class="label">time</div>
+              </div>
+              <div class="offer">
+                <div class="topic">Bagru, Online</div>
+                <div class="label">Offered At</div>
+              </div>
+
+              <div class="topic-level">
+                <div class="topic">
+                  Block Printing, Natural Dye, Resist Printing
+                </div>
+                <div class="label">Programs Included</div>
+              </div>
+              <div class="optional-level">
+                <div class="topic">Bagru ka Tour, Traditional Textiles</div>
+                <div class="label">OPTIONAL EXCURSIONS</div>
+              </div>
+            </div>
+            <div class="three">
+              <p class="para2">
+                More number of days means more colors. Prepare dye extracts from
+                real dye-stuffs, understand the effects of water quality, pH and
+                decode traditional scouring methods. Use flowers, barks, roots,
+                insect dyes to dye protein and cellulose fibres. Set up a
+                natural Indigo fermentation vat and make printing inks and mud
+                resist paste. Learn woodblock making techniques and traditional,
+                modern dyeing methods with one-to-one mentoring.
+              </p>
+            </div>
+            <div class="image">
+              <img src="/assets/images/carving.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="program-section">
+        <div class="program-header" (click)="eightDayContent()">
+          <span>EIGHT-DAY WORKSHOP</span>
+          <hr class="horizontal-line" />
+          <span id="block-carving-icon" class="toggle-icon">{{
+            isEightDayVisible ? "-" : "+"
+          }}</span>
+        </div>
+        <div
+          id="block-carving-content"
+          class="program-content"
+          *ngIf="isEightDayVisible"
+        >
+          <div class="text-row">
+            <div class="text-part">
+              <p class="para1">
+                Dissolving assumed and conventional separations between notions
+                offer a new way of retaining and expanding sensitivity to
+                multiple inherited traditions. Be humbled by the incredible
+                degree of diversity and regional specialisation when the
+                boundaries amongst four ancient crafts are blurred.
+              </p>
+              <p class="para1">
+                We let your method and approach overtake the dominant aesthetic.
+              </p>
+            </div>
+            <div class="register-button">
+              <button class="regbtn">Register!</button>
+            </div>
+          </div>
+          <div class="small">
+            <div class="details">
+              <div class="individual">
+                <div class="topic">82000 INR</div>
+                <div class="label">Individual Cost</div>
+              </div>
+              <div class="group-cost">
+                <div class="topic">70000 INR</div>
+                <div class="label">Group Cost Per Person (2+)</div>
+              </div>
+              <div class="per-request">
+                <div class="topic">Per request</div>
+                <div class="label">Date</div>
+              </div>
+              <div class="hours">
+                <div class="topic">6 hours per day</div>
+                <div class="label">time</div>
+              </div>
+              <div class="offer">
+                <div class="topic">Bagru, Jaipur</div>
+                <div class="label">Offered At</div>
+              </div>
+
+              <div class="topic-level">
+                <div class="topic">
+                  Block Printing, Natural Dye, Resist Printing, Block Carving,
+                  Bagru ka Tour
+                </div>
+                <div class="label">Programs Included</div>
+              </div>
+              <div class="optional-level">
+                <div class="topic">Traditional Textiles</div>
+                <div class="label">OPTIONAL EXCURSIONS</div>
+              </div>
+            </div>
+            <div class="three">
+              <p class="para2">
+                Spend a day with master block carvers, carve your own designs,
+                and learn the craft’s nuances. Print on cotton with self-carved
+                block designs or draw with brush, tjanting. Use traditional
+                inks, hot wax-resist, mud-resist, shibori, tie-dye, and various
+                natural dyes and pastes to create your collection and swatches.
+                Insights into the nature of cellulose, protein fibers, the role
+                of minerals, plant based mordants. Set up a natural indigo
+                fermentation vat and learn the science of extracting indigo
+                plant to pigment.
+              </p>
+            </div>
+            <div class="image">
+              <img src="/assets/images/carving.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      *ngIf="currentContent === 'ONLINE'"
+      id="ONLINE"
+      class="online-container"
+    >
+      <div class="program-section">
+        <div class="program-header" (click)="oneDayContent()">
+          <span>ONE-DAY RESIST PAINTING</span>
+          <hr class="horizontal-line" />
+          <span id="block-carving-icon" class="toggle-icon">{{
+            isOneDayVisible ? "-" : "+"
+          }}</span>
+        </div>
+        <div
+          id="block-carving-content"
+          class="program-content"
+          *ngIf="isOneDayVisible"
+        >
+          <div class="text-row">
+            <div class="text-part">
+              <p class="para1">Surrender. And. Play.</p>
+              <p class="para1">
+                <span>‘Mendh ki Chapai’</span> (Wax Printing) is now a bygone
+                phrase amongst the artisans of hand block printing. A craft
+                practice lost in unstable and constant flux. We, happened to be
+                part of the swan song, quietly reserved a small piece of its
+                history with us. Jacked up on optimism and defiance, we nurtured
+                that part at our studio over the past few years.
+              </p>
+              <p class="para1">
+                We now present this ‘old’ crafting technique with tiny and
+                subtle intervention.
+              </p>
+            </div>
+            <div class="register-button">
+              <button class="regbtn">Register!</button>
+            </div>
+          </div>
+          <div class="small">
+            <div class="details">
+              <div class="individual">
+                <div class="topic">7000 INR</div>
+                <div class="label">Individual Cost</div>
+              </div>
+              <div class="group-cost">
+                <div class="topic">5000 INR</div>
+                <div class="label">Group Cost Per Person (2+)</div>
+              </div>
+              <div class="per-request">
+                <div class="topic">Per request</div>
+                <div class="label">Date</div>
+              </div>
+              <div class="hours">
+                <div class="topic">6 hours per day</div>
+                <div class="label">time</div>
+              </div>
+              <div class="offer">
+                <div class="topic">Bagru, Online</div>
+                <div class="label">Offered At</div>
+              </div>
+
+              <div class="topic-level">
+                <div class="topic">Resist Printing</div>
+                <div class="label">Programs Included</div>
+              </div>
+              <div class="optional-level">
+                <div class="topic">Bagru ka Tour, Traditional Textiles</div>
+                <div class="label">OPTIONAL EXCURSIONS</div>
+              </div>
+            </div>
+            <div class="three">
+              <p class="para2">
+                Use hot wax to draw and express. Move away from the rigidity of
+                wooden blocks and repeat patterns. Explore with us the fluidity
+                of design with wax resist (no paraffin used), Create your own
+                designs or use existing blocks on cotton using hot wax method,
+                Dye your scarf with flowers, barks, roots, insect dyes.
+              </p>
+            </div>
+            <div class="image">
+              <img src="/assets/images/carving.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="program-section">
+        <div class="program-header" (click)="twoDayContent()">
+          <span>TWO-DAY RESIST PAINTING</span>
+          <hr class="horizontal-line" />
+          <span id="block-carving-icon" class="toggle-icon">{{
+            isTwoDayVisible ? "-" : "+"
+          }}</span>
+        </div>
+        <div
+          id="block-carving-content"
+          class="program-content"
+          *ngIf="isTwoDayVisible"
+        >
+          <div class="text-row">
+            <div class="text-part">
+              <p class="para1">
+                Resist. Because it is - the process of undoing, one is separated
+                into two. Mud or wax, when manifested on cloth, creates spaces -
+                positive and negative. Meandering between the opposites, we
+                sought to reclaim the synthesis of the (seemingly) two into one
+                holistic gesture of doing - inside and outside.
+              </p>
+            </div>
+            <div class="register-button">
+              <button class="regbtn">Register!</button>
+            </div>
+          </div>
+          <div class="small">
+            <div class="details">
+              <div class="individual">
+                <div class="topic">14000 INR</div>
+                <div class="label">Individual Cost</div>
+              </div>
+              <div class="group-cost">
+                <div class="topic">10000 INR</div>
+                <div class="label">Group Cost Per Person (2+)</div>
+              </div>
+              <div class="per-request">
+                <div class="topic">Per request</div>
+                <div class="label">Date</div>
+              </div>
+              <div class="hours">
+                <div class="topic">6 hours per day</div>
+                <div class="label">time</div>
+              </div>
+              <div class="offer">
+                <div class="topic">Bagru, Online</div>
+                <div class="label">Offered At</div>
+              </div>
+
+              <div class="topic-level">
+                <div class="topic">Resist Printing</div>
+                <div class="label">Programs Included</div>
+              </div>
+              <div class="optional-level">
+                <div class="topic">Bagru ka Tour, Traditional Textiles</div>
+                <div class="label">OPTIONAL EXCURSIONS</div>
+              </div>
+            </div>
+            <div class="three">
+              <p class="para2">
+                Get hand-on to make the mud and wax resist pastes. Understand
+                the pros and cons of the resist printing techniques and why one
+                is more practiced than the other. Print patterns on cotton cloth
+                with wood block. Use brush and tjanting tools to create fluid
+                designs. Dye with flowers, barks, roots, insect dyes. Over-dye
+                to create multiple color shades.
+              </p>
+            </div>
+            <div class="image">
+              <img src="/assets/images/carving.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="program-section">
+        <div class="program-header" (click)="sixDayContent()">
+          <span>SIX-DAY WORKSHOP</span>
+          <hr class="horizontal-line" />
+          <span id="block-carving-icon" class="toggle-icon">{{
+            isSixDayVisible ? "-" : "+"
+          }}</span>
+        </div>
+        <div
+          id="block-carving-content"
+          class="program-content"
+          *ngIf="isSixDayVisible"
+        >
+          <div class="text-row">
+            <div class="text-part">
+              <p class="para1">
+                So much of what propels our pursuit of beauty stems from the
+                invisible connection between nature and labor, realized only
+                with time. Experience of working in the crafts for six
+                consecutive days will reveal new insights into the alchemy of
+                multiple pre-industrial processes; aided by organic and plant
+                produce.
+              </p>
+              <p class="para1">
+                We are delighted to host enthusiasts seeking to create a color
+                palette of their own with direct and compound dyes.
+              </p>
+            </div>
+            <div class="register-button">
+              <button class="regbtn">Register!</button>
+            </div>
+          </div>
+          <div class="small">
+            <div class="details">
+              <div class="individual">
+                <div class="topic">54000 INR</div>
+                <div class="label">Individual Cost</div>
+              </div>
+              <div class="group-cost">
+                <div class="topic">37000 INR</div>
+                <div class="label">Group Cost Per Person (2+)</div>
+              </div>
+              <div class="per-request">
+                <div class="topic">Per request</div>
+                <div class="label">Date</div>
+              </div>
+              <div class="hours">
+                <div class="topic">6 hours per day</div>
+                <div class="label">time</div>
+              </div>
+              <div class="offer">
+                <div class="topic">Bagru, Online</div>
+                <div class="label">Offered At</div>
+              </div>
+
+              <div class="topic-level">
+                <div class="topic">
+                  Block Printing, Natural Dye, Resist Printing
+                </div>
+                <div class="label">Programs Included</div>
+              </div>
+              <div class="optional-level">
+                <div class="topic">Bagru ka Tour, Traditional Textiles</div>
+                <div class="label">OPTIONAL EXCURSIONS</div>
+              </div>
+            </div>
+            <div class="three">
+              <p class="para2">
+                More number of days means more colors. Prepare dye extracts from
+                real dye-stuffs, understand the effects of water quality, pH and
+                decode traditional scouring methods. Use flowers, barks, roots,
+                insect dyes to dye protein and cellulose fibres. Set up a
+                natural Indigo fermentation vat and make printing inks and mud
+                resist paste. Learn woodblock making techniques and traditional,
+                modern dyeing methods with one-to-one mentoring.
+              </p>
+            </div>
+            <div class="image">
+              <img src="/assets/images/carving.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="natural_dye.js"></script>
+  </section>
+  <section class="sec3">
+    <div class="line">
+      <span class="topic-text1">Photos from Us</span>
+      <hr class="horizontal1-line" />
+    </div>
+    <div class="photo-sec">
+      <img loading="eager" src="assets/images/resist2.jpg" alt="" />
+      <img loading="eager" src="assets/images/resist3.jpg" alt="" />
+      <img loading="eager" src="assets/images/resist4.jpg" alt="" />
+      <img loading="eager" src="assets/images/resist5.jpg" alt="" />
+      <img loading="eager" src="assets/images/resist6.jpg" alt="" />
+      <img loading="eager" src="assets/images/resist07.png" alt="" />
+      <img loading="eager" src="assets/images/resist08.png" alt="" />
+      <img loading="eager" src="assets/images/resist9.jpg" alt="" />
+    </div>
+    <button class="img-btn">See More Photos &rarr;</button>
+  </section>
+
+  <section class="quotes-sec">
+    <div class="testimonial-section">
+      <div class="testimonial">
+        <p class="quote">
+          “ Very friendly and relaxed environment. I appreciate the deep respect
+          you have for the craft and it’s history. I enjoyed how you let us
+          gradually get into the groove and so much knowledge you willingly
+          shared. ”
+        </p>
+        <div class="user-info">
+          <img src="assets/images/TORIL.jpg" alt="Aimee Vandersteen" />
+          <p class="user-name">TORIL GRUE</p>
+        </div>
+      </div>
+      <div class="testimonial-section">
+        <div class="testimonial">
+          <p class="quote">
+            “ I enjoyed learning about the history and traditional processes,
+            the flexibility of tailoring the experience to work for our unique
+            need and the tour of Bagru. This will be our special memories I will
+            carry away from our India trip. ”
+          </p>
+          <div class="user-info">
+            <img src="assets/images/ANN.jpg" alt="Aimee Vandersteen" />
+            <p class="user-name">ANN SMITH</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="quotes-sec">
+    <div class="testimonial-section">
+      <div class="testimonial">
+        <p class="quote">
+          “ I loved that we get free reign to create whatever we wanted. The
+          space was so calm and soothing to be in, felt really at home and free
+          to explore. Felt welcomed to ask questions. ”
+        </p>
+        <div class="user-info">
+          <img src="assets/images/AIMEE.jpg" alt="Aimee Vandersteen" />
+          <p class="user-name">AIMEE VANDERSTEEN</p>
+        </div>
+      </div>
+      <div class="testimonial-section">
+        <div class="testimonial">
+          <p class="quote">
+            “ I really enjoyed being immersed in the art of block printing and
+            dyeing. It was an amazing experience for our entire group. I would
+            like to come again. ”
+          </p>
+          <div class="user-info">
+            <img src="assets/images/SUJATA.jpg" alt="Aimee Vandersteen" />
+            <p class="user-name">SUJATA SHAH</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sec4">
+    <div class="line">
+      <span class="topic-text1">RECOMMENDED EXCURSIONS</span>
+      <hr class="horizontal1-line" />
+    </div>
+    <div class="rec-sec">
+      <div class="textsec">
+        <div class="h1txt">BAGRU KA TOUR</div>
+        <p class="smallp">Bagru · 2hr</p>
+        <p class="bigp">
+          Bagru ka Tour is an experience of walking through a series of visceral
+          nature of livelihoods connected to the crafts of hand-making in
+          textiles.
+        </p>
+        <button class="exc-btn">Visit Excursion</button>
+      </div>
+      <div class="picsec">
+        <img src="assets/images/blockimg7.jpg" alt="" />
+      </div>
+    </div>
+  </section>
+  <section id="last-sec" class="tabcontent1">
+    <div class="line">
+      <span class="topic-text1">RECOMMENDED PROGRAMS </span>
+      <hr class="horizontal1-line" />
+    </div>
+    <div class="container">
+      <div class="item" onclick="window.location='#'">
+        <img src="assets/images/block_prints.jpg" alt="Block Printing" />
+        <p>BLOCK PRINTING</p>
+        <p class="location">Jaipur, Online</p>
+      </div>
+      <div class="item" onclick="window.location='#'">
+        <img src="assets/images/Natural_dyes.JPG" alt="Natural Dye" />
+        <p>NATURAL DYE</p>
+        <p class="location">Bagru, Delhi, Online</p>
+      </div>
+      <div class="item" onclick="window.location='#'">
+        <img src="assets/images/resist-printing.jpg" alt="Natural Indigo" />
+        <p>RESIST PAINTING</p>
+        <p class="location">Bahru, Online</p>
+      </div>
+    </div>
+  </section>
+  <section class="breathe">
+    <div class="breathe-container">
+      <h1>BREATHE EASY</h1>
+      <div class="headline-text">
+        <p>
+          The countryside location of our studio has been designed with natural
+          ventilation in mind, with large windows and doors that allow the
+          breeze to flow through.
+        </p>
+      </div>
+
+      <div class="row-text">
+        <div class="text1-column">
+          <p>
+            The design prioritizes open spaces for people can move around and
+            socialize freely without feeling confined. The pockets of privacy
+            and community provide a sense of security and belonging. The
+          </p>
+        </div>
+        <div class="text2-column">
+          <p>
+            studio embraces industrial style and leaves essential elements and
+            services exposed, albeit neatly arranged, providing easy access for
+            maintenance.
+          </p>
+        </div>
+        <div class="text3-column">
+          <p>
+            The studio is designed to be healthy, comfortable, and welcoming.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="jaipur">
+    <div class="jaipur-section">
+      <div class="jaipur-header" (click)="bagruContent()">
+        <span>BAGRU</span>
+        <hr class="horizontal2-line" />
+        <span id="workshop-icon" class="toggle-icon">{{
+          isBagru ? "-" : "+"
+        }}</span>
+      </div>
+      <div id="workshop-content" class="jaipur-content" *ngIf="isBagru">
+        <div class="jaipur-text">
+          <p>
+            Bagru, a small village town in Rajasthan, is situated at a distance
+            of 32 kms. south-west of Jaipur city. Its traditional processes of
+            hand block printing on textiles with rich natural colors have been
+            known for many centuries. With the attraction of foreign buyers for
+            the traditional hand printed textiles, this village hums with much
+            activity today, supplying exquisite printed materials for the export
+            trade.
+          </p>
+          <p>
+            The hand printers, known as chhipas, came from Sawai Madhopur,
+            Alwar, Jhunjhunu and Sikkar districts of Rajasthan to settle in
+            Bagru and make it their home some 300 years ago. According to a
+            legend, at the very outset, some two families of chhipas were
+            brought by the Thakur of Bagru to settle in Bagru from Isarda, a
+            village four miles from Jaipur and from then on migration of more
+            families of chhipas continued from different places.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="jaipur-section">
+      <div class="jaipur-header" (click)="onlineContent()">
+        <span>ONLINE</span>
+        <hr class="horizontal2-line" />
+        <span id="workshop-icon" class="toggle-icon">{{
+          isOnline ? "-" : "+"
+        }}</span>
+      </div>
+      <div id="workshop-content" class="jaipur-content" *ngIf="isOnline">
+        <div class="jaipur-text">
+          <p>
+            During the global COVID lockdowns when travel and in-person
+            gatherings were restricted, we initiated virtual adaptations of our
+            workshops. This innovative approach to crafting has captured our
+            attention, and we are dedicated to enhancing its sophistication. Our
+            primary objective remains consistent in both virtual and physical
+            versions – to maintain a personalized and engaging experience.
+          </p>
+          <p>
+            In the virtual workshops, upon enrollment, we dispatch a
+            comprehensive dye-kit containing all the necessary ingredients and
+            detailed instructions to your doorstep. To ensure you achieve the
+            desired results and to foster a sense of inclusion, we complement
+            this kit with daily online personal sessions led by experienced
+            instructors. This approach allows you to fully participate and
+            engage, even from a distance, preserving the essence of our craft
+            workshops.
+          </p>
+        </div>
+      </div>
+    </div>
     
+    
+  </section>
+</section>

@@ -9,17 +9,39 @@ import { Component } from '@angular/core';
   styleUrl: './resist-printing.component.css'
 })
 export class ResistPrintingComponent {
-  isContentVisible = false;
+  isOneDayVisible=false;
+  isTwoDayVisible=false;
+  isSixDayVisible=false;
   isEightDayVisible = false;
-  isJaipur=false;
 
-  toggleContent() {
-    this.isContentVisible = !this.isContentVisible;
-  }
+
+  isOnline=false;
+  isBagru=false;
+
+  currentContent = 'BAGRU';
+
   eightDayContent() {
     this.isEightDayVisible = !this.isEightDayVisible;
   }
-  jaipurContent() {
-    this.isJaipur = !this.isJaipur;
+  oneDayContent() {
+    this.isOneDayVisible = !this.isOneDayVisible;
+  }
+
+  twoDayContent() {
+    this.isTwoDayVisible = !this.isTwoDayVisible;
+  }
+  sixDayContent() {
+    this.isSixDayVisible = !this.isSixDayVisible;
+  }
+
+  
+  onlineContent() {
+    this.isOnline = !this.isOnline;
+  }
+  bagruContent() {
+    this.isBagru = !this.isBagru;
+  }
+  switchContent(content: string) {
+    this.currentContent = content;
   }
 }
