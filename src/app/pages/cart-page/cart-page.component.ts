@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { loadStripe } from '@stripe/stripe-js/pure';
 import axios from 'axios';
 import { CartService } from '../../services/cart.service';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-cart-page',
@@ -15,11 +16,13 @@ import { CartService } from '../../services/cart.service';
 export class CartPageComponent implements OnInit {
   embeddedPayment: boolean = false;
   cartItem: any[] = [];
+  isLoggedIn: boolean = false;
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private auth: AuthService) {}
 
   async ngOnInit(): Promise<void> {
     this.embeddedPayment = false;
+    this.isLoggedIn = !!localStorage.getItem('tokenId');
     this.cartService.cart$.subscribe((cartItems) => {
       this.cartItem = cartItems;
     });
@@ -57,5 +60,9 @@ export class CartPageComponent implements OnInit {
   }
   removeItem(noteId: string) {
     this.cartService.removeFromCart(noteId);
+  }
+
+  async loginAt() {
+    this.auth.loginWithRedirect();
   }
 }

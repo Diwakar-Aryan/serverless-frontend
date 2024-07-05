@@ -1,6 +1,7 @@
 .about-text{
     display: inline-block;
-    background-color: #f1ebe3;
+    background-color: rgba(248, 242, 236, 1);
+    color:rgba(79, 46, 44, 1);
   }
   .about h1{
     margin-top: 5%;

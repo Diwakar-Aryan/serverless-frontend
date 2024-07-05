@@ -39,10 +39,24 @@
         <span class="net-label">NET TOTAL</span>
         <span class="net-value">{{ cartItem.length > 0 ? getTotalCost() : "0.00" }}</span>
       </div>
-      <div class="login-button">
+      <!-- <div class="login-button">
         <button class="checkout-button" (click)="doCheckout()">
           Log in to checkout
         </button>
+      </div> -->
+      <div class="login-button">
+        <button
+          class="checkout-button"
+          *ngIf="isLoggedIn; else loginTemplate"
+          (click)="doCheckout()"
+        >
+          Checkout with Stripe
+        </button>
+        <ng-template #loginTemplate>
+          <button class="checkout-button" (click)="loginAt()">
+            Log in to checkout
+          </button>
+        </ng-template>
       </div>
     </div>
   </div>

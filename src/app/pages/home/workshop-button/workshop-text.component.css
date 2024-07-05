@@ -1,8 +1,10 @@
 .text-container {
+  
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  background-color: #e4cfaa; /* Light gray background */
+  padding: 5%;
+  
+  background-color: rgba(225, 204, 180, 1); /* Light gray background */
 }
 
 .left-text {
@@ -22,7 +24,7 @@
   letter-spacing: 0.02em;
   font-feature-settings: "pnum" on, "onum" on;
   opacity: 50%;
-  color: #580505;
+  color: rgba(151, 46, 52, 1);
 }
 
 .right-text {
@@ -44,7 +46,7 @@
 }
 
 .workshop-button {
-  background-color: #7a1b1b; /* Purple color background */
+  background-color: rgba(151, 46, 52, 1); /* Purple color background */
   color: #fff;
   border: none;
   padding: 4.5% 25%;
@@ -54,7 +56,7 @@
 }
 
 .workshop-button:hover {
-  background-color: #580505;
+  background-color: rgba(151, 46, 52, 1);
 }
 
 /* Responsive styles for screens up to 350px (mobile screens) */

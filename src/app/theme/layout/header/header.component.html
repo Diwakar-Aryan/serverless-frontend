@@ -1,20 +1,126 @@
 <!-- header.component.html -->
 <nav class="navbar">
   <div class="navbar-container">
-    <div class="navbar-left"><a href="/home">
-      <img src="/assets/images/logo.black.line.png" alt="WabiSabi Logo" class="navbar-logo">
-    </a></div>
+    <div class="navbar-left">
+      <div class="logo">
+        <a href="/home">
+          <img
+            src="/assets/images/logo.black.line.png"
+            alt="WabiSabi Logo"
+            class="navbar-logo"
+          />
+        </a>
+      </div>
+     
+      <div class="nav-item1">
+        <a href="/jajam" routerLinkActive="active-link" class="navbar-item" id="jajam"
+        >Jajam</a
+      >
+      </div>
+    
+    </div>
     <div class="navbar-right">
-      <a href="/cart" class="navbar-item"><i class="fas fa-shopping-cart">
+      
+      <div class="nav-item1">
+        <a href="/workshops" routerLinkActive="active-link" class="navbar-item"
+        >Workshops</a
+      >
+      <a href="/collections" routerLinkActive="active-link" class="navbar-item"
+        >Collections</a
+      >
+      <a href="/notes" routerLinkActive="active-link" class="navbar-item"
+        >Notes</a
+      >
+      </div>
+     <div class="action-icon">
+      <a href="/cart" class="navbar-item"
+      ><i class="fas fa-shopping-cart">
         <span *ngIf="cartCount > 0" class="cart-count">{{ cartCount }}</span>
       </i>
-        </a>
-      <!-- <a href="/account" class="navbar-item"
-        ><i class="fa-solid fa-arrow-right-to-bracket"></i
-      ></a> -->
+     </a>
+
+     <ng-container *ngIf="isAuthenticated; else loggedOut">
+      <a href="/account" class="navbar-item">
+        <i class="fa-solid fa-user"></i>
+      </a>
+      </ng-container>
+     <ng-template #loggedOut>
+      <a href="/account" class="navbar-item">
+        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+      </a>
+     </ng-template>
+     <div class="navbar-toggle-container">
+      <a class="navbar-item">|</a>
+      <button class="navbar-toggle" (click)="toggleNavbar()">
+        <span *ngIf="navCollapsed"><i class="fa-solid fa-bars"></i></span>
+        <span *ngIf="!navCollapsed"><i class="fa-solid fa-xmark"></i></span>
+      </button>
+    </div>
+    </div>
+     
+      <!-- <div class="navbar-toggle-container">
+      <a class="navbar-item">|</a>
+      <button class="navbar-toggle" (click)="toggleNavbar()">
+        <span *ngIf="navCollapsed"><i class="fa-solid fa-bars"></i></span>
+        <span *ngIf="!navCollapsed"><i class="fa-solid fa-xmark"></i></span>
+      </button> -->
+      <!-- </div> -->
+     
+    </div>
+
+  </div>
+  <div class="navigation" [class.collapsed]="navCollapsed">
+    <div class="nav-section">
+      <div class="nav-column">
+        <h4>PROJECTS</h4>
+        <ul>
+          <li><a href="/jajam" routerLinkActive="active-link">Jajam</a></li>
+        </ul>
+      </div>
+      <div class="nav-column">
+        <h4>PLATFORM</h4>
+        <ul>
+          <li>
+            <a href="/workshops" routerLinkActive="active-link">Workshops</a>
+          </li>
+          <li>
+            <a href="/collections" routerLinkActive="active-link"
+              >Collections</a
+            >
+          </li>
+          <li><a href="/notes" routerLinkActive="active-link">Notes</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- <app-breadcrumb></app-breadcrumb> -->
+</nav>
+
+
+<!-- header.component.html -->
+<!-- <nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-left">
+      <a href="/home">
+        <img
+          src="/assets/images/logo.black.line.png"
+          alt="WabiSabi Logo"
+          class="navbar-logo"
+        />
+      </a>
+      <a href="/jajam" routerLinkActive="active-link" class="navbar-item">Jajam</a>
+    </div>
+    <div class="navbar-right">
+      <a href="/workshops" routerLinkActive="active-link" class="navbar-item">Workshops</a>
+      <a href="/collections" routerLinkActive="active-link" class="navbar-item">Collections</a>
+      <a href="/notes" routerLinkActive="active-link" class="navbar-item">Notes</a>
+      <a href="/cart" class="navbar-item">
+        <i class="fas fa-shopping-cart">
+          <span *ngIf="cartCount > 0" class="cart-count">{{ cartCount }}</span>
+        </i>
+      </a>
       <ng-container *ngIf="isAuthenticated; else loggedOut">
         <a href="/account" class="navbar-item">
-          <!-- <img [src]="userImage" alt="User Image" class="user-icon" *ngIf="userImage"> -->
           <i class="fa-solid fa-user"></i>
         </a>
       </ng-container>
@@ -23,7 +129,8 @@
           <i class="fa-solid fa-arrow-right-to-bracket"></i>
         </a>
       </ng-template>
-      <!-- <a href="#" class="navbar-item"><i class="fas fa-ellipsis-v"></i></a> -->
+    </div>
+    <div class="navbar-toggle-container">
       <a class="navbar-item">|</a>
       <button class="navbar-toggle" (click)="toggleNavbar()">
         <span *ngIf="navCollapsed"><i class="fa-solid fa-bars"></i></span>
@@ -45,10 +152,8 @@
           <li><a href="/workshops" routerLinkActive="active-link">Workshops</a></li>
           <li><a href="/collections" routerLinkActive="active-link">Collections</a></li>
           <li><a href="/notes" routerLinkActive="active-link">Notes</a></li>
-         
         </ul>
       </div>
     </div>
   </div>
-  <!-- <app-breadcrumb></app-breadcrumb> -->
-</nav>
+</nav> -->

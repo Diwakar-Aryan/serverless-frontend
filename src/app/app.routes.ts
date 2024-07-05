@@ -31,6 +31,7 @@ import { ResistPrintingComponent } from './pages/workshop/workshop-images-screen
 import { JajamSpreadComponent } from './pages/collections/jajam-spread/jajam-spread.component';
 import { CharChaukorComponent } from './pages/collections/jajam-spread/char-chaukor/char-chaukor.component';
 import { BarfiComponent } from './pages/collections/jajam-spread/barfi/barfi.component';
+import { JourneyPageComponent } from './pages/jajam/journey-page/journey-page.component';
 
 export const routes: Routes = [
     {
@@ -103,6 +104,9 @@ export const routes: Routes = [
     },
     {
         path: "jajam/regional", component: RegionalPageComponent,
+    },
+    {
+        path: "jajam/journey", component: JourneyPageComponent,
     },
 
     {

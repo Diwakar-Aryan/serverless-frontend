@@ -20,6 +20,7 @@ export class AccountComponent {
   constructor(
     public auth: AuthServiceService,
     private http: HttpClient,
+    private router: Router,
     @Inject(DOCUMENT) public document: Document
   ) {}
 
@@ -51,6 +52,7 @@ export class AccountComponent {
   
     localStorage.removeItem('userImage');
     localStorage.removeItem('tokenId');
-    this.auth.auth.logout({ logoutParams: { returnTo: this.document.location.origin } });
+    this.auth.auth.logout({ logoutParams: { returnTo: 'http://localhost:4200/home' } });
+    // this.router.navigate(['/home']);
   }
 }

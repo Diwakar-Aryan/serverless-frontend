@@ -1,4 +1,7 @@
 /* header.component.css */
+.navbar-toggle-container {
+  display: none;
+}
 .navbar {
   display: block;
   flex-direction: column;
@@ -33,10 +36,27 @@
 
 
 .navbar-left img {
-  max-height: 22px; /* Maximum height for desktop */
+  max-height: 20px; /* Maximum height for desktop */
   width: auto; /* Maintain aspect ratio */
 }
-
+.navbar-left{
+  display: flex;
+  flex-direction: row;
+}
+.navbar-right{
+  display: flex;
+  flex-direction: row;
+}
+.nav-item1 a{
+  color: gray;
+  font-size: 1rem;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 600;
+}
+#jajam{
+  padding-left: 15%;
+  margin-top: 5%;
+}
 .navbar-item {
   margin-left: 0.55rem;
   font-size: 1rem;
@@ -178,7 +198,10 @@
     width: 100%;
     height: 100%;
   }
-
+ .action-icon{
+  display: flex;
+  flex-direction: row;
+ }
 
 }
 @media (max-width: 714px) {
@@ -279,4 +302,31 @@
   }
   
 
+}
+
+
+@media (max-width: 1460px) {
+  .nav-item1{
+    display: none;
+  }
+
+  .navbar-toggle-container {
+    display: flex;
+    align-items: center;
+  }
+  .action-icon{
+    display: flex;
+    flex-direction: row;
+   }
+}
+
+@media (min-width: 1461px) {
+  .navbar-left .nav-item1 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-toggle-container {
+    display: none;
+  }
 }
