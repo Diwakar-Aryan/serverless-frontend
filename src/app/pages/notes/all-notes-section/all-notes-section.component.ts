@@ -44,6 +44,18 @@ export class AllNotesSectionComponent implements OnInit {
     } else if (content === 'unlocked') {
       this.lockStatus = 2;
     }
+    else if (content === 'All-place') {
+      this.lockStatus = 4;
+    }
+    else if (content === 'PLACEHOLDER') {
+      this.lockStatus = 5;
+    }
+    else if (content === 'All-eng') {
+      this.lockStatus = 6;
+    }
+    else if (content === 'ENGLISH') {
+      this.lockStatus = 7;
+    }
     this.applyLockFilter(this.lockStatus);
   }
   

@@ -1,8 +1,8 @@
 <section>
   <div class="tabs-container">
     <div class="tabs-left">
-      <a class="tab" id="all-tab" [class.active]="lockStatus === 0" (click)="showContent('all')">ALL</a>
-      <a class="tab" id="placeholder-tab">PLACEHOLDER</a>
+      <a class="tab" id="all-tab" [class.active]="lockStatus === 4" (click)="showContent('All-place')">ALL</a><strong>/</strong>
+      <a class="tab" id="placeholder-tab" [class.active]="lockStatus === 5" (click)="showContent('PLACEHOLDER')">PLACEHOLDER</a>
     </div>
     <div class="line-and-topic">
       <hr class="horizontal-line" />
@@ -11,8 +11,8 @@
   </div>
   <div class="tabs-container2">
     <div class="tabs-left2">
-      <a class="tab2" id="all-tab2" [class.active]="lockStatus === 0" (click)="showContent('all')">ALL</a>
-      <a class="tab2" id="english-tab2">ENGLISH</a>
+      <a class="tab2" id="all-tab2" [class.active]="lockStatus === 6" (click)="showContent('All-eng')">ALL</a><strong>/</strong>
+      <a class="tab2" id="english-tab2" [class.active]="lockStatus === 7" (click)="showContent('ENGLISH')">ENGLISH</a>
     </div>
     <div class="line-and-topic2">
       <hr class="horizontal-line2" />
@@ -22,8 +22,8 @@
 
   <div class="tabs-container3">
     <div class="tabs-left3">
-      <a class="tab3" id="all-tab3" [class.active]="lockStatus === 0" (click)="showContent('all')">ALL</a>
-      <a class="tab3" id="locked-tab3" [class.active]="lockStatus === 1" (click)="showContent('locked')">LOCKED</a>
+      <a class="tab3" id="all-tab3" [class.active]="lockStatus === 0" (click)="showContent('all')">ALL</a><strong>/</strong>
+      <a class="tab3" id="locked-tab3" [class.active]="lockStatus === 1" (click)="showContent('locked')">LOCKED</a><strong>/</strong>
       <a class="tab3" id="unlocked-tab3" [class.active]="lockStatus === 2" (click)="showContent('unlocked')">UNLOCKED</a>
     </div>
     <div class="line-and-topic3">

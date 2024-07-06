@@ -1,5 +1,5 @@
 section {
-  padding: 1%;
+
   background-color: #f8f8f8; /* Light background for sections */
   padding: 5%;
 }
@@ -7,7 +7,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1%;
+  padding-left: 6%;
   background-color: #f8f8f8; /* Light background for tabs */
 }
 
@@ -17,25 +17,30 @@ section {
 }
 
 .tab3 {
-  margin: 0 15px;
-  padding: 10px 20px;
+  margin: 0 10px;
+  /* padding: 10px 20px; */
   background-color: #fff;
-  border: 1px solid #ccc;
   text-decoration: none;
   color: #333;
   font-family: "Nunito Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 2rem;
   cursor: pointer;
+  opacity: 60%;
+}
+.tabs-left strong {
+  font-weight: normal;
+  color: #000;
+  font-size: 2rem;
+  opacity: 10%;
+  text-align: center;
 }
 
 .tab3:hover {
-  background-color: #6d6b6d;
-  color: #fff;
+  border: 3.5px solid #868585;
 }
 
 .tab3.active {
-  background-color: #551404;
-  color: #fff;
+  border: 3.5px solid #868585;
 }
 
 .line-and-topic {
@@ -54,10 +59,11 @@ section {
 
 .topic-text {
   font-family: "Nunito Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #333;
   letter-spacing: 0.3em;
   font-weight: bold;
+  opacity: 60%;
 }
 
 .container {
@@ -70,6 +76,7 @@ section {
 }
 .all-content{
   padding-left: 2%;
+  padding-top: 5%;
 }
 .item {
   /* text-align: center; */
@@ -130,31 +137,75 @@ section {
   font-size: 0.9em;
   color: grey;
 }
+.line{
+  display: flex;
+  align-items: center;
+  width: 100%; 
+  z-index: 2;
+  padding-left: 2.6%;
+}
+
+.horizontal1-line {
+  flex-grow: 1;
+  background-color: #7c7b7b;
+  border: none;
+  height: 2px;
+  z-index: 2;
+}
+
+.topic1-text {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.7rem;
+  color: #7c7b7b;
+  font-weight: normal;
+  z-index: 2;
+}
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
   .tabs-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
   }
 
   .tabs-left {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Two columns */
+    grid-template-columns: repeat(9, 1fr); /* Two columns */
     gap: 10px;
   }
 
   .tab3 {
-    font-size: 0.85rem;
-    padding: 6px 12px;
-    margin: 0;
+    margin: 0 10px;
+    /* padding: 10px 20px; */
+    background-color: #fff;
+    text-decoration: none;
+    color: #333;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 60%;
   }
-
-  .container,
-  .container2 {
-    flex-direction: column;
-    align-items: center;
-    margin: 10px 5%;
+  .tabs-left strong {
+    font-weight: normal;
+    color: #000;
+    font-size: 1.2rem;
+    opacity: 10%;
+    text-align: center;
+  }
+  .all-content{
+    display: flex;
+    width: 100%;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-left: 0;
+    padding-right: 0;
+   
+  }
+  .container2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
   }
 
   .item img,

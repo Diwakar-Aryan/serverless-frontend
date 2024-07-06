@@ -24,29 +24,42 @@ section {
 
 .tab,.tab2,
 .tab3 {
-  margin: 0 15px;
-  padding: 10px 20px;
+  margin: 0 10px;
+  /* padding: 10px 20px; */
   background-color: #fff;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   text-decoration: none;
   color: #333;
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 2rem;
   cursor: pointer;
+  font-weight: bold;
+  opacity: 60%;
 }
 
 .tab:hover,.tab2:hover,
 .tab3:hover {
-  background-color: #6d6b6d;
-  color: #fff;
+  /* background-color: #6d6b6d; */
+  border: 3.5px solid #868585;
+  /* color: #fff; */
 }
 
 .tab.active,.tab2.active,
 .tab3.active {
-  background-color: #6d6b6d;
-  color: #fff;
+ 
+  border: 3.5px solid #868585;
+
 }
 
+.tabs-left strong,
+.tabs-left2 strong,
+.tabs-left3 strong {
+  font-weight: normal;
+  color: #000;
+  font-size: 2.5rem;
+  opacity: 10%;
+  text-align: center;
+}
 .line-and-topic,.line-and-topic2,
 .line-and-topic3 {
   display: flex;
@@ -66,10 +79,11 @@ section {
 .topic-text,.topic-text2,
 .topic-text3 {
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #333;
   letter-spacing: 0.3em;
   font-weight: bold;
+  opacity: 60%;
 }
 
 
@@ -174,13 +188,14 @@ section {
 }
 .note-details .right-content{
   padding-left: 15%;
+  padding-right: 7.8%;
 }
 .note-details{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 8%;
-  padding-right: 10%;
+  padding-left: 10%;
+  /* padding-right: 10%; */
   width: 100%;
 }
 
