@@ -56,7 +56,10 @@ export class CartPageComponent implements OnInit {
     checkout?.mount('#checkout');
   }
   getTotalCost(): number {
-    return this.cartItem.reduce((total, item) => total + parseFloat(item.cost), 0);
+    return this.cartItem.reduce(
+      (total, item) => total + parseFloat(item.cost),
+      0
+    );
   }
   removeItem(noteId: string) {
     this.cartService.removeFromCart(noteId);

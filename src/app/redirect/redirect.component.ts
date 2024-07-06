@@ -13,7 +13,7 @@ export class RedirectComponent implements OnInit{
 
   @Input('sessionId') sessionId: string = ''
   paymentStatus: boolean = false;
-  
+
   ngOnInit(){
     axios.interceptors.request.use(config => {
       const authToken = localStorage.getItem('tokenId');
@@ -38,6 +38,8 @@ export class RedirectComponent implements OnInit{
 
       this.paymentStatus = true;
       //do redirect, clear cart
+
+      localStorage.setItem('cart', JSON.stringify([]))
     }
 
   }
