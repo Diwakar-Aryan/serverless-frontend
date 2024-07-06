@@ -25,6 +25,7 @@ export class AccountComponent {
   ) {}
 
   ngOnInit(): void {
+    this.checkLoginStatus();
     this.auth.auth. user$.subscribe((user) => {
       if (user && user.email) {
         this.email = user.email;
@@ -41,7 +42,13 @@ export class AccountComponent {
     });
   }
   
- 
+  checkLoginStatus(): void {
+    const storedTokenId = localStorage.getItem('tokenId');
+    if (!storedTokenId) {
+      this.loginAt();
+    }
+  }
+
 
   async loginAt() {
     this.auth.auth.loginWithRedirect();

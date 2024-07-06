@@ -68,8 +68,8 @@
     justify-content: space-between;
     /* padding: 1%; */
    
-    /* padding-left: 7%;
-    padding-right: 7%; */
+    padding-left: 2%;
+  
   }
   
   .tabs-left {
@@ -78,35 +78,43 @@
   }
   
   .tab {
-    margin: 0 15px;
-    padding: 10px 20px;
+    margin: 0 10px;
+    /* padding: 10px 20px; */
   
-    border: 1px solid rgba(151, 46, 52, 1);
+    /* border: 1px solid rgba(151, 46, 52, 1); */
     text-decoration: none;
     color: rgba(151, 46, 52, 1);
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 1rem;
+    font-size: 1.6rem;
     cursor: pointer;
     text-wrap: nowrap;
+    font-weight: 600;
+    opacity: 60%;
   }
   
   .tab:hover {
-    background-color: rgba(151, 46, 52, 1);
-    color: #fff;
+    border: 2px solid rgba(151, 46, 52, 1);
+    color: rgba(151, 46, 52, 1);
   }
   
   .tab.active {
-    background-color: rgba(151, 46, 52, 1);
-    color: #fff;
+    border: 2px solid rgba(151, 46, 52, 1);
+    color: rgba(151, 46, 52, 1);
   }
-  
+  .tabs-left strong {
+    font-weight: normal;
+    color: rgba(151, 46, 52, 1);
+    font-size: 1.6rem;
+    opacity: 20%;
+    text-align: center;
+  }
   .line-and-topic {
     display: flex;
     align-items: center;
     width: 100%; 
   }
   
-  .horizontal-line {
+  .horizontal1-line {
     flex-grow: 1;
     background-color: rgba(151, 46, 52, 1);
     border: none;
@@ -114,12 +122,13 @@
     margin-right: 10px; 
   }
   
-  .topic-text {
+  .topic1-text {
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 4rem;
+    font-size: 1.6rem;
     color: rgba(151, 46, 52, 1);
     letter-spacing: 0.3em;
     font-weight: bold;
+    opacity: 60%;
   }
 .main{
     padding: 5%;
@@ -504,15 +513,30 @@ height: 100%;
        
         align-items: flex-start;
       }
-    
-      .tabs-left{
+    .tabs-left{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+      .tab1{
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin-bottom: 10px;
-        row-gap: 10px;
+        /* row-gap: 10px; */
       }
     
       .line-and-topic {
         width: 100%;
+      }
+      .tab{
+        margin: 0 0px;
+      
+      }
+      .tabs-left strong {
+        font-weight: normal;
+        color: rgba(151, 46, 52, 1);
+        font-size: 1rem;
+        opacity: 10%;
+        text-align: center;
+       
       }
 }

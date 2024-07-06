@@ -15,16 +15,22 @@
     <section class="main">
         <div class="tabs-container">
             <div class="tabs-left">
+              <div class="tab1">
                 <a class="tab" id="all-tab" [class.active]="currentContent === 'CHAUPAD'"
-                    (click)="switchContent('CHAUPAD')" routerLink="/collections/jajam-chaupad">CHAUPAD</a>
+                (click)="switchContent('CHAUPAD')" routerLink="/collections/jajam-chaupad">CHAUPAD</a><strong>/</strong>
+              </div>
+              <div class="tab1">
                 <a class="tab" id="placeholder-tab" [class.active]="currentContent === 'BARFI'"
-                    (click)="switchContent('BARFI')" routerLink="/collections/jajam-barfi">BARFI</a>
-                    <a class="tab" id="placeholder-tab" [class.active]="currentContent === 'CHAR'"
-                    (click)="switchContent('CHAR')" routerLink="/collections/jajam-char-chaukor">CHAR CHAUKOR</a>
+                (click)="switchContent('BARFI')" routerLink="/collections/jajam-barfi">BARFI</a><strong>/</strong>
+              </div>
+              <div class="tab1">
+                <a class="tab" id="placeholder-tab" [class.active]="currentContent === 'CHAR'"
+                (click)="switchContent('CHAR')" routerLink="/collections/jajam-char-chaukor">CHAR CHAUKOR</a>
+              </div>
             </div>
             <div class="line-and-topic">
-                <hr class="horizontal-line" />
-                <span class="topic-text">DESIGN</span>
+                <hr class="horizontal1-line" />
+                <span class="topic1-text">DESIGN</span>
             </div>
         </div>
         <div class="container">
