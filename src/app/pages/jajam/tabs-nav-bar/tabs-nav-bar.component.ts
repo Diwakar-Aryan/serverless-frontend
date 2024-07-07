@@ -14,7 +14,7 @@ import { NavigationEnd, Router, RouterModule, RouterOutlet } from '@angular/rout
   styleUrl: './tabs-nav-bar.component.css'
 })
 export class TabsNavBarComponent {
-  currentContent= '';
+  currentContent:string= '';
   isRegionShow: boolean = true;
   constructor(private router: Router) {}
   // openTab(tabName: string): void {
