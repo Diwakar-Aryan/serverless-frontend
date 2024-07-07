@@ -64,7 +64,7 @@
 }
 .text-container {
   display: block;
-  background-color: rgba(154, 126, 94, 1);
+  background-color: rgba(152, 128, 74, 1);
   color: rgba(255, 255, 255, 1);
   padding: 5%;
 }
@@ -126,7 +126,7 @@
 }
 .btn {
   background-color: rgba(255, 255, 255, 1);
-  color: rgba(154, 126, 94, 1);
+  color: rgba(152, 128, 74, 1);
   border: none;
   font-weight: 600;
   text-align: center;
@@ -138,7 +138,7 @@
 }
 .btn:hover {
   background-color: rgb(255, 255, 255);
-  color: rgba(154, 126, 94, 1);
+  color: rgba(152, 128, 74, 1);
 }
 .tabs-container {
   display: flex;
@@ -159,21 +159,21 @@
   margin: 0 15px;
   padding: 10px 20px;
 
-  border: 1px solid rgba(154, 126, 94, 1);
+  border: 1px solid rgba(152, 128, 74, 1);
   text-decoration: none;
-  color: rgba(154, 126, 94, 1);
+  color: rgba(152, 128, 74, 1);
   font-family: 'Nunito Sans', sans-serif;
   font-size: 1rem;
   cursor: pointer;
 }
 
 .tab:hover {
-  background-color: rgba(154, 126, 94, 1);
+  background-color: rgba(152, 128, 74, 1);
   color: #fff;
 }
 
 .tab.active {
-  background-color: rgba(154, 126, 94, 1);
+  background-color: rgba(152, 128, 74, 1);
   color: #fff;
 }
 
@@ -185,7 +185,7 @@
 
 .horizontal-line {
   flex-grow: 1;
-  background-color: rgba(154, 126, 94, 1);
+  background-color: rgba(152, 128, 74, 1);
   border: none;
   height: 5px;
   margin-right: 10px; 
@@ -194,13 +194,13 @@
 .topic-text {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 2rem;
-  color: rgba(154, 126, 94, 1);
+  color: rgba(152, 128, 74, 1);
   letter-spacing: 0.3em;
   font-weight: bold;
 }
 
 .sec2 {
-  background-color: rgba(219, 223, 224, 1);
+  background-color: rgba(225, 215, 199, 1);
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 5%;
@@ -232,11 +232,11 @@ color: rgba(154, 126, 94, 1);
   line-height: 0.4;
 }
 .program-header:hover {
-  border: 3px solid rgba(154, 126, 94, 1);
+  border: 3px solid rgba(152, 128, 74, 1);
 }
 .horizontal-line {
   flex-grow: 1;
-  background-color: rgba(154, 126, 94, 1);
+  background-color: rgba(152, 128, 74, 1);
   border: none;
   height: 5px;
   /* margin-right: 10px;  */
@@ -274,7 +274,7 @@ color: rgba(154, 126, 94, 1);
 .regbtn {
   display: flex;
   color: rgba(255, 255, 255, 1);
-  background-color: rgba(154, 126, 94, 1);
+  background-color: rgba(152, 128, 74, 1);
   border: none;
   font-weight: 600;
   text-align: center;
@@ -285,8 +285,8 @@ color: rgba(154, 126, 94, 1);
 }
 
 .regbtn:hover {
-  color: rgba(154, 126, 94, 1);
-  background-color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1);
+  background-color: rgb(172, 137, 57);
 }
 .program-content .para1 {
   font-family: Nunito, sans-serif;
