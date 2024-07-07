@@ -316,7 +316,7 @@
 }
 /* ____________________wisih section______________ */
 .wish-container {
-  background-color: #e0dede;
+  background-color: rgba(250, 247, 237, 1);
   display: flex;
   flex-direction: column;
   align-items: center;
