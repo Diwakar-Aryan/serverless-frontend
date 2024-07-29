@@ -105,6 +105,7 @@
   flex-direction: row;
   padding-top: 5%;
 }
+
 .first-half {
   display: grid;
   /* flex-direction: row;  */
@@ -115,10 +116,26 @@
 .recommended-links a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: .2em;
   text-wrap: wrap;
   text-align: center;
   font-weight: bold;
+}
+.anokhi img{
+  height: 100%;
+  width: 100%;
+}
+.new-york img{
+  height: 100%;
+  width: 100%;
+}
+.planet img{
+  height: 100%;
+  width: 100%;
+}
+.travel img{
+  height: 100%;
+  width: 100%;
 }
 .download-button {
   width: 40%;

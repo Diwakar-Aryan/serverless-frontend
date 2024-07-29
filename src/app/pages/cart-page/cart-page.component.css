@@ -122,14 +122,14 @@
   padding-right: 10%;
   padding: 1rem 4rem;
   border: none;
-  background-color: #595b5e;
+  background-color: #0c0c0c;
   color: #fff;
   font-size: 1em;
   cursor: pointer;
   border-radius: 2rem;
   font-weight: bold;
   border: 0.2rem solid #e4eaf3;
-  opacity: 50%;
+  opacity: 70%;
   transition: background-color 0.3s ease;
 }
 
