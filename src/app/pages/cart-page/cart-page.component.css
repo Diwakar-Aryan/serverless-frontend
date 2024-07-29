@@ -19,7 +19,8 @@
 .topic-text {
   font-size: 5rem;
   font-style: normal;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+  font-weight: 200;
 }
 
 .horizontal-line {
@@ -49,7 +50,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   padding: 10px 0;
-  font-weight: bold;
+  font-weight: 400;
 
 }
 
@@ -101,7 +102,7 @@
 }
 
 .net-total {
-  font-weight: bold;
+  font-weight: 400;
   margin-bottom: 5%;
   align-self: flex-start;
   justify-content: space-between;
@@ -115,12 +116,13 @@
 
 .login-button {
   text-align: right;
+  padding-top: 5%;
 }
 
 .checkout-button {
   /* margin-right: 10rem; */
   padding-right: 10%;
-  padding: 1rem 4rem;
+  padding: 1rem 3rem;
   border: none;
   background-color: #0c0c0c;
   color: #fff;
