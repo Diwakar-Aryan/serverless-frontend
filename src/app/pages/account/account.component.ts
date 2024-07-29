@@ -12,6 +12,9 @@ import { AuthServiceService } from '../../theme/shared/services/auth-service.ser
   styleUrl: './account.component.css',
 })
 export class AccountComponent {
+showContent(arg0: string) {
+throw new Error('Method not implemented.');
+}
   email: string | null = null;
   userName: string | null | undefined;
   userImage: string | null | undefined;

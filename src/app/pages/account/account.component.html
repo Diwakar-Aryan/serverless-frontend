@@ -1,9 +1,19 @@
 <section>
   <div class="image-container">
-    <img src="/assets/images/flyer-background.jpg" alt="img" />
+    <img src="/assets/images/accountimg.jpg" alt="img" />
     <div class="overlay-text">
       <span class="topic-text">ACCOUNT</span>
       <hr class="horizontal-line" />
+      <div class="button">
+        <!-- <button class="btn"> <i class="fas fa-sign-out-alt"></i> Logout</button> -->
+        <ng-container *ngIf="auth.auth.isAuthenticated$ | async; else loggedOut">
+          <button class="btn" (click)="logout()">Log out</button>
+        </ng-container>
+  
+        <ng-template #loggedOut>
+          <button class="btn" (click)="loginAt()">Log in</button>
+        </ng-template>
+      </div>
     </div>
   </div>
 </section>
@@ -11,24 +21,92 @@
   <div class="row-section">
     <div *ngIf="email" class="email">
       <!-- <div class="initials-box">{{ userImage }}</div> -->
-      <img [src]="userImage" alt="User Image" />
-      <h2>{{ email }}</h2>
+      <div class="username">
+        <h2>{{ userName }}</h2>
+      </div>
+      <h4>{{ email }}</h4>
       <!-- <p>{{userName}}</p> -->
     </div>
-    <div class="button">
-      <!-- <button class="btn"> <i class="fas fa-sign-out-alt"></i> Logout</button> -->
-      <ng-container *ngIf="auth.auth.isAuthenticated$ | async; else loggedOut">
-        <button class="btn" (click)="logout()">Log out</button>
-      </ng-container>
-
-      <ng-template #loggedOut>
-        <button class="btn" (click)="loginAt()">Log in</button>
-      </ng-template>
+    <div class="profile-img">
+      <img [src]="userImage" alt="User Image" />
     </div>
   </div>
 </section>
-<section></section>
 <section>
+  <div class="tabs-container">
+    <div class="tabs-left">
+      <a class="tab3" id="all-tab" (click)="showContent('all')">ANY</a
+      ><strong>/</strong>
+      <a class="tab3" id="bagru-tab" (click)="showContent('bagru')">NOTES</a
+      ><strong>/</strong>
+      <a class="tab3" id="delhi-tab" (click)="showContent('delhi')">THEATER</a
+      ><strong>/</strong>
+      <a class="tab3" id="jaipur-tab" (click)="showContent('jaipur')">STORE</a
+      >
+    </div>
+    <div class="line-and-topic">
+      <hr class="horizontal-line" />
+      <span class="topic-text">Location</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="line">
+    <span class="topic1-text">NOTES</span>
+    <hr class="horizontal1-line" />
+  </div>
+  <div class="htext-container">
+    <div class="textsec1">
+      <h1>Heading 1, Heading 1</h1>
+      <h6>Heading 6, Heading 6, Heading 6</h6>
+    </div>
+    <button class="rbtn1">Read</button>
+  </div>
+  <div class="htext-container">
+    <div class="textsec2">
+      <h1>Heading 1, Heading 1</h1>
+      <h6>Heading 6, Heading 6, Heading 6</h6>
+    </div>
+    <button class="rbtn">Read</button>
+  </div>
+  <div class="htext-container">
+    <div class="textsec3">
+      <h1>Heading 1, Heading 1</h1>
+      <h6>Heading 6, Heading 6, Heading 6</h6>
+    </div>
+    <button class="rbtn">Read</button>
+  </div>
+</section>
+
+<section>
+  <div class="line">
+    <span class="topic1-text">THEATER</span>
+    <hr class="horizontal1-line" />
+  </div>
+  <div class="container2">
+    <div class="item2">
+      <img
+        src="assets/images/2022_04.jpg"
+        routerLink="/bagru"
+        alt="Block Carving"
+      />
+      <p>BAGRU KA TOUR</p>
+      <p class="location2">Bagru</p>
+    </div>
+    <div class="item2">
+      <img
+        src="assets/images/main_04.jpg"
+        routerLink="/texttile"
+        alt="Block Printing"
+      />
+      <p>TRADITIONAL TEXTILES</p>
+      <p class="location2">Bagru</p>
+    </div>
+  </div>
+
+</section>
+<!-- <section>
   <div class="text-container">
     <div class="left-text">
       <p>
@@ -55,4 +133,4 @@
       <button class="learn-button" routerLink="/learn-more">Learn More</button>
     </div>
   </div>
-</section>
+</section> -->
