@@ -53,10 +53,10 @@ export const routes: Routes = [
         path: "jajam", component: JajamComponent ,
     },
     {
-        path: "notes", component: NotesComponent,canActivate: [authGuard]
+        path: "notes", component: NotesComponent
     },
     {
-        path: "cart", component: CartPageComponent,canActivate: [authGuard]
+        path: "cart", component: CartPageComponent
     },
     {
         path: "privacy", component: PrivacyPolicyComponent,
