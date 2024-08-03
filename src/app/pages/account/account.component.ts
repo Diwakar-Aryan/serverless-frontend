@@ -44,7 +44,7 @@ throw new Error('Method not implemented.');
       }
     });
   }
-  
+
   checkLoginStatus(): void {
     const storedTokenId = localStorage.getItem('tokenId');
     if (!storedTokenId) {
@@ -56,13 +56,21 @@ throw new Error('Method not implemented.');
   async loginAt() {
     this.auth.auth.loginWithRedirect();
   }
-  
+
 
   logout(): void {
-  
+
     localStorage.removeItem('userImage');
     localStorage.removeItem('tokenId');
     this.auth.auth.logout({ logoutParams: { returnTo: 'http://localhost:4200/home' } });
     // this.router.navigate(['/home']);
+  }
+
+  getNotes() {
+
+    // Call notes services and call all locked notes this will give detail about all nots and call generate pdf and read same as Notes Page
+    //this.lockedNotes = await this.notesService.getLockedNotes();
+
+
   }
 }
