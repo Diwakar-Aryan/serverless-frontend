@@ -88,7 +88,7 @@
             <button
               class="add-to-cart"
               *ngIf="
-                note?.tagStatus && note.tagStatus === TAGS.PRICE || note.tagStatus === TAGS.CART
+                (note.tagStatus === TAGS.PRICE )|| (note.tagStatus === TAGS.CART)
               "
               (click)="updateCart(note, !note.addedToCart)"
             >
@@ -96,7 +96,7 @@
             </button>
             <button
               class="add-to-cart"
-              *ngIf="note?.tagStatus === TAGS.PURCHASED"
+              *ngIf="note.tagStatus === TAGS.PURCHASED"
               (click)="openPdfInNewTab()"
             >
               Read

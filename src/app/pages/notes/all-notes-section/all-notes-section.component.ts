@@ -116,28 +116,30 @@ export class AllNotesSectionComponent implements OnInit {
     this.applyTopicLockFilter(this.currentFilter['topicFilter']);
 
     //checking data for its tagStaus i.e if it is in cart or unlocked or locked
-    this.filteredNotes.forEach((note) => {
-      note.tagStatus = this.TAGS.PRICE;
-      console.log(note.tagStatus)
-      console.log(`price ${this.TAGS.PRICE}`)
-      if (this.lockedNotes.filter((lnote) => lnote._id === note._id)) {
-        note.tagStatus = this.TAGS.PURCHASED;
-        console.log(`price ${note.tagStatus }`)
-        console.log(`price ${note._id }`)
-        return;
-      } else if (note?.addedToCart) {
-        note.tagStatus = this.TAGS.CART;
-      }
-    });
     // this.filteredNotes.forEach((note) => {
-    //   if (this.lockedNotes.some((lnote) => lnote._id === note._id)) {
+    //   note.tagStatus = this.TAGS.PRICE;
+    //   console.log(note.tagStatus)
+    //   console.log(`price ${this.TAGS.PRICE}`)
+    //   if (this.lockedNotes.filter((lnote) => lnote._id === note._id)) {
     //     note.tagStatus = this.TAGS.PURCHASED;
+    //     console.log(`price ${note.tagStatus }`)
+    //     console.log(`price ${note._id }`)
+    //     return;
     //   } else if (note?.addedToCart) {
     //     note.tagStatus = this.TAGS.CART;
-    //   } else {
-    //     note.tagStatus = this.TAGS.PRICE;
+    //     console.log(`price ${note.tagStatus }`)
     //   }
     // });
+    this.filteredNotes.forEach((note) => {
+      if (this.lockedNotes.some((lnote) => lnote._id === note._id)) {
+        note.tagStatus = this.TAGS.PURCHASED;
+      } else if (note?.addedToCart) {
+        note.tagStatus = this.TAGS.CART;
+      } else {
+        note.tagStatus = this.TAGS.PRICE;
+        
+      }
+    });
   }
 
   applyAccessLockFilter(filter: string) {
