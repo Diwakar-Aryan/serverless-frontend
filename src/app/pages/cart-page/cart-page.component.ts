@@ -17,7 +17,9 @@ export class CartPageComponent implements OnInit {
   embeddedPayment: boolean = false;
   cartItem: any[] = [];
   isLoggedIn: boolean = false;
-
+  selectedCurrency: string = 'INR';
+  exchangeRates: { [key: string]: number } = { INR: 1, USD: 0.0119346, EUR: 0.0109525, AUD: 0.018334, UGX: 44.4825  };
+  supportedCurrencies: string[] = ['INR', 'USD', 'EUR', 'AUD', 'UGX'];
   constructor(private cartService: CartService, private auth: AuthService) {}
 
   async ngOnInit(): Promise<void> {
@@ -34,8 +36,28 @@ export class CartPageComponent implements OnInit {
       }
       return config;
     });
+    this.fetchExchangeRates();
+  }
+  async fetchExchangeRates() {
+    try {
+      const response = await axios.get('https://api.exchangerate-api.com/v4/latest/INR');
+      this.exchangeRates['USD'] = response.data.rates.USD;
+      this.exchangeRates['EUR'] = response.data.rates.EUR;
+      this.exchangeRates['AUD'] = response.data.rates.AUD;
+      this.exchangeRates['UGX'] = response.data.rates.UGX;
+    } catch (error) {
+      console.error('Error fetching exchange rates:', error);
+    }
   }
 
+  onCurrencyChange(event: Event) {
+    const selectElement = event.target as HTMLSelectElement;
+    this.selectedCurrency = selectElement.value;
+  }
+
+  convertPrice(amount: number): string {
+    return (amount * (this.exchangeRates[this.selectedCurrency] || 1)).toFixed(2);
+  }
   async doCheckout() {
     const stripe = await loadStripe(
       'pk_test_51PM6BADJUuO5kkChDdnuYDmXZCvhrCXxXjUd98kM8ntSjlbmB0chibMbNtmc3oTQh10fq2Qs6XKzca36KqJ00HDO00KpDwqrrF'

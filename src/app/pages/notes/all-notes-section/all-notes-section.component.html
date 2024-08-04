@@ -1,8 +1,20 @@
 <section>
   <div class="tabs-container">
     <div class="tabs-left">
-      <a class="tab" id="all-tab" [class.active]="lockStatus === 4" (click)="applyFilter('','','all')">ALL</a><strong>/</strong>
-      <a class="tab" id="placeholder-tab" [class.active]="lockStatus === 5" (click)="applyFilter('','','place')">PLACEHOLDER</a>
+      <a
+        class="tab"
+        id="all-tab"
+        [class.active]="currentFilter.topicFilter === TOPIC.ALL"
+        (click)="applyFilter('', '', 'all')"
+        >ALL</a
+      ><strong>/</strong>
+      <a
+        class="tab"
+        id="placeholder-tab"
+        [class.active]="currentFilter.topicFilter === TOPIC.PLACE"
+        (click)="applyFilter('', '', 'place')"
+        >PLACEHOLDER</a
+      >
     </div>
     <div class="line-and-topic">
       <hr class="horizontal-line" />
@@ -11,8 +23,20 @@
   </div>
   <div class="tabs-container2">
     <div class="tabs-left2">
-      <a class="tab2" id="all-tab2" [class.active]="lockStatus === 6" (click)="applyFilter('','all','')">ALL</a><strong>/</strong>
-      <a class="tab2" id="english-tab2" [class.active]="lockStatus === 7" (click)="applyFilter('','English','')">ENGLISH</a>
+      <a
+        class="tab2"
+        id="all-tab2"
+        [class.active]="currentFilter.languageFilter === LANGUAGE.ALL"
+        (click)="applyFilter('', 'all', '')"
+        >ALL</a
+      ><strong>/</strong>
+      <a
+        class="tab2"
+        id="english-tab2"
+        [class.active]="currentFilter.languageFilter === LANGUAGE.ENGLISH"
+        (click)="applyFilter('', 'English', '')"
+        >ENGLISH</a
+      >
     </div>
     <div class="line-and-topic2">
       <hr class="horizontal-line2" />
@@ -22,9 +46,27 @@
 
   <div class="tabs-container3">
     <div class="tabs-left3">
-      <a class="tab3" id="all-tab3" [class.active]="lockStatus === 0" (click)="applyFilter('all','','')">ALL</a><strong>/</strong>
-      <a class="tab3" id="locked-tab3" [class.active]="lockStatus === 1" (click)="applyFilter('locked','','')">LOCKED</a><strong>/</strong>
-      <a class="tab3" id="unlocked-tab3" [class.active]="lockStatus === 2" (click)="applyFilter('unlocked','','')">UNLOCKED</a>
+      <a
+        class="tab3"
+        id="all-tab3"
+        [class.active]="currentFilter.accessFilter === ACCESS.ALL"
+        (click)="applyFilter('all', '', '')"
+        >ALL</a
+      ><strong>/</strong>
+      <a
+        class="tab3"
+        id="locked-tab3"
+        [class.active]="currentFilter.accessFilter === ACCESS.LOCKED"
+        (click)="applyFilter('locked', '', '')"
+        >LOCKED</a
+      ><strong>/</strong>
+      <a
+        class="tab3"
+        id="unlocked-tab3"
+        [class.active]="currentFilter.accessFilter === ACCESS.UNLOCKED"
+        (click)="applyFilter('unlocked', '', '')"
+        >UNLOCKED</a
+      >
     </div>
     <div class="line-and-topic3">
       <hr class="horizontal-line3" />
@@ -38,57 +80,124 @@
         <div class="note-row">
           <div class="left-content">
             <div class="title" (click)="toggleNoteDetails(note)">
-              <p class="note" >{{note.name}}</p>
-              <p class="sub-text" >{{note.title}}</p>
+              <p class="note">{{ note.name }}</p>
+              <p class="sub-text">{{ note.title }}</p>
             </div>
           </div>
           <div class="right-content">
-            <button class="add-to-cart" *ngIf="(note?.tagStatus && note.tagStatus === TAGS.PRICE || note.tagStatus === TAGS.CART)" (click)="updateCart(note, !note.addedToCart)">
-              {{note?.addedToCart ? 'Added To Cart' : note.cost}}
+            <button
+              class="add-to-cart"
+              *ngIf="
+                note?.tagStatus && note.tagStatus === TAGS.PRICE || note.tagStatus === TAGS.CART
+              "
+              (click)="updateCart(note, !note.addedToCart)"
+            >
+              {{ note?.addedToCart ? "Added To Cart" : note.cost + ' INR' }}
             </button>
-            <button *ngIf="note?.tagStatus && note.tagStatus === TAGS.PURCHASED" (click)="openPdfInNewTab()">Read</button>
+            <button
+              class="add-to-cart"
+              *ngIf="note?.tagStatus === TAGS.PURCHASED"
+              (click)="openPdfInNewTab()"
+            >
+              Read
+            </button>
           </div>
+         
         </div>
         <div class="note-details" *ngIf="selectedNoteId === note._id">
           <div class="left-content">
-            <p>This is a placeholder Note. And the text you’re reading is a placeholder preview for the Note.</p>
+            <p>
+              This is a placeholder Note. And the text you’re reading is a
+              placeholder preview for the Note.
+            </p>
           </div>
           <div class="right-content">
-            <img src={{coverSrc}} alt="Note Cover" />
+            <img src="{{ coverSrc }}" alt="Note Cover" />
           </div>
         </div>
       </div>
     </div>
-    <div class="locked-notes" *ngIf="currentFilter.accessFilter === ACCESS.LOCKED">
-      <div class="note-container" *ngFor="let note of filteredNotes">
-        <div class="note-row">
-          <div class="left-content">
-            <div class="title" (click)="toggleNoteDetails(note)">
-              <p class="note" >{{note.name}}</p>
-              <p class="sub-text" >{{note.title}}</p>
+    <div
+      class="locked-notes"
+      *ngIf="currentFilter.accessFilter === ACCESS.LOCKED"
+    >
+      <div *ngIf="filteredNotes.length === 0" class="no-content-message">
+        No content found
+      </div>
+      <div *ngIf="filteredNotes.length > 0">
+        <div class="note-container" *ngFor="let note of filteredNotes">
+          <div class="note-row">
+            <div class="left-content">
+              <div class="title" (click)="toggleNoteDetails(note)">
+                <p class="note">{{ note.name }}</p>
+                <p class="sub-text">{{ note.title }}</p>
+              </div>
             </div>
-
+            <div class="right-content">
+              <button
+                class="add-to-cart"
+                (click)="updateCart(note, !note.addedToCart)"
+              >
+                {{ note?.addedToCart ? "Added To Cart" : note.cost + ' INR'}}
+              </button>
+            </div>
           </div>
-          <div class="right-content">
-            <button class="add-to-cart" (click)="updateCart(note, !note.addedToCart)">
-              {{note?.addedToCart ? 'Added To Cart' : note.cost}}
-            </button>
-          </div>
-        </div>
-        <div class="note-details" *ngIf="selectedNoteId === note._id">
-          <div class="left-content">
-            <p>This is a placeholder Note. And the text you’re reading is a placeholder preview for the Note.</p>
-          </div>
-          <div class="right-content">
-            <img src="https://wabisabi-notes-directory.s3.ap-south-1.amazonaws.com/cover/test.jpg" alt="Note Cover Image" />
+          <div class="note-details" *ngIf="selectedNoteId === note._id">
+            <div class="left-content">
+              <p>
+                This is a placeholder Note. And the text you’re reading is a
+                placeholder preview for the Note.
+              </p>
+            </div>
+            <div class="right-content">
+              <img src="{{ coverSrc }}" alt="Note Cover Image" />
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="unlocked-notes"*ngIf="currentFilter.accessFilter === ACCESS.UNLOCKED">
-
-      <button (click)="openPdfInNewTab()">Read</button>
-
+    <div
+      class="unlocked-notes"
+      *ngIf="currentFilter.accessFilter === ACCESS.UNLOCKED"
+    >
+      <div *ngIf="filteredNotes.length === 0" class="no-content-message">
+        No content found
+      </div>
+      <div *ngIf="filteredNotes.length > 0">
+        <div class="note-container" *ngFor="let note of filteredNotes">
+          <div class="note-row">
+            <div class="left-content">
+              <div class="title" (click)="toggleNoteDetails(note)">
+                <p class="note">{{ note.name }}</p>
+                <p class="sub-text">{{ note.title }}</p>
+              </div>
+            </div>
+            <div class="right-content">
+              <!-- <button class="add-to-cart" (click)="updateCart(note, !note.addedToCart)">
+              {{note?.addedToCart ? 'Added To Cart' : note.cost}}
+            </button> -->
+              <button
+                class="add-to-cart"
+                *ngIf="note?.tagStatus === TAGS.PURCHASED"
+                (click)="openPdfInNewTab()"
+              >
+                Read
+              </button>
+            </div>
+          </div>
+          <div class="note-details" *ngIf="selectedNoteId === note._id">
+            <div class="left-content">
+              <p>
+                This is a placeholder Note. And the text you’re reading is a
+                placeholder preview for the Note.
+              </p>
+            </div>
+            <div class="right-content">
+              <img src="{{ coverSrc }}" alt="Note Cover Image" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
