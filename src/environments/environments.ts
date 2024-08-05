@@ -1,5 +1,5 @@
 export const environment = {
-  production : false,
+  production : true,
   auth : {
     domain: 'dev-iidxtj05nh5mnkf3.us.auth0.com',
     clientId: 'KqqduLszahTAUSc4FzLu5SUoh0NFixmB',
