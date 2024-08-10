@@ -64,7 +64,7 @@ export class CartPageComponent implements OnInit {
     );
 
     const response = await axios.post(
-      'http://localhost:3000/payment/create-checkout-session',
+      'http://43.204.116.18:3000/payment/create-checkout-session',
       { cart: this.cartItem }
     );
 

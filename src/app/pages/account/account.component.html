@@ -6,10 +6,12 @@
       <hr class="horizontal-line" />
       <div class="button">
         <!-- <button class="btn"> <i class="fas fa-sign-out-alt"></i> Logout</button> -->
-        <ng-container *ngIf="auth.auth.isAuthenticated$ | async; else loggedOut">
+        <ng-container
+          *ngIf="auth.auth.isAuthenticated$ | async; else loggedOut"
+        >
           <button class="btn" (click)="logout()">Log out</button>
         </ng-container>
-  
+
         <ng-template #loggedOut>
           <button class="btn" (click)="loginAt()">Log in</button>
         </ng-template>
@@ -35,14 +37,13 @@
 <section>
   <div class="tabs-container">
     <div class="tabs-left">
-      <a class="tab3" id="all-tab" (click)="showContent('all')">ANY</a
+      <a class="tab3" id="all-tab" (click)="showTabContent('all')">ANY</a
       ><strong>/</strong>
-      <a class="tab3" id="bagru-tab" (click)="showContent('notes')">NOTES</a
+      <a class="tab3" id="notes" (click)="showTabContent('notes')">NOTES</a
       ><strong>/</strong>
-      <a class="tab3" id="delhi-tab" (click)="showContent('theater')">THEATER</a
+      <a class="tab3" id="theater" (click)="showTabContent('theater')">THEATER</a
       ><strong>/</strong>
-      <a class="tab3" id="jaipur-tab" (click)="showContent('store')">STORE</a
-      >
+      <a class="tab3" id="store" (click)="showTabContent('store')">STORE</a>
     </div>
     <div class="line-and-topic1">
       <hr class="horizontal-line1" />
@@ -56,26 +57,16 @@
     <span class="topic1-text">NOTES</span>
     <hr class="horizontal1-line" />
   </div>
-  <div class="htext-container">
-    <div class="textsec1">
-      <h1>Heading 1, Heading 1</h1>
-      <h6>Heading 6, Heading 6, Heading 6</h6>
+  <div *ngFor="let note of lockedNotes" class="htext-container">
+    <div class="note-row">
+      <div class="left-content">
+        <p class="note">{{ note.name }}</p>
+        <p class="sub-text">{{ note.title }}</p>
+      </div>
+      <div class="right-content">
+        <button class="rbtn">Read</button>
+      </div>
     </div>
-    <button class="rbtn1">Read</button>
-  </div>
-  <div class="htext-container">
-    <div class="textsec2">
-      <h1>Heading 1, Heading 1</h1>
-      <h6>Heading 6, Heading 6, Heading 6</h6>
-    </div>
-    <button class="rbtn">Read</button>
-  </div>
-  <div class="htext-container">
-    <div class="textsec3">
-      <h1>Heading 1, Heading 1</h1>
-      <h6>Heading 6, Heading 6, Heading 6</h6>
-    </div>
-    <button class="rbtn">Read</button>
   </div>
 </section>
 
@@ -84,27 +75,7 @@
     <span class="topic1-text">THEATER</span>
     <hr class="horizontal1-line" />
   </div>
-  <div class="container2">
-    <!-- <div class="item2">
-      <img
-        src="assets/images/2022_04.jpg"
-        routerLink="/bagru"
-        alt="Block Carving"
-      />
-      <p>BAGRU KA TOUR</p>
-      <p class="location2">Bagru</p>
-    </div>
-    <div class="item2">
-      <img
-        src="assets/images/main_04.jpg"
-        routerLink="/texttile"
-        alt="Block Printing"
-      />
-      <p>TRADITIONAL TEXTILES</p>
-      <p class="location2">Bagru</p>
-    </div> -->
-  </div>
-
+  <div class="container2"></div>
 </section>
 <!-- <section>
   <div class="text-container">

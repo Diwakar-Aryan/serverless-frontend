@@ -28,7 +28,7 @@ export class RedirectComponent implements OnInit{
 
   async getSessionStatus(){
 
-    const sessionResponse = await axios.get(`http://localhost:3000/payment/session-status?session_id=${this.sessionId}`);
+    const sessionResponse = await axios.get(`http://43.204.116.18:3000/payment/session-status?session_id=${this.sessionId}`);
 
     if(sessionResponse.data.status == 'open'){
       // if false, redirect don't clear cart

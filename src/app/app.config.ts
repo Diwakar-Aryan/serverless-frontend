@@ -14,7 +14,7 @@ export const appConfig: ApplicationConfig = {
     domain: environment.auth.domain,
     clientId: environment.auth.clientId,
     authorizationParams:{
-      redirect_uri: 'http://localhost:4200/account'
+      redirect_uri: 'https://pn-3-angular-wabisabi-ui-zvjf.vercel.app/account'
     }
 
   }),

@@ -26,6 +26,8 @@
   font-size: 2rem;
   cursor: pointer;
   opacity: 60%;
+  box-sizing: border-box;
+  border: 3px solid transparent; 
 }
 .tabs-left strong {
   font-weight: normal;
@@ -34,13 +36,13 @@
   opacity: 10%;
   text-align: center;
 }
-
 .tab3:hover {
-  border: 3.5px solid #868585;
+  border: 3px solid #868585;
+
 }
 
 .tab3.active {
-  border: 3.5px solid #868585;
+  border: 3px solid #868585;
 }
 
 .line-and-topic {
@@ -150,15 +152,7 @@
   display: flex;
   padding-left: 15%;
 }
-.htext-container .rbtn{
-  height: 2%;
-  margin-left: 60%;
-}
-.htext-container .rbtn1{
-  height: 2%;
-  margin-left: 60%; 
-  margin-top: 5%; 
-}
+
 .textsec1{
   padding-top: 5%;
   padding-bottom: 2%;
@@ -356,7 +350,61 @@ h2 {
   border-radius: 50px;
   cursor: pointer;
 }
+.note-row{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  padding-top: 3%;
+  padding-right: 18%;
+}
+.left-content{
+  width: 50%;
+}
 
+.right-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+.note {
+  font-family: Nunito, sans-serif;
+   color: rgb(61, 55, 55);
+   font-weight: 600;
+   font-size: 1.25rem;
+   letter-spacing: 0.02em;
+   font-feature-settings: "pnum" on, "onum" on;
+   opacity: 50%;
+   line-height: 0cap;
+   cursor: pointer;
+ }
+ .notes-content{
+  padding-top: 3%;
+ }
+
+ .rbtn {
+  background-color: #4e4f51; 
+  color: white; 
+  border: none; 
+  border-radius: 4px; 
+  width: 40%;
+  height: 60%;
+  font-size: 14px; 
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; 
+}
+
+.rbtn:hover {
+  background-color: #292a2b; 
+  transform: translateY(-2px); 
+}
+
+.rbtn:active {
+  background-color: #292a2b;
+  transform: translateY(0); 
+}
 .workshop-button:hover {
   background-color: rgba(151, 46, 52, 1);
 }
@@ -497,15 +545,7 @@ transition: background-color 0.3s ease;
   padding-left: 5%;
   padding-right: 5%;
 }
-.htext-container .rbtn{
-  height: 2%;
-  margin-left: 60%;
-}
-.htext-container .rbtn1{
-  height: 2%;
-  margin-left: 60%; 
-  margin-top: 5%; 
-}
+
 .textsec1{
   padding-top: 5%;
   padding-bottom: 2%;

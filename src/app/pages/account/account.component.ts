@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { AuthServiceService } from '../../theme/shared/services/auth-service.service';
+import { NotesService } from '../../services/notes.service';
 @Component({
   selector: 'app-account',
   standalone: true,
@@ -19,11 +20,14 @@ throw new Error('Method not implemented.');
   userName: string | null | undefined;
   userImage: string | null | undefined;
   tokenId: string | null = null;
+  lockedNotes: any[] = [];
+  selectedTab: string = 'all';
 
   constructor(
     public auth: AuthServiceService,
     private http: HttpClient,
     private router: Router,
+    private notesService:NotesService,
     @Inject(DOCUMENT) public document: Document
   ) {}
 
@@ -43,6 +47,7 @@ throw new Error('Method not implemented.');
         this.auth.saveToLocalStorage('tokenId', this.tokenId);
       }
     });
+    this.getNotes();
   }
 
   checkLoginStatus(): void {
@@ -62,15 +67,17 @@ throw new Error('Method not implemented.');
 
     localStorage.removeItem('userImage');
     localStorage.removeItem('tokenId');
-    this.auth.auth.logout({ logoutParams: { returnTo: 'http://localhost:4200/home' } });
+    this.auth.auth.logout({ logoutParams: { returnTo: 'https://pn-3-angular-wabisabi-ui-zvjf.vercel.app/home' } });
     // this.router.navigate(['/home']);
   }
 
-  getNotes() {
+  async getNotes() {
 
     // Call notes services and call all locked notes this will give detail about all nots and call generate pdf and read same as Notes Page
-    //this.lockedNotes = await this.notesService.getLockedNotes();
+    this.lockedNotes = await this.notesService.getLockedNotes();
+  }
 
-
+  showTabContent(tab: string): void {
+    this.selectedTab = tab;
   }
 }
